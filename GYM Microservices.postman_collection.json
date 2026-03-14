@@ -1,0 +1,918 @@
+{
+  "info": {
+    "_postman_id": "605623e1-7b08-49a2-b096-49731ce1eb07",
+    "name": "GYM Microservices",
+    "description": "Colección completa para probar todos los endpoints de los microservicios del gimnasio.\n\n**Puertos:**\n\n- Miembros: [http://localhost:8081](http://localhost:8081)\n    \n- Clases: [http://localhost:8082](http://localhost:8082)\n    \n- Entrenadores: [http://localhost:8083](http://localhost:8083)\n    \n- Equipos: [http://localhost:8084](http://localhost:8084)\n    \n\nLas variables de la colección usan un script que genera fácilmente los IDs de manera única y contiene las URLs de cada microservicio.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38803087"
+  },
+  "item": [
+    {
+      "name": "Miembros (puerto 8081)",
+      "item": [
+        {
+          "name": "Crear miembro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": {\n    \"miembro_id\": \"{{miembro_id}}\"\n  },\n  \"nombre\": \"Ana García\",\n  \"email\": {\n    \"email\": \"ana.garcia@email.com\"\n  },\n  \"fechaInscripcion\": \"2026-01-15\"\n}"
+            },
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros"
+              ]
+            },
+            "description": "Registra un nuevo miembro en el sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar todos los miembros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros"
+              ]
+            },
+            "description": "Retorna la lista completa de miembros registrados."
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener miembro por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros/{{miembro_id}}",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros",
+                "{{miembro_id}}"
+              ]
+            },
+            "description": "Obtiene los datos de un miembro específico por su ID."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar miembro",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": {\n    \"miembro_id\": \"{{miembro_id}}\"\n  },\n  \"nombre\": \"Ana García Actualizada\",\n  \"email\": {\n    \"email\": \"ana.nueva@email.com\"\n  },\n  \"fechaInscripcion\": \"2026-01-15\"\n}"
+            },
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros/{{miembro_id}}",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros",
+                "{{miembro_id}}"
+              ]
+            },
+            "description": "Actualiza todos los datos de un miembro existente."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar miembro",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros/{{miembro_id}}",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros",
+                "{{miembro_id}}"
+              ]
+            },
+            "description": "Elimina un miembro. Retorna 204 No Content si tiene éxito."
+          },
+          "response": []
+        },
+        {
+          "name": "Verificar existencia de miembro",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros/{{miembro_id}}/existe",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros",
+                "{{miembro_id}}",
+                "existe"
+              ]
+            },
+            "description": "Verifica si un miembro con el ID dado existe en el sistema."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Entrenadores (puerto 8083)",
+      "item": [
+        {
+          "name": "Crear entrenador",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": {\n    \"entrenador_id\": \"{{entrenador_id}}\"\n  },\n  \"nombre\": \"Carlos Ruiz\",\n  \"especialidad\": {\n    \"especialidad\": \"Crossfit\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores"
+              ]
+            },
+            "description": "Registra un nuevo entrenador en el sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar todos los entrenadores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores"
+              ]
+            },
+            "description": "Retorna la lista completa de entrenadores registrados."
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener entrenador por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores/{{entrenador_id}}",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores",
+                "{{entrenador_id}}"
+              ]
+            },
+            "description": "Obtiene los datos de un entrenador específico por su ID."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar entrenador",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": {\n    \"entrenador_id\": \"{{entrenador_id}}\"\n  },\n  \"nombre\": \"Carlos Ruiz Actualizado\",\n  \"especialidad\": {\n    \"especialidad\": \"Yoga y Pilates\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores/{{entrenador_id}}",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores",
+                "{{entrenador_id}}"
+              ]
+            },
+            "description": "Actualiza todos los datos de un entrenador existente."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar entrenador",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores/{{entrenador_id}}",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores",
+                "{{entrenador_id}}"
+              ]
+            },
+            "description": "Elimina un entrenador. Retorna 204 No Content si tiene éxito."
+          },
+          "response": []
+        },
+        {
+          "name": "Verificar existencia de entrenador",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores/{{entrenador_id}}/existe",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores",
+                "{{entrenador_id}}",
+                "existe"
+              ]
+            },
+            "description": "Verifica si un entrenador con el ID dado existe en el sistema."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Equipos (puerto 8084)",
+      "item": [
+        {
+          "name": "Crear equipo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": {\n    \"equipo_id\": \"{{equipo_id}}\"\n  },\n  \"nombre\": \"Mancuernas\",\n  \"descripcion\": {\n    \"descripcion\": \"Set de mancuernas de 5 a 30 kg\"\n  },\n  \"cantidad\": 10\n}"
+            },
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos"
+              ]
+            },
+            "description": "Registra un nuevo equipo/material en el sistema."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar todos los equipos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos"
+              ]
+            },
+            "description": "Retorna la lista completa de equipos registrados."
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener equipo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos/{{equipo_id}}",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos",
+                "{{equipo_id}}"
+              ]
+            },
+            "description": "Obtiene los datos de un equipo específico por su ID."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar equipo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": {\n    \"equipo_id\": \"{{equipo_id}}\"\n  },\n  \"nombre\": \"Mancuernas Actualizado\",\n  \"descripcion\": {\n    \"descripcion\": \"Set de mancuernas de 5 a 50 kg\"\n  },\n  \"cantidad\": 15\n}"
+            },
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos/{{equipo_id}}",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos",
+                "{{equipo_id}}"
+              ]
+            },
+            "description": "Actualiza todos los datos de un equipo existente."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar equipo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos/{{equipo_id}}",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos",
+                "{{equipo_id}}"
+              ]
+            },
+            "description": "Elimina un equipo. Retorna 204 No Content si tiene éxito."
+          },
+          "response": []
+        },
+        {
+          "name": "Verificar existencia de equipo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos/{{equipo_id}}/existe",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos",
+                "{{equipo_id}}",
+                "existe"
+              ]
+            },
+            "description": "Verifica si un equipo con el ID dado existe en el sistema."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Clases (puerto 8082)",
+      "item": [
+        {
+          "name": "4. Programar clase (setup)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": { \"clase_id\": \"{{clase_id}}\" },\n  \"nombre\": \"Crossfit Matutino\",\n  \"horario\": { \"horario\": \"2026-03-01T07:00:00\" },\n  \"capacidadMaxima\": 20\n}"
+            },
+            "url": {
+              "raw": "{{base_clases}}/api/clases",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases"
+              ]
+            },
+            "description": "Setup: crea la clase a la que se asignarán entrenador, equipo y miembro."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar todas las clases",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_clases}}/api/clases",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases"
+              ]
+            },
+            "description": "Retorna la lista completa de clases programadas."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear miembro (setup)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": { \"miembro_id\": \"{{miembro_id}}\" },\n  \"nombre\": \"Ana García\",\n  \"email\": { \"email\": \"ana.garcia@email.com\" },\n  \"fechaInscripcion\": \"2026-01-15\"\n}"
+            },
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros"
+              ]
+            },
+            "description": "Setup: crea el miembro que se usará en el flujo."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear entrenador (setup)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": { \"entrenador_id\": \"{{entrenador_id}}\" },\n  \"nombre\": \"Carlos Ruiz\",\n  \"especialidad\": { \"especialidad\": \"Crossfit\" }\n}"
+            },
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores"
+              ]
+            },
+            "description": "Setup: crea el entrenador que se usará en el flujo."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear equipo (setup)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": { \"equipo_id\": \"{{equipo_id}}\" },\n  \"nombre\": \"Mancuernas\",\n  \"descripcion\": { \"descripcion\": \"Set de mancuernas 5-30kg\" },\n  \"cantidad\": 10\n}"
+            },
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos"
+              ]
+            },
+            "description": "Setup: crea el equipo que se usará en el flujo."
+          },
+          "response": []
+        },
+        {
+          "name": "Asignar entrenador a clase",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_clases}}/api/clases/{{clase_id}}/entrenador/{{entrenador_id}}",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases",
+                "{{clase_id}}",
+                "entrenador",
+                "{{entrenador_id}}"
+              ]
+            },
+            "description": "Asigna el entrenador a la clase para crear la referencia."
+          },
+          "response": []
+        },
+        {
+          "name": "Agregar equipo a clase",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_clases}}/api/clases/{{clase_id}}/equipos/{{equipo_id}}",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases",
+                "{{clase_id}}",
+                "equipos",
+                "{{equipo_id}}"
+              ]
+            },
+            "description": "Agrega el equipo a la clase para crear la referencia."
+          },
+          "response": []
+        },
+        {
+          "name": "7. Agregar miembro a clase",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_clases}}/api/clases/{{clase_id}}/miembros/{{miembro_id}}",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases",
+                "{{clase_id}}",
+                "miembros",
+                "{{miembro_id}}"
+              ]
+            },
+            "description": "Inscribe el miembro en la clase para crear la referencia."
+          },
+          "response": []
+        },
+        {
+          "name": "Intentar eliminar entrenador (debe fallar - 400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores/{{entrenador_id}}",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores",
+                "{{entrenador_id}}"
+              ]
+            },
+            "description": "DEBE FALLAR con 400 Bad Request. El entrenador está asignado a la clase y no puede eliminarse."
+          },
+          "response": []
+        },
+        {
+          "name": "Intentar eliminar equipo (debe fallar - 400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos/{{equipo_id}}",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos",
+                "{{equipo_id}}"
+              ]
+            },
+            "description": "DEBE FALLAR con 400 Bad Request. El equipo está asignado a la clase y no puede eliminarse."
+          },
+          "response": []
+        },
+        {
+          "name": "1Intentar eliminar miembro (debe fallar - 400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros/{{miembro_id}}",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros",
+                "{{miembro_id}}"
+              ]
+            },
+            "description": "DEBE FALLAR con 400 Bad Request. El miembro está inscrito en la clase y no puede eliminarse."
+          },
+          "response": []
+        },
+        {
+          "name": "Quitar entrenador de clase",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_clases}}/api/clases/{{clase_id}}/entrenador",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases",
+                "{{clase_id}}",
+                "entrenador"
+              ]
+            },
+            "description": "Desvincula el entrenador de la clase. Ahora el entrenador puede eliminarse."
+          },
+          "response": []
+        },
+        {
+          "name": "Remover equipo de clase",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_clases}}/api/clases/{{clase_id}}/equipos/{{equipo_id}}",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases",
+                "{{clase_id}}",
+                "equipos",
+                "{{equipo_id}}"
+              ]
+            },
+            "description": "Elimina el equipo de la clase. Ahora el equipo puede eliminarse."
+          },
+          "response": []
+        },
+        {
+          "name": "Remover miembro de clase",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_clases}}/api/clases/{{clase_id}}/miembros/{{miembro_id}}",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases",
+                "{{clase_id}}",
+                "miembros",
+                "{{miembro_id}}"
+              ]
+            },
+            "description": "Desincribe el miembro de la clase. Ahora el miembro puede eliminarse."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar entrenador (ahora funciona - 204)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_entrenadores}}/api/entrenadores/{{entrenador_id}}",
+              "host": [
+                "{{base_entrenadores}}"
+              ],
+              "path": [
+                "api",
+                "entrenadores",
+                "{{entrenador_id}}"
+              ]
+            },
+            "description": "DEBE TENER ÉXITO con 204 No Content. El entrenador ya no está referenciado en ninguna clase."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar equipo (ahora funciona - 204)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_equipos}}/api/equipos/{{equipo_id}}",
+              "host": [
+                "{{base_equipos}}"
+              ],
+              "path": [
+                "api",
+                "equipos",
+                "{{equipo_id}}"
+              ]
+            },
+            "description": "DEBE TENER ÉXITO con 204 No Content. El equipo ya no está en ninguna clase."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar miembro (ahora funciona - 204)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_miembros}}/api/miembros/{{miembro_id}}",
+              "host": [
+                "{{base_miembros}}"
+              ],
+              "path": [
+                "api",
+                "miembros",
+                "{{miembro_id}}"
+              ]
+            },
+            "description": "DEBE TENER ÉXITO con 204 No Content. El miembro ya no está inscrito en ninguna clase."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar clase (limpieza final - 204)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_clases}}/api/clases/{{clase_id}}",
+              "host": [
+                "{{base_clases}}"
+              ],
+              "path": [
+                "api",
+                "clases",
+                "{{clase_id}}"
+              ]
+            },
+            "description": "Elimina la clase. Retorna 204 No Content."
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "// Solo generar si no existen (primera ejecución)\r",
+          "if (!pm.collectionVariables.get(\"clase_id_generado\")) {\r",
+          "\r",
+          "    const timestamp = Date.now();\r",
+          "    const random = Math.floor(Math.random() * 10000);\r",
+          "\r",
+          "    pm.collectionVariables.set(\"clase_id\", \"CLS-\" + timestamp + \"-\" + random);\r",
+          "    pm.collectionVariables.set(\"miembro_id\", \"MBR-\" + timestamp + \"-\" + random);\r",
+          "    pm.collectionVariables.set(\"entrenador_id\", \"ENT-\" + timestamp + \"-\" + random);\r",
+          "    pm.collectionVariables.set(\"equipo_id\", \"EQP-\" + timestamp + \"-\" + random);\r",
+          "\r",
+          "    pm.collectionVariables.set(\"clase_id_generado\", true);\r",
+          "}"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_miembros",
+      "value": "http://localhost:8081"
+    },
+    {
+      "key": "base_clases",
+      "value": "http://localhost:8082"
+    },
+    {
+      "key": "base_entrenadores",
+      "value": "http://localhost:8083"
+    },
+    {
+      "key": "base_equipos",
+      "value": "http://localhost:8084"
+    },
+    {
+      "key": "miembro_id",
+      "value": "MBR-001"
+    },
+    {
+      "key": "entrenador_id",
+      "value": "ENT-001"
+    },
+    {
+      "key": "equipo_id",
+      "value": "EQP-001"
+    },
+    {
+      "key": "clase_id",
+      "value": "CLS-001"
+    },
+    {
+      "key": "clase_id_generado",
+      "value": ""
+    }
+  ]
+}
