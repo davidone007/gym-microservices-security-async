@@ -8,18 +8,18 @@
   - **Local**: copia a `<KEYCLOAK_HOME>/data/import/gimnasio-realm.json`
 
 2. Inicia Keycloak con importación (Docker recomendado para desarrollo local):
-  ```bash
-  docker run -d --name keycloak-biblioteca -p 8080:8080 \
-    -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
-    -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin \
-    -v keycloak_data:/opt/keycloak/data \
-    -v "$(pwd)/keycloak:/opt/keycloak/data/import" \
-    quay.io/keycloak/keycloak:26.5.4 start-dev --import-realm
-  ```
+   ```bash
+   docker run -d --name keycloak-gimnasio -p 8180:8080 \
+     -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
+     -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin \
+     -v keycloak_gym_data:/opt/keycloak/data \
+     -v "$(pwd)/keycloak:/opt/keycloak/data/import" \
+     quay.io/keycloak/keycloak:26.5.4 start-dev --import-realm
+   ```
 
 ### Opción 2: Consola de administración
 
-1. Inicia Keycloak y entra en la consola (ej. http://localhost:8080/admin).
+1. Inicia Keycloak y entra en la consola (ej. http://localhost:8180/admin).
 2. Crea un nuevo realm: **Create realm**.
 3. Pulsa **Browse** y selecciona `gimnasio-realm.json`, luego **Create**.
 
@@ -55,7 +55,7 @@ El cliente `gym-backend` es **confidential**: hay que enviar `client_id` y `clie
 
 ```bash
 # Ejemplo con usuario admin (reemplaza username/password por trainer o member si quieres otros roles)
-curl -X POST "http://localhost:8080/realms/gimnasio/protocol/openid-connect/token" \
+curl -X POST "http://localhost:8180/realms/gimnasio/protocol/openid-connect/token" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "username=admin" \
   -d "password=admin123" \
