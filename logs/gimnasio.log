@@ -1,0 +1,64 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< co.analisys:gimnasio >------------------------
+[INFO] Building gimnasio 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ gimnasio >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ gimnasio ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ gimnasio ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ gimnasio ---
+[INFO] skip non existing resourceDirectory /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ gimnasio ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.2:run (default-cli) < test-compile @ gimnasio <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.2:run (default-cli) @ gimnasio ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-03-14T18:50:16.295-05:00  INFO 51336 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : Starting GimnasioApplication using Java 17.0.9 with PID 51336 (/Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/target/classes started by davidef in /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async)
+2026-03-14T18:50:16.300-05:00  INFO 51336 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-14T18:50:18.042-05:00  INFO 51336 --- [gimnasio] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14T18:50:18.159-05:00  INFO 51336 --- [gimnasio] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 4 JPA repository interfaces.
+2026-03-14T18:50:19.260-05:00  INFO 51336 --- [gimnasio] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-14T18:50:19.280-05:00  INFO 51336 --- [gimnasio] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-14T18:50:19.280-05:00  INFO 51336 --- [gimnasio] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-14T18:50:19.387-05:00  INFO 51336 --- [gimnasio] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-14T18:50:19.391-05:00  INFO 51336 --- [gimnasio] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2967 ms
+2026-03-14T18:50:19.441-05:00  INFO 51336 --- [gimnasio] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-14T18:50:19.716-05:00  INFO 51336 --- [gimnasio] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:gimnasiodb user=SA
+2026-03-14T18:50:19.719-05:00  INFO 51336 --- [gimnasio] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-14T18:50:19.736-05:00  INFO 51336 --- [gimnasio] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:gimnasiodb'
+2026-03-14T18:50:19.928-05:00  INFO 51336 --- [gimnasio] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14T18:50:19.998-05:00  INFO 51336 --- [gimnasio] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-14T18:50:20.045-05:00  INFO 51336 --- [gimnasio] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-14T18:50:20.541-05:00  INFO 51336 --- [gimnasio] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14T18:50:20.627-05:00  WARN 51336 --- [gimnasio] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-14T18:50:22.009-05:00  INFO 51336 --- [gimnasio] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14T18:50:22.080-05:00  INFO 51336 --- [gimnasio] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14T18:50:22.546-05:00  WARN 51336 --- [gimnasio] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14T18:50:23.065-05:00  INFO 51336 --- [gimnasio] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-14T18:50:23.077-05:00  INFO 51336 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : Started GimnasioApplication in 7.647 seconds (process running for 9.496)
+Datos de ejemplo cargados exitosamente.
+2026-03-14T18:50:25.695-05:00  INFO 51336 --- [gimnasio] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-14T18:50:25.695-05:00  INFO 51336 --- [gimnasio] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-14T18:50:25.697-05:00  INFO 51336 --- [gimnasio] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

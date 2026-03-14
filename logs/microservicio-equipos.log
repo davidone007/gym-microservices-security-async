@@ -1,0 +1,109 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< co.analisys:microservicio-equipos >------------------
+[INFO] Building microservicio-equipos 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ microservicio-equipos >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ microservicio-equipos ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ microservicio-equipos ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-equipos ---
+[INFO] skip non existing resourceDirectory /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-equipos/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ microservicio-equipos ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.2:run (default-cli) < test-compile @ microservicio-equipos <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.2:run (default-cli) @ microservicio-equipos ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-03-14T18:50:16.845-05:00  INFO 51361 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Starting EquiposApplication using Java 17.0.9 with PID 51361 (/Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-equipos/target/classes started by davidef in /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-equipos)
+2026-03-14T18:50:16.851-05:00  INFO 51361 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-03-14T18:50:18.976-05:00  INFO 51361 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14T18:50:19.147-05:00  INFO 51361 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 1 JPA repository interface.
+2026-03-14T18:50:20.063-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-03-14T18:50:20.082-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-14T18:50:20.082-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-14T18:50:20.174-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-14T18:50:20.175-05:00  INFO 51361 --- [microservicio-equipos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3205 ms
+2026-03-14T18:50:20.238-05:00  INFO 51361 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-14T18:50:20.630-05:00  INFO 51361 --- [microservicio-equipos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:equiposdb user=SA
+2026-03-14T18:50:20.632-05:00  INFO 51361 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-14T18:50:20.648-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:equiposdb'
+2026-03-14T18:50:20.894-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14T18:50:20.987-05:00  INFO 51361 --- [microservicio-equipos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-14T18:50:21.043-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-14T18:50:21.469-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14T18:50:22.905-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14T18:50:22.976-05:00  INFO 51361 --- [microservicio-equipos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14T18:50:23.560-05:00  WARN 51361 --- [microservicio-equipos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14T18:50:23.604-05:00 DEBUG 51361 --- [microservicio-equipos] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-14T18:50:24.079-05:00 DEBUG 51361 --- [microservicio-equipos] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-14T18:50:24.478-05:00  INFO 51361 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+2026-03-14T18:50:24.494-05:00  INFO 51361 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Started EquiposApplication in 8.482 seconds (process running for 9.759)
+Datos de equipos cargados exitosamente.
+2026-03-14T18:50:37.769-05:00  INFO 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-14T18:50:37.770-05:00  INFO 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-14T18:50:37.772-05:00  INFO 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-14T18:50:37.789-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2026-03-14T18:50:37.804-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2026-03-14T18:50:37.832-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:37.859-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
+2026-03-14T18:50:37.860-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
+2026-03-14T18:50:37.862-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
+2026-03-14T18:50:37.862-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2026-03-14T18:50:37.863-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
+2026-03-14T18:50:37.863-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2026-03-14T18:50:37.863-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2026-03-14T18:50:37.863-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-03-14T18:50:37.864-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-03-14T18:50:37.864-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2026-03-14T18:50:37.870-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:37.871-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:37.877-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:37.903-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:37.917-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:38.030-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2026-03-14T18:50:38.031-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2026-03-14T18:50:38.032-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
+2026-03-14T18:50:38.033-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
+2026-03-14T18:50:38.035-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:38.052-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:38.062-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2026-03-14T18:50:38.063-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2026-03-14T18:50:38.439-05:00  INFO 51361 --- [microservicio-equipos] [nio-8084-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 365 ms
+2026-03-14T18:50:38.463-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:48.402-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/equipos
+2026-03-14T18:50:48.517-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-14T18:50:48.518-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-1] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fd67702b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
+2026-03-14T18:50:48.518-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/equipos
+2026-03-14T18:50:49.460-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/equipos
+2026-03-14T18:50:49.460-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-3] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Failed to authenticate since the JWT was invalid
+2026-03-14T18:50:49.617-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/equipos
+2026-03-14T18:50:49.620-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-14T18:50:49.620-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fd67702b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
+2026-03-14T18:50:49.620-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/equipos
+2026-03-14T18:50:49.655-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public co.analisys.equipos.model.Equipo co.analisys.equipos.controller.EquipoController.crear(co.analisys.equipos.model.Equipo); target is of class [co.analisys.equipos.controller.EquipoController]
+2026-03-14T18:50:49.666-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-2] horizationManagerBeforeMethodInterceptor : Failed to authorize ReflectiveMethodInvocation: public co.analisys.equipos.model.Equipo co.analisys.equipos.controller.EquipoController.crear(co.analisys.equipos.model.Equipo); target is of class [co.analisys.equipos.controller.EquipoController] with authorization manager org.springframework.security.config.annotation.method.configuration.DeferringObservationAuthorizationManager@5d632cba and decision ExpressionAuthorizationDecision [granted=false, expressionAttribute=hasRole('ADMIN')]
+2026-03-14T18:50:49.737-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/equipos
+2026-03-14T18:50:49.739-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-5] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-14T18:50:49.740-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-5] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@9781965e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-14T18:50:49.741-05:00 DEBUG 51361 --- [microservicio-equipos] [nio-8084-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/equipos

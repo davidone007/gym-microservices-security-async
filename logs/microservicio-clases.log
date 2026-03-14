@@ -1,0 +1,115 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< co.analisys:microservicio-clases >------------------
+[INFO] Building microservicio-clases 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ microservicio-clases >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ microservicio-clases ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ microservicio-clases ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-clases ---
+[INFO] skip non existing resourceDirectory /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-clases/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ microservicio-clases ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.2:run (default-cli) < test-compile @ microservicio-clases <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.2:run (default-cli) @ microservicio-clases ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-03-14T18:50:16.681-05:00  INFO 51339 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : Starting ClasesApplication using Java 17.0.9 with PID 51339 (/Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-clases/target/classes started by davidef in /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-clases)
+2026-03-14T18:50:16.689-05:00  INFO 51339 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-14T18:50:18.794-05:00  INFO 51339 --- [microservicio-clases] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14T18:50:18.921-05:00  INFO 51339 --- [microservicio-clases] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interface.
+2026-03-14T18:50:19.933-05:00  INFO 51339 --- [microservicio-clases] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-14T18:50:19.948-05:00  INFO 51339 --- [microservicio-clases] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-14T18:50:19.949-05:00  INFO 51339 --- [microservicio-clases] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-14T18:50:20.043-05:00  INFO 51339 --- [microservicio-clases] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-14T18:50:20.045-05:00  INFO 51339 --- [microservicio-clases] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3281 ms
+2026-03-14T18:50:20.102-05:00  INFO 51339 --- [microservicio-clases] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-14T18:50:20.451-05:00  INFO 51339 --- [microservicio-clases] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:clasesdb user=SA
+2026-03-14T18:50:20.453-05:00  INFO 51339 --- [microservicio-clases] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-14T18:50:20.472-05:00  INFO 51339 --- [microservicio-clases] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:clasesdb'
+2026-03-14T18:50:20.721-05:00  INFO 51339 --- [microservicio-clases] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14T18:50:20.824-05:00  INFO 51339 --- [microservicio-clases] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-14T18:50:20.878-05:00  INFO 51339 --- [microservicio-clases] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-14T18:50:21.281-05:00  INFO 51339 --- [microservicio-clases] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14T18:50:22.870-05:00  INFO 51339 --- [microservicio-clases] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14T18:50:22.952-05:00  INFO 51339 --- [microservicio-clases] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14T18:50:23.545-05:00  WARN 51339 --- [microservicio-clases] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14T18:50:23.588-05:00 DEBUG 51339 --- [microservicio-clases] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-14T18:50:24.075-05:00 DEBUG 51339 --- [microservicio-clases] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-14T18:50:24.475-05:00  INFO 51339 --- [microservicio-clases] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-03-14T18:50:24.491-05:00  INFO 51339 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : Started ClasesApplication in 8.639 seconds (process running for 10.119)
+Datos de clases cargados exitosamente.
+2026-03-14T18:50:32.131-05:00  INFO 51339 --- [microservicio-clases] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-14T18:50:32.132-05:00  INFO 51339 --- [microservicio-clases] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-14T18:50:32.133-05:00  INFO 51339 --- [microservicio-clases] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-14T18:50:32.150-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2026-03-14T18:50:32.163-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2026-03-14T18:50:32.194-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:32.222-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
+2026-03-14T18:50:32.222-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
+2026-03-14T18:50:32.224-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2026-03-14T18:50:32.224-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
+2026-03-14T18:50:32.225-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
+2026-03-14T18:50:32.225-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2026-03-14T18:50:32.223-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-03-14T18:50:32.226-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2026-03-14T18:50:32.227-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2026-03-14T18:50:32.225-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2026-03-14T18:50:32.230-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:32.233-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:32.237-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:32.263-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:32.274-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:32.401-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2026-03-14T18:50:32.402-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2026-03-14T18:50:32.403-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
+2026-03-14T18:50:32.404-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
+2026-03-14T18:50:32.406-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:32.432-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:32.441-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2026-03-14T18:50:32.442-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2026-03-14T18:50:32.940-05:00  INFO 51339 --- [microservicio-clases] [nio-8082-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 487 ms
+2026-03-14T18:50:32.958-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-14T18:50:48.630-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/clases
+2026-03-14T18:50:48.742-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-1] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-14T18:50:48.742-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-1] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@c1e311e9, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_TRAINER, SCOPE_email, SCOPE_profile]]
+2026-03-14T18:50:48.743-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/clases
+2026-03-14T18:50:49.160-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/clases
+2026-03-14T18:50:49.164-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-14T18:50:49.164-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@c1e311e9, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_TRAINER, SCOPE_email, SCOPE_profile]]
+2026-03-14T18:50:49.164-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/clases
+2026-03-14T18:50:49.196-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public co.analisys.clases.model.Clase co.analisys.clases.controller.ClaseController.programar(co.analisys.clases.model.Clase); target is of class [co.analisys.clases.controller.ClaseController]
+2026-03-14T18:50:49.206-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-3] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public co.analisys.clases.model.Clase co.analisys.clases.controller.ClaseController.programar(co.analisys.clases.model.Clase); target is of class [co.analisys.clases.controller.ClaseController]
+2026-03-14T18:50:49.476-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/clases
+2026-03-14T18:50:49.477-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Failed to authenticate since the JWT was invalid
+2026-03-14T18:50:49.593-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/clases
+2026-03-14T18:50:49.595-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-14T18:50:49.596-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fd67702b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
+2026-03-14T18:50:49.596-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/clases
+2026-03-14T18:50:49.598-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public co.analisys.clases.model.Clase co.analisys.clases.controller.ClaseController.programar(co.analisys.clases.model.Clase); target is of class [co.analisys.clases.controller.ClaseController]
+2026-03-14T18:50:49.600-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-5] horizationManagerBeforeMethodInterceptor : Failed to authorize ReflectiveMethodInvocation: public co.analisys.clases.model.Clase co.analisys.clases.controller.ClaseController.programar(co.analisys.clases.model.Clase); target is of class [co.analisys.clases.controller.ClaseController] with authorization manager org.springframework.security.config.annotation.method.configuration.DeferringObservationAuthorizationManager@71dd8dc8 and decision ExpressionAuthorizationDecision [granted=false, expressionAttribute=hasAnyRole('ADMIN', 'TRAINER')]
+2026-03-14T18:50:49.755-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/clases
+2026-03-14T18:50:49.758-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-4] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-14T18:50:49.758-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-4] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@9781965e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-14T18:50:49.758-05:00 DEBUG 51339 --- [microservicio-clases] [nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/clases
