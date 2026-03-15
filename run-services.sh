@@ -11,7 +11,7 @@ echo "✅ Asegurando permisos de ejecución en los wrappers de Maven (mvnw)..."
 # Hacer ejecutable el mvnw raíz y los mvnw dentro de los microservicios
 [[ -f "${ROOT_DIR}/mvnw" ]] && chmod +x "${ROOT_DIR}/mvnw"
 
-MICROSERVICIOS=(microservicio-clases microservicio-entrenadores microservicio-equipos microservicio-miembros)
+MICROSERVICIOS=(microservicio-clases microservicio-entrenadores microservicio-equipos microservicio-miembros microservicio-pagos)
 for s in "${MICROSERVICIOS[@]}"; do
   [[ -f "${ROOT_DIR}/${s}/mvnw" ]] && chmod +x "${ROOT_DIR}/${s}/mvnw"
 done
@@ -42,6 +42,18 @@ docker run -d \
   -v "${KEYCLOAK_VOLUME_NAME}:/opt/keycloak/data" \
   -v "${ROOT_DIR}/keycloak:/opt/keycloak/data/import" \
   "${KEYCLOAK_IMAGE}" start-dev --import-realm
+
+RABBITMQ_CONTAINER_NAME="rabbitmq"
+echo "🛑 Eliminando contenedor previo de RabbitMQ si existe..."
+if docker ps -a --format '{{.Names}}' | grep -q "^${RABBITMQ_CONTAINER_NAME}$"; then
+  docker rm -f "${RABBITMQ_CONTAINER_NAME}" >/dev/null 2>&1 || true
+fi
+
+echo "🚀 Iniciando RabbitMQ..."
+docker run -d \
+  --name "${RABBITMQ_CONTAINER_NAME}" \
+  -p 5672:5672 -p 15672:15672 \
+  rabbitmq:3.13-management
 
 # Esperar que Keycloak esté disponible
 if ! command -v curl >/dev/null 2>&1; then
@@ -89,7 +101,8 @@ APPS=( "gimnasio:." \
        "microservicio-clases:microservicio-clases" \
        "microservicio-entrenadores:microservicio-entrenadores" \
        "microservicio-equipos:microservicio-equipos" \
-       "microservicio-miembros:microservicio-miembros" )
+      "microservicio-miembros:microservicio-miembros" \
+      "microservicio-pagos:microservicio-pagos" )
 
 for app in "${APPS[@]}"; do
   IFS=":" read -r name dir <<< "$app"

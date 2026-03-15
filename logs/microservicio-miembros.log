@@ -1,3 +1,4 @@
+nohup: ignoring input
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] -----------------< co.analisys:microservicio-miembros >-----------------
@@ -8,14 +9,17 @@
 [INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ microservicio-miembros >>>
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ microservicio-miembros ---
-[INFO] Copying 1 resource from src/main/resources to target/classes
-[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
 [INFO] 
 [INFO] --- compiler:3.13.0:compile (default-compile) @ microservicio-miembros ---
-[INFO] Nothing to compile - all classes are up to date.
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 19 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Universidad/Semestre IX/Microservicios/gym-microservices-security-async/microservicio-miembros/src/main/java/co/analisys/miembros/listener/ClasesHorarioListener.java: C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros\src\main\java\co\analisys\miembros\listener\ClasesHorarioListener.java uses unchecked or unsafe operations.
+[INFO] /C:/Universidad/Semestre IX/Microservicios/gym-microservices-security-async/microservicio-miembros/src/main/java/co/analisys/miembros/listener/ClasesHorarioListener.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-miembros ---
-[INFO] skip non existing resourceDirectory /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-miembros/src/test/resources
+[INFO] skip non existing resourceDirectory C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ microservicio-miembros ---
 [INFO] No sources to compile
@@ -35,94 +39,41 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2026-03-14T18:50:16.984-05:00  INFO 51363 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Starting MiembrosApplication using Java 17.0.9 with PID 51363 (/Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-miembros/target/classes started by davidef in /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-miembros)
-2026-03-14T18:50:16.991-05:00  INFO 51363 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-03-14T18:50:18.903-05:00  INFO 51363 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-14T18:50:19.022-05:00  INFO 51363 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
-2026-03-14T18:50:19.999-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-03-14T18:50:20.018-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-14T18:50:20.019-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2026-03-14T18:50:20.111-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-14T18:50:20.114-05:00  INFO 51363 --- [microservicio-miembros] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3044 ms
-2026-03-14T18:50:20.175-05:00  INFO 51363 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-14T18:50:20.533-05:00  INFO 51363 --- [microservicio-miembros] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:miembrosdb user=SA
-2026-03-14T18:50:20.537-05:00  INFO 51363 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-14T18:50:20.557-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:miembrosdb'
-2026-03-14T18:50:20.802-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-14T18:50:20.886-05:00  INFO 51363 --- [microservicio-miembros] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-14T18:50:20.936-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-14T18:50:21.378-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-14T18:50:22.839-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-14T18:50:22.914-05:00  INFO 51363 --- [microservicio-miembros] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-14T18:50:23.497-05:00  WARN 51363 --- [microservicio-miembros] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-14T18:50:23.531-05:00 DEBUG 51363 --- [microservicio-miembros] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-03-14T18:50:24.061-05:00 DEBUG 51363 --- [microservicio-miembros] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-03-14T18:50:24.470-05:00  INFO 51363 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-03-14T18:50:24.485-05:00  INFO 51363 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Started MiembrosApplication in 8.408 seconds (process running for 9.472)
+2026-03-15T17:51:59.399-05:00  INFO 19232 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Starting MiembrosApplication using Java 17.0.11 with PID 19232 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros)
+2026-03-15T17:51:59.405-05:00  INFO 19232 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T17:52:01.321-05:00  INFO 19232 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15T17:52:01.438-05:00  INFO 19232 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
+2026-03-15T17:52:02.974-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-03-15T17:52:02.999-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-15T17:52:02.999-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-15T17:52:03.169-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-15T17:52:03.171-05:00  INFO 19232 --- [microservicio-miembros] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3670 ms
+2026-03-15T17:52:03.256-05:00  INFO 19232 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-15T17:52:03.682-05:00  INFO 19232 --- [microservicio-miembros] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:miembrosdb user=SA
+2026-03-15T17:52:03.685-05:00  INFO 19232 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-15T17:52:03.708-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:miembrosdb'
+2026-03-15T17:52:03.995-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-15T17:52:04.132-05:00  INFO 19232 --- [microservicio-miembros] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-15T17:52:04.210-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-15T17:52:04.821-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15T17:52:06.744-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15T17:52:06.861-05:00  INFO 19232 --- [microservicio-miembros] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T17:52:08.253-05:00  WARN 19232 --- [microservicio-miembros] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15T17:52:08.304-05:00 DEBUG 19232 --- [microservicio-miembros] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-15T17:52:09.062-05:00 DEBUG 19232 --- [microservicio-miembros] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-15T17:52:09.877-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-03-15T17:52:09.883-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-15T17:52:09.987-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#261b27db:0/SimpleConnection@13a35d3b [delegate=amqp://guest@127.0.0.1:5672/, localPort=9053]
+2026-03-15T17:52:10.136-05:00  INFO 19232 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Started MiembrosApplication in 11.519 seconds (process running for 12.258)
 Datos de miembros cargados exitosamente.
-2026-03-14T18:50:29.071-05:00  INFO 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-14T18:50:29.072-05:00  INFO 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-14T18:50:29.074-05:00  INFO 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-03-14T18:50:29.101-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
-2026-03-14T18:50:29.116-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
-2026-03-14T18:50:29.185-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:29.223-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
-2026-03-14T18:50:29.224-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
-2026-03-14T18:50:29.232-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
-2026-03-14T18:50:29.233-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
-2026-03-14T18:50:29.233-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
-2026-03-14T18:50:29.233-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
-2026-03-14T18:50:29.234-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
-2026-03-14T18:50:29.234-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
-2026-03-14T18:50:29.234-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
-2026-03-14T18:50:29.234-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:29.234-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
-2026-03-14T18:50:29.237-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:29.252-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:29.274-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:29.295-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:29.446-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
-2026-03-14T18:50:29.447-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
-2026-03-14T18:50:29.457-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
-2026-03-14T18:50:29.458-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
-2026-03-14T18:50:29.463-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:29.487-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:29.500-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
-2026-03-14T18:50:29.501-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
-2026-03-14T18:50:30.253-05:00  INFO 51363 --- [microservicio-miembros] [nio-8081-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 732 ms
-2026-03-14T18:50:30.276-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:47.827-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/miembros
-2026-03-14T18:50:48.018-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:48.019-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-1] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@9781965e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-14T18:50:48.019-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/miembros
-2026-03-14T18:50:48.129-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/miembros
-2026-03-14T18:50:48.132-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:48.132-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@c1e311e9, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_TRAINER, SCOPE_email, SCOPE_profile]]
-2026-03-14T18:50:48.132-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/miembros
-2026-03-14T18:50:48.148-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/miembros
-2026-03-14T18:50:48.150-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-3] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:48.151-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-3] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fd67702b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
-2026-03-14T18:50:48.151-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/miembros
-2026-03-14T18:50:48.870-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros
-2026-03-14T18:50:48.872-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:48.872-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@9781965e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-14T18:50:48.873-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros
-2026-03-14T18:50:48.905-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public co.analisys.miembros.model.Miembro co.analisys.miembros.controller.MiembroController.crear(co.analisys.miembros.model.Miembro); target is of class [co.analisys.miembros.controller.MiembroController]
-2026-03-14T18:50:48.913-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-5] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public co.analisys.miembros.model.Miembro co.analisys.miembros.controller.MiembroController.crear(co.analisys.miembros.model.Miembro); target is of class [co.analisys.miembros.controller.MiembroController]
-2026-03-14T18:50:49.410-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/miembros
-2026-03-14T18:50:49.410-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:49.431-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-6] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8081/api/miembros?continue to session
-2026-03-14T18:50:49.494-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros
-2026-03-14T18:50:49.498-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:49.498-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fd67702b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07102D5FB75E859025B321464E496540], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
-2026-03-14T18:50:49.499-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros
-2026-03-14T18:50:49.500-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public co.analisys.miembros.model.Miembro co.analisys.miembros.controller.MiembroController.crear(co.analisys.miembros.model.Miembro); target is of class [co.analisys.miembros.controller.MiembroController]
-2026-03-14T18:50:49.502-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-4] horizationManagerBeforeMethodInterceptor : Failed to authorize ReflectiveMethodInvocation: public co.analisys.miembros.model.Miembro co.analisys.miembros.controller.MiembroController.crear(co.analisys.miembros.model.Miembro); target is of class [co.analisys.miembros.controller.MiembroController] with authorization manager org.springframework.security.config.annotation.method.configuration.DeferringObservationAuthorizationManager@25758bd7 and decision ExpressionAuthorizationDecision [granted=false, expressionAttribute=hasRole('ADMIN')]
-2026-03-14T18:50:49.682-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/miembros
-2026-03-14T18:50:49.684-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-8] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:49.684-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-8] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fd67702b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07102D5FB75E859025B321464E496540], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
-2026-03-14T18:50:49.685-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/miembros
-2026-03-14T18:50:49.699-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/miembros
-2026-03-14T18:50:49.702-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-7] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:49.702-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-7] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@9781965e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=07102D5FB75E859025B321464E496540], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-14T18:50:49.702-05:00 DEBUG 51363 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/miembros
+2026-03-15T17:52:28.255-05:00  INFO 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-15T17:52:28.255-05:00  INFO 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-15T17:52:28.257-05:00  INFO 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-15T17:52:28.285-05:00 DEBUG 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/miembros/1/existe
+2026-03-15T17:52:28.463-05:00 DEBUG 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-15T17:52:28.464-05:00 DEBUG 19232 --- [microservicio-miembros] [nio-8081-exec-1] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@6d5a0df8, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-15T17:52:28.470-05:00 DEBUG 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/miembros/1/existe
+[miembros] Notificación de inscripción recibida: {claseId=1, miembroId=1}
+[miembros] Enviando email de confirmación a 1 para la clase 1
+[miembros] Notificación de cambio de horario recibida: {claseId=1, entrenadorId=1, nuevoHorario=[2026, 10, 10, 10, 0]}
+[miembros] Simulando notificación masiva de cambio de horario para la clase 1 a 2026-10-10 10:00

@@ -1,367 +1,667 @@
 {
-  "info": {
-    "name": "Gimnasio - Pruebas de Seguridad JWT",
-    "description": "Colección para demostrar:\n- Acceso con tokens JWT válidos (admin, trainer, member)\n- Comportamiento con tokens inválidos o sin token (401)\n- Autorización por roles (403 cuando el rol no tiene permiso)\n\nRequisitos: Keycloak en http://localhost:8180 con realm gimnasio importado; microservicios en 8081 (miembros), 8082 (clases), 8083 (entrenadores), 8084 (equipos).",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-  },
-  "variable": [
-    { "key": "keycloak_url", "value": "http://localhost:8180" },
-    { "key": "realm", "value": "gimnasio" },
-    { "key": "client_id", "value": "gym-backend" },
-    { "key": "client_secret", "value": "g7nM2pQ5rT8vX1yB4cF0hJ3kL6nP9sU" },
-    { "key": "miembros_url", "value": "http://localhost:8081" },
-    { "key": "entrenadores_url", "value": "http://localhost:8083" },
-    { "key": "equipos_url", "value": "http://localhost:8084" },
-    { "key": "clases_url", "value": "http://localhost:8082" },
-    { "key": "token_admin", "value": "" },
-    { "key": "token_trainer", "value": "" },
-    { "key": "token_member", "value": "" }
-  ],
-  "item": [
-    {
-      "name": "0 - Keycloak - Obtener tokens",
-      "description": "Obtener JWT para cada rol. Ejecutar estos requests primero; los scripts guardan el access_token en variables de colección.",
-      "item": [
-        {
-          "name": "Token ADMIN (admin / admin123)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "var json = pm.response.json();",
-                  "if (json.access_token) {",
-                  "    pm.collectionVariables.set('token_admin', json.access_token);",
-                  "    pm.test('Token guardado en token_admin', function () { pm.expect(json.access_token).to.be.a('string'); });",
-                  "} else {",
-                  "    pm.test('Error: no access_token', function () { pm.expect.fail('Respuesta sin access_token'); });",
-                  "}"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [{ "key": "Content-Type", "value": "application/x-www-form-urlencoded" }],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                { "key": "username", "value": "admin" },
-                { "key": "password", "value": "admin123" },
-                { "key": "grant_type", "value": "password" },
-                { "key": "client_id", "value": "{{client_id}}" },
-                { "key": "client_secret", "value": "{{client_secret}}" }
-              ]
-            },
-            "url": "{{keycloak_url}}/realms/{{realm}}/protocol/openid-connect/token",
-            "description": "Obtiene un JWT con rol ROLE_ADMIN. El token se guarda en la variable de colección token_admin."
-          }
-        },
-        {
-          "name": "Token TRAINER (trainer / trainer123)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "var json = pm.response.json();",
-                  "if (json.access_token) {",
-                  "    pm.collectionVariables.set('token_trainer', json.access_token);",
-                  "    pm.test('Token guardado en token_trainer', function () { pm.expect(json.access_token).to.be.a('string'); });",
-                  "} else {",
-                  "    pm.test('Error: no access_token', function () { pm.expect.fail('Respuesta sin access_token'); });",
-                  "}"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [{ "key": "Content-Type", "value": "application/x-www-form-urlencoded" }],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                { "key": "username", "value": "trainer" },
-                { "key": "password", "value": "trainer123" },
-                { "key": "grant_type", "value": "password" },
-                { "key": "client_id", "value": "{{client_id}}" },
-                { "key": "client_secret", "value": "{{client_secret}}" }
-              ]
-            },
-            "url": "{{keycloak_url}}/realms/{{realm}}/protocol/openid-connect/token",
-            "description": "Obtiene un JWT con rol ROLE_TRAINER. Se guarda en token_trainer."
-          }
-        },
-        {
-          "name": "Token MEMBER (member / member123)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "var json = pm.response.json();",
-                  "if (json.access_token) {",
-                  "    pm.collectionVariables.set('token_member', json.access_token);",
-                  "    pm.test('Token guardado en token_member', function () { pm.expect(json.access_token).to.be.a('string'); });",
-                  "} else {",
-                  "    pm.test('Error: no access_token', function () { pm.expect.fail('Respuesta sin access_token'); });",
-                  "}"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [{ "key": "Content-Type", "value": "application/x-www-form-urlencoded" }],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                { "key": "username", "value": "member" },
-                { "key": "password", "value": "member123" },
-                { "key": "grant_type", "value": "password" },
-                { "key": "client_id", "value": "{{client_id}}" },
-                { "key": "client_secret", "value": "{{client_secret}}" }
-              ]
-            },
-            "url": "{{keycloak_url}}/realms/{{realm}}/protocol/openid-connect/token",
-            "description": "Obtiene un JWT con rol ROLE_MEMBER. Se guarda en token_member."
-          }
-        }
-      ]
+    "info": {
+        "name": "Gimnasio - Pruebas de Seguridad JWT",
+        "description": "Colección para demostrar:\n- Acceso con tokens JWT válidos (admin, trainer, member)\n- Comportamiento con tokens inválidos o sin token (401)\n- Autorización por roles (403 cuando el rol no tiene permiso)\n\nRequisitos: Keycloak en http://localhost:8180 con realm gimnasio importado; microservicios en 8081 (miembros), 8082 (clases), 8083 (entrenadores), 8084 (equipos).",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
-    {
-      "name": "1 - Acceso con token válido",
-      "description": "Demostrar que con un JWT válido se obtienen respuestas 200 (o 201). Ejecutar después de obtener los tokens.",
-      "item": [
+    "variable": [
         {
-          "name": "Miembros - Listar (token ADMIN)",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }],
-            "url": "{{miembros_url}}/api/miembros",
-            "description": "Esperado: 200 y lista (puede estar vacía). Demuestra acceso autenticado."
-          }
+            "key": "keycloak_url",
+            "value": "http://localhost:8180"
         },
         {
-          "name": "Miembros - Listar (token TRAINER)",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{token_trainer}}" }],
-            "url": "{{miembros_url}}/api/miembros",
-            "description": "Esperado: 200. Cualquier rol autenticado puede consultar."
-          }
+            "key": "realm",
+            "value": "gimnasio"
         },
         {
-          "name": "Miembros - Listar (token MEMBER)",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{token_member}}" }],
-            "url": "{{miembros_url}}/api/miembros",
-            "description": "Esperado: 200. Miembro solo puede leer."
-          }
+            "key": "client_id",
+            "value": "gym-backend"
         },
         {
-          "name": "Entrenadores - Listar (token ADMIN)",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }],
-            "url": "{{entrenadores_url}}/api/entrenadores",
-            "description": "Esperado: 200."
-          }
+            "key": "client_secret",
+            "value": "g7nM2pQ5rT8vX1yB4cF0hJ3kL6nP9sU"
         },
         {
-          "name": "Equipos - Listar (token MEMBER)",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{token_member}}" }],
-            "url": "{{equipos_url}}/api/equipos",
-            "description": "Esperado: 200."
-          }
+            "key": "miembros_url",
+            "value": "http://localhost:8081"
         },
         {
-          "name": "Clases - Listar (token TRAINER)",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{token_trainer}}" }],
-            "url": "{{clases_url}}/api/clases",
-            "description": "Esperado: 200. TRAINER puede consultar clases."
-          }
+            "key": "entrenadores_url",
+            "value": "http://localhost:8083"
         },
         {
-          "name": "Miembros - Crear (token ADMIN) - 201",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Authorization", "value": "Bearer {{token_admin}}" },
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": { \"miembro_id\": \"m1\" },\n  \"nombre\": \"Postman Test\",\n  \"email\": { \"email\": \"postman@test.com\" },\n  \"fechaInscripcion\": \"2025-01-15\"\n}"
-            },
-            "url": "{{miembros_url}}/api/miembros",
-            "description": "Esperado: 200/201. Solo ADMIN puede crear miembros. Ajusta el id si ya existe."
-          }
+            "key": "equipos_url",
+            "value": "http://localhost:8084"
         },
         {
-          "name": "Clases - Programar (token TRAINER) - 200",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Authorization", "value": "Bearer {{token_trainer}}" },
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": { \"clase_id\": \"c-postman\" },\n  \"nombre\": \"Yoga\",\n  \"horario\": { \"horario\": \"2025-06-01T10:00:00\" },\n  \"capacidadMaxima\": 20\n}"
-            },
-            "url": "{{clases_url}}/api/clases",
-            "description": "Esperado: 200. TRAINER puede programar clases. Si la clase ya existe puede dar error de duplicado."
-          }
+            "key": "clases_url",
+            "value": "http://localhost:8082"
+        },
+        {
+            "key": "token_admin",
+            "value": ""
+        },
+        {
+            "key": "token_trainer",
+            "value": ""
+        },
+        {
+            "key": "token_member",
+            "value": ""
+        },
+        {
+            "key": "pagos_url",
+            "value": "http://localhost:8085"
         }
-      ]
-    },
-    {
-      "name": "2 - Token inválido o sin token (401)",
-      "description": "Demostrar que sin JWT o con JWT inválido/expirado el servidor responde 401 Unauthorized.",
-      "item": [
+    ],
+    "item": [
         {
-          "name": "Miembros - Sin header Authorization",
-          "request": {
-            "method": "GET",
-            "url": "{{miembros_url}}/api/miembros",
-            "description": "Esperado: 401. No se envía token."
-          }
+            "name": "0 - Keycloak - Obtener tokens",
+            "description": "Obtener JWT para cada rol. Ejecutar estos requests primero; los scripts guardan el access_token en variables de colección.",
+            "item": [
+                {
+                    "name": "Token ADMIN (admin / admin123)",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "var json = pm.response.json();",
+                                    "if (json.access_token) {",
+                                    "    pm.collectionVariables.set('token_admin', json.access_token);",
+                                    "    pm.test('Token guardado en token_admin', function () { pm.expect(json.access_token).to.be.a('string'); });",
+                                    "} else {",
+                                    "    pm.test('Error: no access_token', function () { pm.expect.fail('Respuesta sin access_token'); });",
+                                    "}"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "username",
+                                    "value": "admin"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "admin123"
+                                },
+                                {
+                                    "key": "grant_type",
+                                    "value": "password"
+                                },
+                                {
+                                    "key": "client_id",
+                                    "value": "{{client_id}}"
+                                },
+                                {
+                                    "key": "client_secret",
+                                    "value": "{{client_secret}}"
+                                }
+                            ]
+                        },
+                        "url": "{{keycloak_url}}/realms/{{realm}}/protocol/openid-connect/token",
+                        "description": "Obtiene un JWT con rol ROLE_ADMIN. El token se guarda en la variable de colección token_admin."
+                    }
+                },
+                {
+                    "name": "Token TRAINER (trainer / trainer123)",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "var json = pm.response.json();",
+                                    "if (json.access_token) {",
+                                    "    pm.collectionVariables.set('token_trainer', json.access_token);",
+                                    "    pm.test('Token guardado en token_trainer', function () { pm.expect(json.access_token).to.be.a('string'); });",
+                                    "} else {",
+                                    "    pm.test('Error: no access_token', function () { pm.expect.fail('Respuesta sin access_token'); });",
+                                    "}"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "username",
+                                    "value": "trainer"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "trainer123"
+                                },
+                                {
+                                    "key": "grant_type",
+                                    "value": "password"
+                                },
+                                {
+                                    "key": "client_id",
+                                    "value": "{{client_id}}"
+                                },
+                                {
+                                    "key": "client_secret",
+                                    "value": "{{client_secret}}"
+                                }
+                            ]
+                        },
+                        "url": "{{keycloak_url}}/realms/{{realm}}/protocol/openid-connect/token",
+                        "description": "Obtiene un JWT con rol ROLE_TRAINER. Se guarda en token_trainer."
+                    }
+                },
+                {
+                    "name": "Token MEMBER (member / member123)",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "var json = pm.response.json();",
+                                    "if (json.access_token) {",
+                                    "    pm.collectionVariables.set('token_member', json.access_token);",
+                                    "    pm.test('Token guardado en token_member', function () { pm.expect(json.access_token).to.be.a('string'); });",
+                                    "} else {",
+                                    "    pm.test('Error: no access_token', function () { pm.expect.fail('Respuesta sin access_token'); });",
+                                    "}"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/x-www-form-urlencoded"
+                            }
+                        ],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "username",
+                                    "value": "member"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "member123"
+                                },
+                                {
+                                    "key": "grant_type",
+                                    "value": "password"
+                                },
+                                {
+                                    "key": "client_id",
+                                    "value": "{{client_id}}"
+                                },
+                                {
+                                    "key": "client_secret",
+                                    "value": "{{client_secret}}"
+                                }
+                            ]
+                        },
+                        "url": "{{keycloak_url}}/realms/{{realm}}/protocol/openid-connect/token",
+                        "description": "Obtiene un JWT con rol ROLE_MEMBER. Se guarda en token_member."
+                    }
+                }
+            ]
         },
         {
-          "name": "Entrenadores - Bearer vacío",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer " }],
-            "url": "{{entrenadores_url}}/api/entrenadores",
-            "description": "Esperado: 401."
-          }
+            "name": "1 - Acceso con token válido",
+            "description": "Demostrar que con un JWT válido se obtienen respuestas 200 (o 201). Ejecutar después de obtener los tokens.",
+            "item": [
+                {
+                    "name": "Miembros - Listar (token ADMIN)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_admin}}"
+                            }
+                        ],
+                        "url": "{{miembros_url}}/api/miembros",
+                        "description": "Esperado: 200 y lista (puede estar vacía). Demuestra acceso autenticado."
+                    }
+                },
+                {
+                    "name": "Miembros - Listar (token TRAINER)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_trainer}}"
+                            }
+                        ],
+                        "url": "{{miembros_url}}/api/miembros",
+                        "description": "Esperado: 200. Cualquier rol autenticado puede consultar."
+                    }
+                },
+                {
+                    "name": "Miembros - Listar (token MEMBER)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            }
+                        ],
+                        "url": "{{miembros_url}}/api/miembros",
+                        "description": "Esperado: 200. Miembro solo puede leer."
+                    }
+                },
+                {
+                    "name": "Entrenadores - Listar (token ADMIN)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_admin}}"
+                            }
+                        ],
+                        "url": "{{entrenadores_url}}/api/entrenadores",
+                        "description": "Esperado: 200."
+                    }
+                },
+                {
+                    "name": "Equipos - Listar (token MEMBER)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            }
+                        ],
+                        "url": "{{equipos_url}}/api/equipos",
+                        "description": "Esperado: 200."
+                    }
+                },
+                {
+                    "name": "Clases - Listar (token TRAINER)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_trainer}}"
+                            }
+                        ],
+                        "url": "{{clases_url}}/api/clases",
+                        "description": "Esperado: 200. TRAINER puede consultar clases."
+                    }
+                },
+                {
+                    "name": "Miembros - Crear (token ADMIN) - 201",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_admin}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"id\": { \"miembro_id\": \"m1\" },\n  \"nombre\": \"Postman Test\",\n  \"email\": { \"email\": \"postman@test.com\" },\n  \"fechaInscripcion\": \"2025-01-15\"\n}"
+                        },
+                        "url": "{{miembros_url}}/api/miembros",
+                        "description": "Esperado: 200/201. Solo ADMIN puede crear miembros. Ajusta el id si ya existe."
+                    }
+                },
+                {
+                    "name": "Clases - Programar (token TRAINER) - 200",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_trainer}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"id\": { \"clase_id\": \"c-postman\" },\n  \"nombre\": \"Yoga\",\n  \"horario\": { \"horario\": \"2025-06-01T10:00:00\" },\n  \"capacidadMaxima\": 20\n}"
+                        },
+                        "url": "{{clases_url}}/api/clases",
+                        "description": "Esperado: 200. TRAINER puede programar clases. Si la clase ya existe puede dar error de duplicado."
+                    }
+                }
+            ]
         },
         {
-          "name": "Equipos - Token inválido (string falsa)",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer token-invalido-xyz" }],
-            "url": "{{equipos_url}}/api/equipos",
-            "description": "Esperado: 401. El servidor rechaza el JWT inválido."
-          }
+            "name": "2 - Token inválido o sin token (401)",
+            "description": "Demostrar que sin JWT o con JWT inválido/expirado el servidor responde 401 Unauthorized.",
+            "item": [
+                {
+                    "name": "Miembros - Sin header Authorization",
+                    "request": {
+                        "method": "GET",
+                        "url": "{{miembros_url}}/api/miembros",
+                        "description": "Esperado: 401. No se envía token."
+                    }
+                },
+                {
+                    "name": "Entrenadores - Bearer vacío",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer "
+                            }
+                        ],
+                        "url": "{{entrenadores_url}}/api/entrenadores",
+                        "description": "Esperado: 401."
+                    }
+                },
+                {
+                    "name": "Equipos - Token inválido (string falsa)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer token-invalido-xyz"
+                            }
+                        ],
+                        "url": "{{equipos_url}}/api/equipos",
+                        "description": "Esperado: 401. El servidor rechaza el JWT inválido."
+                    }
+                },
+                {
+                    "name": "Clases - Token malformado",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.invalid.signature"
+                            }
+                        ],
+                        "url": "{{clases_url}}/api/clases",
+                        "description": "Esperado: 401. Firma o payload inválido."
+                    }
+                }
+            ]
         },
         {
-          "name": "Clases - Token malformado",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.invalid.signature" }],
-            "url": "{{clases_url}}/api/clases",
-            "description": "Esperado: 401. Firma o payload inválido."
-          }
+            "name": "3 - Autorización por roles (403)",
+            "description": "Demostrar que cuando el rol no tiene permiso para la acción, el servidor responde 403 Forbidden.",
+            "item": [
+                {
+                    "name": "POST Miembro - con token MEMBER → 403",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"id\": { \"miembro_id\": \"m-no-permitido\" },\n  \"nombre\": \"No Permitido\",\n  \"email\": { \"email\": \"nope@test.com\" },\n  \"fechaInscripcion\": \"2025-01-01\"\n}"
+                        },
+                        "url": "{{miembros_url}}/api/miembros",
+                        "description": "Esperado: 403. MEMBER no puede crear miembros (solo ADMIN)."
+                    }
+                },
+                {
+                    "name": "POST Entrenador - con token TRAINER → 403",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_trainer}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"id\": { \"entrenador_id\": \"e1\" },\n  \"nombre\": \"Entrenador\",\n  \"especialidad\": { \"especialidad\": \"Fitness\" }\n}"
+                        },
+                        "url": "{{entrenadores_url}}/api/entrenadores",
+                        "description": "Esperado: 403. TRAINER no puede crear entrenadores (solo ADMIN)."
+                    }
+                },
+                {
+                    "name": "DELETE Entrenador - con token MEMBER → 403",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            }
+                        ],
+                        "url": "{{entrenadores_url}}/api/entrenadores/e1",
+                        "description": "Esperado: 403 (o 404 si no existe e1). MEMBER no puede eliminar."
+                    }
+                },
+                {
+                    "name": "POST Clase - con token MEMBER → 403",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"id\": { \"clase_id\": \"c-member\" },\n  \"nombre\": \"Pilates\",\n  \"horario\": { \"horario\": \"2025-06-01T11:00:00\" },\n  \"capacidadMaxima\": 15\n}"
+                        },
+                        "url": "{{clases_url}}/api/clases",
+                        "description": "Esperado: 403. MEMBER no puede programar clases (solo ADMIN o TRAINER)."
+                    }
+                },
+                {
+                    "name": "POST Equipo - con token MEMBER → 403",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"id\": { \"equipo_id\": \"eq1\" },\n  \"nombre\": \"Mancuernas\",\n  \"descripcion\": { \"descripcion\": \"Set 5kg\" },\n  \"cantidad\": 10\n}"
+                        },
+                        "url": "{{equipos_url}}/api/equipos",
+                        "description": "Esperado: 403. MEMBER no puede crear equipos (solo ADMIN)."
+                    }
+                },
+                {
+                    "name": "GET Miembros - con token válido → 200 (éxito)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            }
+                        ],
+                        "url": "{{miembros_url}}/api/miembros",
+                        "description": "Comparación: el mismo token MEMBER que da 403 en POST sí puede hacer GET (200)."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "4 - Resumen por servicio (con token_admin)",
+            "description": "Un request por cada servicio con token ADMIN para verificar que todo responde correctamente.",
+            "item": [
+                {
+                    "name": "GET Miembros",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_admin}}"
+                            }
+                        ],
+                        "url": "{{miembros_url}}/api/miembros"
+                    }
+                },
+                {
+                    "name": "GET Entrenadores",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_admin}}"
+                            }
+                        ],
+                        "url": "{{entrenadores_url}}/api/entrenadores"
+                    }
+                },
+                {
+                    "name": "GET Equipos",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_admin}}"
+                            }
+                        ],
+                        "url": "{{equipos_url}}/api/equipos"
+                    }
+                },
+                {
+                    "name": "GET Clases",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_admin}}"
+                            }
+                        ],
+                        "url": "{{clases_url}}/api/clases"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "5 - Pruebas Asíncronas (RabbitMQ)",
+            "description": "Validar la comunicación asíncrona entre pagos y clases",
+            "item": [
+                {
+                    "name": "Crear Pago (POST)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"miembroId\": \"1\", \"claseId\": \"1\", \"amount\": 50}"
+                        },
+                        "url": "{{pagos_url}}/pagos",
+                        "description": "Envía un evento de pago exitoso vía RabbitMQ."
+                    }
+                },
+                {
+                    "name": "Verificar Clase (GET miembro agregado)",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_member}}"
+                            }
+                        ],
+                        "url": "{{clases_url}}/api/clases/1",
+                        "description": "Verifica si el miembro fue agregado a la clase luego del pago."
+                    }
+                },
+                {
+                    "name": "Cambio de Horario (PUT)",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token_admin}}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"horario\": \"2026-10-10T10:00:00\"}"
+                        },
+                        "url": "{{clases_url}}/api/clases/1/horario",
+                        "description": "Dispara un evento de cambio de horario en la clase."
+                    }
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "3 - Autorización por roles (403)",
-      "description": "Demostrar que cuando el rol no tiene permiso para la acción, el servidor responde 403 Forbidden.",
-      "item": [
-        {
-          "name": "POST Miembro - con token MEMBER → 403",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Authorization", "value": "Bearer {{token_member}}" },
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": { \"miembro_id\": \"m-no-permitido\" },\n  \"nombre\": \"No Permitido\",\n  \"email\": { \"email\": \"nope@test.com\" },\n  \"fechaInscripcion\": \"2025-01-01\"\n}"
-            },
-            "url": "{{miembros_url}}/api/miembros",
-            "description": "Esperado: 403. MEMBER no puede crear miembros (solo ADMIN)."
-          }
-        },
-        {
-          "name": "POST Entrenador - con token TRAINER → 403",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Authorization", "value": "Bearer {{token_trainer}}" },
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": { \"entrenador_id\": \"e1\" },\n  \"nombre\": \"Entrenador\",\n  \"especialidad\": { \"especialidad\": \"Fitness\" }\n}"
-            },
-            "url": "{{entrenadores_url}}/api/entrenadores",
-            "description": "Esperado: 403. TRAINER no puede crear entrenadores (solo ADMIN)."
-          }
-        },
-        {
-          "name": "DELETE Entrenador - con token MEMBER → 403",
-          "request": {
-            "method": "DELETE",
-            "header": [{ "key": "Authorization", "value": "Bearer {{token_member}}" }],
-            "url": "{{entrenadores_url}}/api/entrenadores/e1",
-            "description": "Esperado: 403 (o 404 si no existe e1). MEMBER no puede eliminar."
-          }
-        },
-        {
-          "name": "POST Clase - con token MEMBER → 403",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Authorization", "value": "Bearer {{token_member}}" },
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": { \"clase_id\": \"c-member\" },\n  \"nombre\": \"Pilates\",\n  \"horario\": { \"horario\": \"2025-06-01T11:00:00\" },\n  \"capacidadMaxima\": 15\n}"
-            },
-            "url": "{{clases_url}}/api/clases",
-            "description": "Esperado: 403. MEMBER no puede programar clases (solo ADMIN o TRAINER)."
-          }
-        },
-        {
-          "name": "POST Equipo - con token MEMBER → 403",
-          "request": {
-            "method": "POST",
-            "header": [
-              { "key": "Authorization", "value": "Bearer {{token_member}}" },
-              { "key": "Content-Type", "value": "application/json" }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": { \"equipo_id\": \"eq1\" },\n  \"nombre\": \"Mancuernas\",\n  \"descripcion\": { \"descripcion\": \"Set 5kg\" },\n  \"cantidad\": 10\n}"
-            },
-            "url": "{{equipos_url}}/api/equipos",
-            "description": "Esperado: 403. MEMBER no puede crear equipos (solo ADMIN)."
-          }
-        },
-        {
-          "name": "GET Miembros - con token válido → 200 (éxito)",
-          "request": {
-            "method": "GET",
-            "header": [{ "key": "Authorization", "value": "Bearer {{token_member}}" }],
-            "url": "{{miembros_url}}/api/miembros",
-            "description": "Comparación: el mismo token MEMBER que da 403 en POST sí puede hacer GET (200)."
-          }
-        }
-      ]
-    },
-    {
-      "name": "4 - Resumen por servicio (con token_admin)",
-      "description": "Un request por cada servicio con token ADMIN para verificar que todo responde correctamente.",
-      "item": [
-        { "name": "GET Miembros", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }], "url": "{{miembros_url}}/api/miembros" } },
-        { "name": "GET Entrenadores", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }], "url": "{{entrenadores_url}}/api/entrenadores" } },
-        { "name": "GET Equipos", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }], "url": "{{equipos_url}}/api/equipos" } },
-        { "name": "GET Clases", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token_admin}}" }], "url": "{{clases_url}}/api/clases" } }
-      ]
-    }
-  ]
+    ]
 }

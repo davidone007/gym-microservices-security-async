@@ -121,9 +121,19 @@ public class ClaseController {
         return claseService.listar();
     }
 
+    @Operation(summary = "Actualizar horario de una clase", description = "Requiere ADMIN o TRAINER.")
+    @PutMapping("/{id}/horario")
+    @PreAuthorize("hasAnyRole('ADMIN', 'TRAINER')")
+    public Clase actualizarHorario(
+            @Parameter(description = "ID de la clase") @PathVariable String id,
+            @Valid @RequestBody co.analisys.clases.model.Horario horario) {
+        return claseService.actualizarHorario(id, horario);
+    }
+
     @Operation(summary = "Verificar si un entrenador está referenciado en alguna clase")
     @GetMapping("/verificar/entrenador/{entrenadorId}")
-    public Map<String, Boolean> verificarEntrenador(@Parameter(description = "ID del entrenador") @PathVariable String entrenadorId) {
+    public Map<String, Boolean> verificarEntrenador(
+            @Parameter(description = "ID del entrenador") @PathVariable String entrenadorId) {
         Map<String, Boolean> response = new HashMap<>();
         response.put("referenciado", claseService.isEntrenadorReferenciado(entrenadorId));
         return response;
@@ -131,7 +141,8 @@ public class ClaseController {
 
     @Operation(summary = "Verificar si un equipo está referenciado en alguna clase")
     @GetMapping("/verificar/equipo/{equipoId}")
-    public Map<String, Boolean> verificarEquipo(@Parameter(description = "ID del equipo") @PathVariable String equipoId) {
+    public Map<String, Boolean> verificarEquipo(
+            @Parameter(description = "ID del equipo") @PathVariable String equipoId) {
         Map<String, Boolean> response = new HashMap<>();
         response.put("referenciado", claseService.isEquipoReferenciado(equipoId));
         return response;
@@ -139,7 +150,8 @@ public class ClaseController {
 
     @Operation(summary = "Verificar si un miembro está referenciado en alguna clase")
     @GetMapping("/verificar/miembro/{miembroId}")
-    public Map<String, Boolean> verificarMiembro(@Parameter(description = "ID del miembro") @PathVariable String miembroId) {
+    public Map<String, Boolean> verificarMiembro(
+            @Parameter(description = "ID del miembro") @PathVariable String miembroId) {
         Map<String, Boolean> response = new HashMap<>();
         response.put("referenciado", claseService.isMiembroReferenciado(miembroId));
         return response;

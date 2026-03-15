@@ -1,3 +1,4 @@
+nohup: ignoring input
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] ---------------< co.analisys:microservicio-entrenadores >---------------
@@ -8,15 +9,17 @@
 [INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ microservicio-entrenadores >>>
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ microservicio-entrenadores ---
-[INFO] Copying 1 resource from src/main/resources to target/classes
-[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
 [INFO] 
 [INFO] --- compiler:3.13.0:compile (default-compile) @ microservicio-entrenadores ---
 [INFO] Recompiling the module because of changed source code.
-[INFO] Compiling 15 source files with javac [debug parameters release 17] to target/classes
+[INFO] Compiling 18 source files with javac [debug parameters release 17] to target\classes
+[INFO] /C:/Universidad/Semestre IX/Microservicios/gym-microservices-security-async/microservicio-entrenadores/src/main/java/co/analisys/entrenadores/listener/ClasesHorarioListener.java: C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-entrenadores\src\main\java\co\analisys\entrenadores\listener\ClasesHorarioListener.java uses unchecked or unsafe operations.
+[INFO] /C:/Universidad/Semestre IX/Microservicios/gym-microservices-security-async/microservicio-entrenadores/src/main/java/co/analisys/entrenadores/listener/ClasesHorarioListener.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-entrenadores ---
-[INFO] skip non existing resourceDirectory /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-entrenadores/src/test/resources
+[INFO] skip non existing resourceDirectory C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-entrenadores\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ microservicio-entrenadores ---
 [INFO] No sources to compile
@@ -36,80 +39,34 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2026-03-14T18:50:20.498-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : Starting EntrenadoresApplication using Java 17.0.9 with PID 51421 (/Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-entrenadores/target/classes started by davidef in /Users/davidef/Desktop/Icesi/9 semestre/micro/Semana6/Semana7/gym-microservices-security-async/microservicio-entrenadores)
-2026-03-14T18:50:20.504-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : No active profile set, falling back to 1 default profile: "default"
-2026-03-14T18:50:21.837-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-14T18:50:21.919-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interface.
-2026-03-14T18:50:22.934-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
-2026-03-14T18:50:22.950-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-14T18:50:22.950-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2026-03-14T18:50:23.049-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-14T18:50:23.053-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2458 ms
-2026-03-14T18:50:23.116-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-14T18:50:23.395-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:entrenadoresdb user=SA
-2026-03-14T18:50:23.397-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-14T18:50:23.412-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:entrenadoresdb'
-2026-03-14T18:50:23.623-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-14T18:50:23.683-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-14T18:50:23.720-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-14T18:50:24.069-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-14T18:50:24.978-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-14T18:50:25.025-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-14T18:50:25.388-05:00  WARN 51421 --- [microservicio-entrenadores] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-14T18:50:25.408-05:00 DEBUG 51421 --- [microservicio-entrenadores] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-03-14T18:50:25.801-05:00 DEBUG 51421 --- [microservicio-entrenadores] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-03-14T18:50:26.163-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
-2026-03-14T18:50:26.174-05:00  INFO 51421 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : Started EntrenadoresApplication in 6.276 seconds (process running for 6.787)
+2026-03-15T17:51:59.077-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : Starting EntrenadoresApplication using Java 17.0.11 with PID 23800 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-entrenadores\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-entrenadores)
+2026-03-15T17:51:59.082-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T17:52:01.084-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-15T17:52:01.196-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-03-15T17:52:02.722-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-03-15T17:52:02.750-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-15T17:52:02.750-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-15T17:52:02.924-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-15T17:52:02.925-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3749 ms
+2026-03-15T17:52:03.010-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-15T17:52:03.443-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:entrenadoresdb user=SA
+2026-03-15T17:52:03.446-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-15T17:52:03.468-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:entrenadoresdb'
+2026-03-15T17:52:03.761-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-15T17:52:03.871-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-15T17:52:03.947-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-15T17:52:04.556-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-15T17:52:06.464-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-15T17:52:06.571-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-15T17:52:07.478-05:00  WARN 23800 --- [microservicio-entrenadores] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-15T17:52:07.529-05:00 DEBUG 23800 --- [microservicio-entrenadores] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-15T17:52:08.276-05:00 DEBUG 23800 --- [microservicio-entrenadores] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-15T17:52:09.405-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-03-15T17:52:09.412-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-15T17:52:09.518-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6e6ec9c:0/SimpleConnection@a8ef0c2 [delegate=amqp://guest@127.0.0.1:5672/, localPort=9052]
+2026-03-15T17:52:09.668-05:00  INFO 23800 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : Started EntrenadoresApplication in 11.322 seconds (process running for 12.179)
 Datos de entrenadores cargados exitosamente.
-2026-03-14T18:50:35.367-05:00  INFO 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-14T18:50:35.368-05:00  INFO 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-14T18:50:35.369-05:00  INFO 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-03-14T18:50:35.388-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
-2026-03-14T18:50:35.398-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
-2026-03-14T18:50:35.427-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:35.453-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
-2026-03-14T18:50:35.454-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
-2026-03-14T18:50:35.454-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
-2026-03-14T18:50:35.454-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
-2026-03-14T18:50:35.455-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
-2026-03-14T18:50:35.455-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
-2026-03-14T18:50:35.455-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
-2026-03-14T18:50:35.456-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
-2026-03-14T18:50:35.456-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
-2026-03-14T18:50:35.456-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
-2026-03-14T18:50:35.458-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:35.460-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:35.470-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:35.493-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:35.511-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:35.630-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
-2026-03-14T18:50:35.630-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
-2026-03-14T18:50:35.640-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
-2026-03-14T18:50:35.640-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
-2026-03-14T18:50:35.645-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:35.658-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:35.672-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
-2026-03-14T18:50:35.673-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
-2026-03-14T18:50:36.047-05:00  INFO 51421 --- [microservicio-entrenadores] [nio-8083-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 363 ms
-2026-03-14T18:50:36.068-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-03-14T18:50:48.168-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/entrenadores
-2026-03-14T18:50:48.293-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:48.294-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@9781965e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-14T18:50:48.294-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/entrenadores
-2026-03-14T18:50:49.443-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/entrenadores
-2026-03-14T18:50:49.519-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/entrenadores
-2026-03-14T18:50:49.522-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:49.523-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@c1e311e9, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_TRAINER, SCOPE_email, SCOPE_profile]]
-2026-03-14T18:50:49.523-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/entrenadores
-2026-03-14T18:50:49.549-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public co.analisys.entrenadores.model.Entrenador co.analisys.entrenadores.controller.EntrenadorController.crear(co.analisys.entrenadores.model.Entrenador); target is of class [co.analisys.entrenadores.controller.EntrenadorController]
-2026-03-14T18:50:49.561-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-2] horizationManagerBeforeMethodInterceptor : Failed to authorize ReflectiveMethodInvocation: public co.analisys.entrenadores.model.Entrenador co.analisys.entrenadores.controller.EntrenadorController.crear(co.analisys.entrenadores.model.Entrenador); target is of class [co.analisys.entrenadores.controller.EntrenadorController] with authorization manager org.springframework.security.config.annotation.method.configuration.DeferringObservationAuthorizationManager@2678d1f4 and decision ExpressionAuthorizationDecision [granted=false, expressionAttribute=hasRole('ADMIN')]
-2026-03-14T18:50:49.577-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] o.s.security.web.FilterChainProxy        : Securing DELETE /api/entrenadores/e1
-2026-03-14T18:50:49.579-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:49.579-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fd67702b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
-2026-03-14T18:50:49.579-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] o.s.security.web.FilterChainProxy        : Secured DELETE /api/entrenadores/e1
-2026-03-14T18:50:49.580-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public void co.analisys.entrenadores.controller.EntrenadorController.eliminar(java.lang.String); target is of class [co.analisys.entrenadores.controller.EntrenadorController]
-2026-03-14T18:50:49.581-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-5] horizationManagerBeforeMethodInterceptor : Failed to authorize ReflectiveMethodInvocation: public void co.analisys.entrenadores.controller.EntrenadorController.eliminar(java.lang.String); target is of class [co.analisys.entrenadores.controller.EntrenadorController] with authorization manager org.springframework.security.config.annotation.method.configuration.DeferringObservationAuthorizationManager@2678d1f4 and decision ExpressionAuthorizationDecision [granted=false, expressionAttribute=hasRole('ADMIN')]
-2026-03-14T18:50:49.718-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/entrenadores
-2026-03-14T18:50:49.721-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-4] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-14T18:50:49.721-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-4] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@9781965e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-14T18:50:49.721-05:00 DEBUG 51421 --- [microservicio-entrenadores] [nio-8083-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/entrenadores
+[entrenadores] Notificación de inscripción recibida: {claseId=1, miembroId=1}
+[entrenadores] Notificando al entrenador de la clase 1 sobre el nuevo miembro.
+[entrenadores] Notificación de cambio de horario recibida: {claseId=1, entrenadorId=1, nuevoHorario=[2026, 10, 10, 10, 0]}
+[entrenadores] Notificando al entrenador 1 cambio de horario de clase 1 a 2026-10-10 10:00

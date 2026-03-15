@@ -12,16 +12,20 @@ import co.analisys.clases.repository.ClaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.client.RestClientException;
 
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 @Service
 public class ClaseService {
 
     private final ClaseRepository claseRepository;
+    private final RabbitTemplate rabbitTemplate;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -35,8 +39,27 @@ public class ClaseService {
     @Value("${miembro.service.url}")
     private String miembroBaseUrl;
 
-    public ClaseService(ClaseRepository claseRepository) {
+    public ClaseService(ClaseRepository claseRepository, RabbitTemplate rabbitTemplate) {
         this.claseRepository = claseRepository;
+        this.rabbitTemplate = rabbitTemplate;
+    }
+
+    @Transactional
+    public Clase actualizarHorario(String claseId, co.analisys.clases.model.Horario nuevoHorario) {
+        Clase clase = claseRepository.findById(new ClaseId(claseId))
+                .orElseThrow(() -> new ResourceNotFoundException("Clase no encontrada: " + claseId));
+        clase.setHorario(nuevoHorario);
+        Clase claseActualizada = claseRepository.save(clase);
+
+        Map<String, Object> payload = new HashMap<>();
+        payload.put("claseId", claseId);
+        payload.put("nuevoHorario", nuevoHorario.getHorario());
+        payload.put("entrenadorId",
+                clase.getEntrenadorId() != null ? clase.getEntrenadorId().getEntrenador_id() : null);
+
+        rabbitTemplate.convertAndSend("clases-exchange", "clases.horario.actualizado", payload);
+
+        return claseActualizada;
     }
 
     public Clase programar(Clase clase) {
@@ -113,6 +136,7 @@ public class ClaseService {
         return claseRepository.save(clase);
     }
 
+    @Transactional
     public Clase agregarMiembro(String claseId, String miembroIdValue) {
         Clase clase = claseRepository.findById(new ClaseId(claseId))
                 .orElseThrow(() -> new ResourceNotFoundException("Clase no encontrada: " + claseId));

@@ -1,0 +1,53 @@
+nohup: ignoring input
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< co.analisys:microservicio-pagos >-------------------
+[INFO] Building microservicio-pagos 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ microservicio-pagos >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ microservicio-pagos ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ microservicio-pagos ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-pagos ---
+[INFO] skip non existing resourceDirectory C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-pagos\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ microservicio-pagos ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.2:run (default-cli) < test-compile @ microservicio-pagos <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.2:run (default-cli) @ microservicio-pagos ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-03-15T17:51:46.248-05:00  INFO 22628 --- [microservicio-pagos] [           main] c.a.pagos.MicroservicioPagosApplication  : Starting MicroservicioPagosApplication using Java 17.0.11 with PID 22628 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-pagos\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-pagos)
+2026-03-15T17:51:46.255-05:00  INFO 22628 --- [microservicio-pagos] [           main] c.a.pagos.MicroservicioPagosApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-15T17:51:49.594-05:00  INFO 22628 --- [microservicio-pagos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-03-15T17:51:49.633-05:00  INFO 22628 --- [microservicio-pagos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-15T17:51:49.635-05:00  INFO 22628 --- [microservicio-pagos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-15T17:51:50.038-05:00  INFO 22628 --- [microservicio-pagos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-15T17:51:50.044-05:00  INFO 22628 --- [microservicio-pagos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3665 ms
+2026-03-15T17:51:53.590-05:00  INFO 22628 --- [microservicio-pagos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-03-15T17:51:53.606-05:00  INFO 22628 --- [microservicio-pagos] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-15T17:51:54.200-05:00  INFO 22628 --- [microservicio-pagos] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#21da4b5f:0/SimpleConnection@681e913c [delegate=amqp://guest@127.0.0.1:5672/, localPort=7207]
+2026-03-15T17:51:54.473-05:00  INFO 22628 --- [microservicio-pagos] [           main] c.a.pagos.MicroservicioPagosApplication  : Started MicroservicioPagosApplication in 9.064 seconds (process running for 9.97)
+2026-03-15T17:52:16.007-05:00  INFO 22628 --- [microservicio-pagos] [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-15T17:52:16.008-05:00  INFO 22628 --- [microservicio-pagos] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-15T17:52:16.009-05:00  INFO 22628 --- [microservicio-pagos] [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Pago procesado y publicado: c4b668f9-4784-4c49-8633-e7237d54badf payload={amount=50.0, claseId=1, authToken=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICItRm11Z3VXS2lOOVZ1RnpDUHZIUWlzc2puZlhlQ19uQk1BVnJHMmdFUGYwIn0.eyJleHAiOjE3NzM2MTU0MTMsImlhdCI6MTc3MzYxNTExMywianRpIjoib25ydHJvOjQ4YTZmZGE5LTY0ODktNGY4MS1kN2FiLWZkMWI4YmM5NzA3NiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODE4MC9yZWFsbXMvZ2ltbmFzaW8iLCJzdWIiOiJlMzM5NjY4NC03NjNhLTQxZmQtYjc1OC0xOWVmNzNkNjEwYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJneW0tYmFja2VuZCIsInNpZCI6IkVFYWh2aEZCRHpSNzd6Nlh3d1RkU0ozYiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDg0IiwiaHR0cDovL2xvY2FsaG9zdDo4MDgzIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgyIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgxIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX0FETUlOIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJBZG1pbiBHaW1uYXNpbyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwiZ2l2ZW5fbmFtZSI6IkFkbWluIiwiZmFtaWx5X25hbWUiOiJHaW1uYXNpbyIsImVtYWlsIjoiYWRtaW5AZ2ltbmFzaW8ubG9jYWwifQ.oj8LJ18AxS7A2kjmTC43NsopVWI8lyD6Aye7Nf5_07RKcinwH3ixyWi3x_Vo0KVJqspvshloclJKvqRhgdjBzmRFdXi75ThwuTyfMU3vGcd73IUpP5VogL7BRbewy-wjAKQBz78B1dx2M0guKjwG8azukdqKUMtbcnLIqi-Bs7I5CUSIHkMyWtmF6X3T9tl0xsH5km3e0m1-8TmOsbm_pHbyOiKRrFS_O1vxqZbkz4r3fP3mdIoAGfykxy8-4QqoCwCccyxJzAdBGDFKaLYjIt3oywpO31Y7xSymZhp_w6oS5jJ6HzBj2UoqUv7YDrLlBcT0UgSkbOF9nHMjCWzhTw, miembroId=1, id=c4b668f9-4784-4c49-8633-e7237d54badf, timestamp=2026-03-15T22:52:27.933943600Z} headerPresent=true

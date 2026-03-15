@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Script para detener los microservicios iniciados con run-services.sh
+# Script para detener los microservicios en Windows (Git Bash)
 # Uso: ./stop-services.sh [--keycloak]
 
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -12,88 +12,93 @@ if [ "${1-}" = "--keycloak" ]; then
   STOP_KEYCLOAK=true
 fi
 
-PIDFILE="${ROOT_DIR}/run-services.pids"
+# ─── Puertos de los microservicios ────────────────────────────────────────────
+# Ajusta estos puertos según tu configuración
+PUERTOS=(8080 8081 8082 8083 8084 8085)
 
-if [ -f "${PIDFILE}" ]; then
-  echo "Deteniendo microservicios usando ${PIDFILE}..."
-  mapfile -t PIDS < "${PIDFILE}"
-  rm -f "${PIDFILE}"
-else
-  echo "No se encontró ${PIDFILE}; buscando procesos (varias heurísticas)..."
-  PIDS=()
+# ─── Función: obtener PID que usa un puerto (Windows via netstat) ─────────────
+get_pid_for_port() {
+  local port="$1"
+  # netstat -ano muestra: Proto  Local      Foreign    State   PID
+  # Buscamos líneas LISTENING en el puerto dado y extraemos el PID (última columna)
+  netstat -ano 2>/dev/null \
+    | grep -E "^[[:space:]]*(TCP|UDP)[[:space:]].*:${port}[[:space:]]" \
+    | grep -i "LISTENING" \
+    | awk '{print $NF}' \
+    | sort -u \
+    || true
+}
 
-  # 1) pgrep por patrones comunes
-  PATTERNS=("mvnw spring-boot:run" "mvn spring-boot:run" "org.springframework.boot" "co.analisys")
-  for pat in "${PATTERNS[@]}"; do
-    while IFS= read -r pid; do
-      [[ -n "$pid" ]] || continue
-      PIDS+=("$pid")
-    done < <(pgrep -f "$pat" || true)
-  done
+# ─── Matar por puerto ─────────────────────────────────────────────────────────
+echo "🔍 Buscando y matando procesos por puerto..."
+for port in "${PUERTOS[@]}"; do
+  pids=$(get_pid_for_port "$port")
 
-  # 2) buscar procesos que escuchan en los puertos conocidos de los microservicios (NO 8080=Keycloak)
-  if command -v lsof >/dev/null 2>&1; then
-    for port in 8081 8082 8083 8084; do
-      while IFS= read -r pid; do
-        [[ -n "$pid" ]] || continue
-        # Verificar que NO sea docker (Keycloak) ni PID negativo
-        if ! kill -0 "$pid" 2>/dev/null || [ "$pid" -lt 0 ]; then
-          continue
-        fi
-        cmd=$(ps -p "$pid" -o cmd= 2>/dev/null || true)
-        # Solo agregar si es proceso Java/Maven, no Docker
-        if echo "$cmd" | grep -qE 'java|mvn|mvnw'; then
-          PIDS+=("$pid")
-        fi
-      done < <(lsof -ti tcp:"$port" || true)
-    done
+  if [ -z "$pids" ]; then
+    echo "   Puerto $port: libre."
+    continue
   fi
 
-  # 3) fallback: scan de ps para detectar comandos java/spring boot
-  if [ ${#PIDS[@]} -eq 0 ]; then
-    while IFS= read -r line; do
-      pid=$(echo "$line" | awk '{print $1}')
-      cmd=$(echo "$line" | cut -d' ' -f2-)
-      if echo "$cmd" | grep -qE 'spring-boot:run|org.springframework.boot|co.analisys|GimnasioApplication'; then
-        PIDS+=("$pid")
-      fi
-    done < <(ps -eo pid,cmd | tail -n +2)
-  fi
-
-  # unique
-  if [ ${#PIDS[@]} -gt 0 ]; then
-    mapfile -t PIDS < <(printf "%s\n" "${PIDS[@]}" | sort -u)
-  fi
-fi
-
-if [ ${#PIDS[@]} -eq 0 ]; then
-  echo "No se encontraron procesos de microservicios (spring-boot:run ni heurísticas aplicables)."
-else
-  echo "Deteniendo PIDs: ${PIDS[*]}"
-  kill ${PIDS[*]} || true
-  sleep 2
-  # force kill remaining
-  STILL_ALIVE=()
-  for pid in "${PIDS[@]}"; do
-    if kill -0 "$pid" 2>/dev/null; then
-      STILL_ALIVE+=("$pid")
+  for pid in $pids; do
+    # Ignorar PID 0 o 4 (Sistema en Windows)
+    if [ "$pid" -le 4 ] 2>/dev/null; then
+      continue
     fi
+
+    echo "   Puerto $port → matando PID $pid..."
+    cmd.exe /c "taskkill /PID $pid /F" >/dev/null 2>&1 \
+      && echo "   ✅ PID $pid eliminado." \
+      || echo "   ⚠️  No se pudo eliminar PID $pid (quizás ya terminó)."
   done
-  if [ ${#STILL_ALIVE[@]} -gt 0 ]; then
-    echo "Forzando kill -9 a: ${STILL_ALIVE[*]}"
-    kill -9 ${STILL_ALIVE[*]} || true
-  fi
-  echo "Microservicios detenidos."
+done
+
+# ─── Segunda pasada: matar procesos java.exe relacionados al proyecto ─────────
+echo ""
+echo "🔍 Buscando procesos java.exe/mvnw huérfanos del proyecto..."
+
+# WMIC lista procesos con su línea de comando completa
+if command -v wmic >/dev/null 2>&1; then
+  # Obtener todos los java.exe con su CommandLine y ProcessId
+  while IFS= read -r line; do
+    # Buscar líneas que contengan patrones del proyecto
+    if echo "$line" | grep -qiE "spring-boot:run|co\.analisys|GimnasioApplication|microservicio"; then
+      # Extraer el PID de la línea (formato: ...  1234)
+      pid=$(echo "$line" | awk '{print $NF}' | tr -d '[:space:]')
+      if [[ "$pid" =~ ^[0-9]+$ ]] && [ "$pid" -gt 4 ]; then
+        echo "   Proceso huérfano encontrado (PID $pid), matando..."
+        cmd.exe /c "taskkill /PID $pid /F" >/dev/null 2>&1 \
+          && echo "   ✅ PID $pid eliminado." \
+          || echo "   ⚠️  No se pudo eliminar PID $pid."
+      fi
+    fi
+  done < <(wmic process where "name='java.exe'" get ProcessId,CommandLine 2>/dev/null || true)
+else
+  echo "   WMIC no disponible, omitiendo búsqueda de huérfanos."
 fi
 
+# ─── Limpiar pidfile si existe ────────────────────────────────────────────────
+PIDFILE="${ROOT_DIR}/run-services.pids"
+if [ -f "$PIDFILE" ]; then
+  echo ""
+  echo "🗑️  Eliminando ${PIDFILE}..."
+  rm -f "$PIDFILE"
+fi
+
+# ─── Keycloak ─────────────────────────────────────────────────────────────────
 if [ "$STOP_KEYCLOAK" = true ]; then
   if command -v docker >/dev/null 2>&1; then
-    echo "Deteniendo contenedor Keycloak (keycloak-gimnasio) si existe..."
+    echo ""
+    echo "🛑 Deteniendo contenedor Keycloak (keycloak-gimnasio)..."
     docker rm -f keycloak-gimnasio >/dev/null 2>&1 || true
-    echo "Keycloak detenido."
+    echo "   ✅ Keycloak detenido."
+    
+    echo "🛑 Deteniendo contenedor RabbitMQ (rabbitmq)..."
+    docker rm -f rabbitmq >/dev/null 2>&1 || true
+    echo "   ✅ RabbitMQ detenido."
   else
-    echo "Docker no disponible; no se puede detener Keycloak." >&2
+    echo "⚠️  Docker no disponible; no se puede detener Keycloak ni RabbitMQ." >&2
   fi
 fi
 
-echo "Hecho."
+echo ""
+echo "✅ Hecho."
