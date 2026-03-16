@@ -37,7 +37,7 @@ docker run -d ^
   -e KC_BOOTSTRAP_ADMIN_USERNAME=admin ^
   -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin ^
   -v %KEYCLOAK_VOLUME_NAME%:/opt/keycloak/data ^
-  -v %~dp0keycloak:/opt/keycloak/data/import ^
+  -v "%~dp0keycloak":/opt/keycloak/data/import ^
   %KEYCLOAK_IMAGE% start-dev --import-realm
 
 :: RABBITMQ
