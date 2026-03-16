@@ -55,6 +55,18 @@ docker run -d \
   -p 5672:5672 -p 15672:15672 \
   rabbitmq:3.13-management
 
+KAFKA_CONTAINER_NAME="kafka-gimnasio"
+echo "🛑 Eliminando contenedor previo de Kafka si existe..."
+if docker ps -a --format '{{.Names}}' | grep -q "^${KAFKA_CONTAINER_NAME}$"; then
+  docker rm -f "${KAFKA_CONTAINER_NAME}" >/dev/null 2>&1 || true
+fi
+
+echo "🚀 Iniciando Kafka..."
+docker run -d \
+  --name "${KAFKA_CONTAINER_NAME}" \
+  -p 9092:9092 \
+  apache/kafka:3.7.0
+
 # Esperar que Keycloak esté disponible
 if ! command -v curl >/dev/null 2>&1; then
   echo "❌ curl no está instalado. Necesario para verificar disponibilidad de Keycloak." >&2

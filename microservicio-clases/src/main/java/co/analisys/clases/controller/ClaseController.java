@@ -18,15 +18,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import co.analisys.clases.kafka.OcupacionClaseProducer;
+
 @Tag(name = "Clases", description = "Programación y gestión de clases del gimnasio")
 @RestController
 @RequestMapping("/api/clases")
 public class ClaseController {
 
     private final ClaseService claseService;
+    private final OcupacionClaseProducer ocupacionClaseProducer;
 
-    public ClaseController(ClaseService claseService) {
+    public ClaseController(ClaseService claseService, OcupacionClaseProducer ocupacionClaseProducer) {
         this.claseService = claseService;
+        this.ocupacionClaseProducer = ocupacionClaseProducer;
+    }
+
+    @Operation(summary = "Actualizar y notificar ocupación de clase vía Kafka")
+    @PostMapping("/{id}/ocupacion")
+    public void notificarOcupacion(@PathVariable String id, @RequestParam int ocupacion) {
+        ocupacionClaseProducer.actualizarOcupacion(id, ocupacion);
     }
 
     @Operation(summary = "Programar una clase", description = "Requiere rol ADMIN o TRAINER.")
