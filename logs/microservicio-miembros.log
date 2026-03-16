@@ -13,10 +13,7 @@ nohup: ignoring input
 [INFO] Copying 0 resource from src\main\resources to target\classes
 [INFO] 
 [INFO] --- compiler:3.13.0:compile (default-compile) @ microservicio-miembros ---
-[INFO] Recompiling the module because of changed source code.
-[INFO] Compiling 19 source files with javac [debug parameters release 17] to target\classes
-[INFO] /C:/Universidad/Semestre IX/Microservicios/gym-microservices-security-async/microservicio-miembros/src/main/java/co/analisys/miembros/listener/ClasesHorarioListener.java: C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros\src\main\java\co\analisys\miembros\listener\ClasesHorarioListener.java uses unchecked or unsafe operations.
-[INFO] /C:/Universidad/Semestre IX/Microservicios/gym-microservices-security-async/microservicio-miembros/src/main/java/co/analisys/miembros/listener/ClasesHorarioListener.java: Recompile with -Xlint:unchecked for details.
+[INFO] Nothing to compile - all classes are up to date.
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-miembros ---
 [INFO] skip non existing resourceDirectory C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros\src\test\resources
@@ -39,41 +36,43 @@ nohup: ignoring input
 
  :: Spring Boot ::                (v3.3.2)
 
-2026-03-15T17:51:59.399-05:00  INFO 19232 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Starting MiembrosApplication using Java 17.0.11 with PID 19232 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros)
-2026-03-15T17:51:59.405-05:00  INFO 19232 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-03-15T17:52:01.321-05:00  INFO 19232 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-15T17:52:01.438-05:00  INFO 19232 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
-2026-03-15T17:52:02.974-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-03-15T17:52:02.999-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-15T17:52:02.999-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2026-03-15T17:52:03.169-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-15T17:52:03.171-05:00  INFO 19232 --- [microservicio-miembros] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3670 ms
-2026-03-15T17:52:03.256-05:00  INFO 19232 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-15T17:52:03.682-05:00  INFO 19232 --- [microservicio-miembros] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:miembrosdb user=SA
-2026-03-15T17:52:03.685-05:00  INFO 19232 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-15T17:52:03.708-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:miembrosdb'
-2026-03-15T17:52:03.995-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-15T17:52:04.132-05:00  INFO 19232 --- [microservicio-miembros] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-15T17:52:04.210-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-15T17:52:04.821-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-15T17:52:06.744-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-15T17:52:06.861-05:00  INFO 19232 --- [microservicio-miembros] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-15T17:52:08.253-05:00  WARN 19232 --- [microservicio-miembros] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-15T17:52:08.304-05:00 DEBUG 19232 --- [microservicio-miembros] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-03-15T17:52:09.062-05:00 DEBUG 19232 --- [microservicio-miembros] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-03-15T17:52:09.877-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-03-15T17:52:09.883-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-03-15T17:52:09.987-05:00  INFO 19232 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#261b27db:0/SimpleConnection@13a35d3b [delegate=amqp://guest@127.0.0.1:5672/, localPort=9053]
-2026-03-15T17:52:10.136-05:00  INFO 19232 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Started MiembrosApplication in 11.519 seconds (process running for 12.258)
+2026-03-16T17:43:36.616-05:00  INFO 5788 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Starting MiembrosApplication using Java 17.0.11 with PID 5788 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-miembros)
+2026-03-16T17:43:36.622-05:00  INFO 5788 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-16T17:43:38.878-05:00  INFO 5788 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16T17:43:39.013-05:00  INFO 5788 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interface.
+2026-03-16T17:43:40.615-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-03-16T17:43:40.658-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-16T17:43:40.659-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-16T17:43:40.837-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-16T17:43:40.840-05:00  INFO 5788 --- [microservicio-miembros] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4092 ms
+2026-03-16T17:43:40.919-05:00  INFO 5788 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-16T17:43:41.349-05:00  INFO 5788 --- [microservicio-miembros] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:miembrosdb user=SA
+2026-03-16T17:43:41.352-05:00  INFO 5788 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-16T17:43:41.379-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:miembrosdb'
+2026-03-16T17:43:41.710-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16T17:43:41.858-05:00  INFO 5788 --- [microservicio-miembros] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-16T17:43:41.940-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-16T17:43:42.657-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16T17:43:44.750-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16T17:43:44.875-05:00  INFO 5788 --- [microservicio-miembros] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16T17:43:46.285-05:00  WARN 5788 --- [microservicio-miembros] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16T17:43:46.338-05:00 DEBUG 5788 --- [microservicio-miembros] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-16T17:43:47.142-05:00 DEBUG 5788 --- [microservicio-miembros] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-16T17:43:48.009-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-03-16T17:43:48.017-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-16T17:43:48.141-05:00  INFO 5788 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#261b27db:0/SimpleConnection@13a35d3b [delegate=amqp://guest@127.0.0.1:5672/, localPort=44104]
+2026-03-16T17:43:48.314-05:00  INFO 5788 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Started MiembrosApplication in 12.723 seconds (process running for 13.868)
 Datos de miembros cargados exitosamente.
-2026-03-15T17:52:28.255-05:00  INFO 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-15T17:52:28.255-05:00  INFO 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-15T17:52:28.257-05:00  INFO 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-03-15T17:52:28.285-05:00 DEBUG 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/miembros/1/existe
-2026-03-15T17:52:28.463-05:00 DEBUG 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-15T17:52:28.464-05:00 DEBUG 19232 --- [microservicio-miembros] [nio-8081-exec-1] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@6d5a0df8, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-15T17:52:28.470-05:00 DEBUG 19232 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/miembros/1/existe
-[miembros] Notificación de inscripción recibida: {claseId=1, miembroId=1}
-[miembros] Enviando email de confirmación a 1 para la clase 1
-[miembros] Notificación de cambio de horario recibida: {claseId=1, entrenadorId=1, nuevoHorario=[2026, 10, 10, 10, 0]}
-[miembros] Simulando notificación masiva de cambio de horario para la clase 1 a 2026-10-10 10:00
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:51 min
+[INFO] Finished at: 2026-03-16T17:46:16-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project microservicio-miembros: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

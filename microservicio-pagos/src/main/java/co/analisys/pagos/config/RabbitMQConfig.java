@@ -17,7 +17,7 @@ public class RabbitMQConfig {
         return QueueBuilder.durable("pagos-queue")
                 .withArgument("x-dead-letter-exchange", "")
                 .withArgument("x-dead-letter-routing-key", "pagos-dlq")
-                .withArgument("x-message-ttl", 30000)
+                .withArgument("x-message-ttl", 5000)
                 .build();
     }
 
