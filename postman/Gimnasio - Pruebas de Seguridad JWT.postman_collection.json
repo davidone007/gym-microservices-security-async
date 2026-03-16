@@ -905,6 +905,103 @@
         }
       ],
       "description": "Validar la comunicación asíncrona entre pagos y clases"
+    },
+    {
+      "name": "6 - Pruebas Streaming y Eventos (Kafka)",
+      "description": "Pruebas para demostrar la parte 3 de Kafka: Ocupación en tiempo real, Streams de Calorías y Recuperación por Offsets.",
+      "item": [
+        {
+          "name": "Kafka - 1. Notificar Ocupación de Clase",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_admin}}"
+              }
+            ],
+            "url": {
+              "raw": "{{clases_url}}/api/clases/C-KAFKA-1/ocupacion?ocupacion=45",
+              "host": [
+                "{{clases_url}}"
+              ],
+              "path": [
+                "api",
+                "clases",
+                "C-KAFKA-1",
+                "ocupacion"
+              ],
+              "query": [
+                {
+                  "key": "ocupacion",
+                  "value": "45"
+                }
+              ]
+            },
+            "description": "Prueba el Productor y Consumidor de Kafka en tiempo real (Punto 2)"
+          },
+          "response": []
+        },
+        {
+          "name": "Kafka - 2. Enviar Datos Entrenamiento (Streams)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_admin}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"caloriasQuemadas\": 350,\n  \"duracionMinutos\": 45\n}"
+            },
+            "url": {
+              "raw": "{{miembros_url}}/api/miembros/M-KAFKA-UNO/entrenamiento",
+              "host": [
+                "{{miembros_url}}"
+              ],
+              "path": [
+                "api",
+                "miembros",
+                "M-KAFKA-UNO",
+                "entrenamiento"
+              ]
+            },
+            "description": "Envía métricas que Kafka Streams acumulará por ventanas de 7 días (Punto 3)"
+          },
+          "response": []
+        },
+        {
+          "name": "Kafka - 3. Forzar Recuperación de Fallos (Offsets)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_admin}}"
+              }
+            ],
+            "url": {
+              "raw": "{{miembros_url}}/api/miembros/recuperacion",
+              "host": [
+                "{{miembros_url}}"
+              ],
+              "path": [
+                "api",
+                "miembros",
+                "recuperacion"
+              ]
+            },
+            "description": "Simula que el sistema revivió y debe retomar desde el último punto seguro guardado en disco (Punto 4)"
+          },
+          "response": []
+        }
+      ]
     }
   ],
   "variable": [

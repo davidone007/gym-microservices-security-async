@@ -97,4 +97,31 @@ public class MiembroController {
         response.put("existe", miembroService.existePorId(id));
         return response;
     }
+
+    @Autowired
+    private org.springframework.kafka.core.KafkaTemplate<String, String> kafkaTemplate;
+
+    @Autowired
+    private co.analisys.miembros.kafka.RecuperacionService recuperacionService;
+
+    @Operation(summary = "Enviar datos de entrenamiento (Kafka)", description = "Simula el envío de datos a Kafka para procesamiento de streams")
+    @PostMapping("/{id}/entrenamiento")
+    public void registrarEntrenamiento(@PathVariable String id, @RequestBody co.analisys.miembros.kafka.DatosEntrenamiento datos) {
+        try {
+            datos.setMiembroId(id);
+            com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
+            String json = mapper.writeValueAsString(datos);
+            kafkaTemplate.send("datos-entrenamiento", id, json);
+            kafkaTemplate.send("topic-a", id, json); // para probar la recuperación simulada
+            System.out.println("✅ Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): " + json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Operation(summary = "Forzar Recuperación Kafka", description = "Simula la caída del sistema y recupera desde el último Offset guardado")
+    @PostMapping("/recuperacion")
+    public void forzarRecuperacion() {
+        recuperacionService.iniciarProcesamiento();
+    }
 }
