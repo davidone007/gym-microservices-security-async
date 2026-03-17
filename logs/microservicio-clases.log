@@ -361,3 +361,33 @@ Dashboard actualizado en tiempo real: {"claseId":"C-KAFKA-1","ocupacionActual":4
 2026-03-16T18:26:06.963-05:00  INFO 29604 --- [microservicio-clases] [ases-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=microservicio-clases-producer-1] Node -1 disconnected.
 2026-03-16T18:33:49.561-05:00  INFO 29604 --- [microservicio-clases] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Node -1 disconnected.
 2026-03-16T18:36:06.949-05:00  INFO 29604 --- [microservicio-clases] [ases-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=microservicio-clases-producer-1] Node -1 disconnected.
+2026-03-16T19:00:55.918-05:00 DEBUG 29604 --- [microservicio-clases] [nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/clases/C-KAFKA-1/ocupacion?ocupacion=45
+2026-03-16T19:00:55.956-05:00 DEBUG 29604 --- [microservicio-clases] [nio-8082-exec-5] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:00:55.957-05:00 DEBUG 29604 --- [microservicio-clases] [nio-8082-exec-5] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@3e8ec1c0, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:00:55.958-05:00 DEBUG 29604 --- [microservicio-clases] [nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/clases/C-KAFKA-1/ocupacion?ocupacion=45
+Mensaje enviado a Kafka (Topic: ocupacion-clases): {"claseId":"C-KAFKA-1","ocupacionActual":45,"timestamp":[2026,3,16,19,0,55,964233100]}
+Dashboard actualizado en tiempo real: {"claseId":"C-KAFKA-1","ocupacionActual":45,"timestamp":[2026,3,16,19,0,55,964233100]}
+2026-03-16T19:09:49.242-05:00 DEBUG 29604 --- [microservicio-clases] [nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/clases/C-KAFKA-1/ocupacion?ocupacion=45
+2026-03-16T19:09:49.271-05:00 DEBUG 29604 --- [microservicio-clases] [nio-8082-exec-8] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:09:49.271-05:00 DEBUG 29604 --- [microservicio-clases] [nio-8082-exec-8] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:09:49.272-05:00 DEBUG 29604 --- [microservicio-clases] [nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/clases/C-KAFKA-1/ocupacion?ocupacion=45
+Mensaje enviado a Kafka (Topic: ocupacion-clases): {"claseId":"C-KAFKA-1","ocupacionActual":45,"timestamp":[2026,3,16,19,9,49,273609000]}
+Dashboard actualizado en tiempo real: {"claseId":"C-KAFKA-1","ocupacionActual":45,"timestamp":[2026,3,16,19,9,49,273609000]}
+2026-03-16T19:13:30.680-05:00  INFO 29604 --- [microservicio-clases] [monitoreo-grupo] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2026-03-16T19:13:30.680-05:00  INFO 29604 --- [microservicio-clases] [monitoreo-grupo] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-03-16T19:13:30.680-05:00  INFO 29604 --- [microservicio-clases] [monitoreo-grupo] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Client requested disconnect from node 2147483646
+2026-03-16T19:13:30.726-05:00  INFO 29604 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-03-16T19:13:37.665-05:00  WARN 29604 --- [microservicio-clases] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s529ms428µs500ns).
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:01 h
+[INFO] Finished at: 2026-03-16T19:16:22-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project microservicio-clases: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

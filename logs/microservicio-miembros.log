@@ -1160,3 +1160,169 @@ Offset 5 guardado para topic-a-0
 2026-03-16T18:37:27.143-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
 2026-03-16T18:37:27.143-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
 2026-03-16T18:37:27.148-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-grupo-recuperacion-2 unregistered
+2026-03-16T19:04:42.733-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
+2026-03-16T19:04:42.782-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:04:42.782-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@3e8ec1c0, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:04:42.782-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
+? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
+2026-03-16T19:10:24.533-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
+2026-03-16T19:10:24.564-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:10:24.579-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:10:24.579-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
+? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
+2026-03-16T19:10:29.342-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
+2026-03-16T19:10:29.347-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-1] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:10:29.351-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-1] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:10:29.351-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
+? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":450,"duracionMinutos":45}
+2026-03-16T19:10:36.126-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
+2026-03-16T19:10:36.133-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:10:36.133-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:10:36.133-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
+? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":450,"duracionMinutos":45}
+2026-03-16T19:10:40.246-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
+2026-03-16T19:10:40.248-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:10:40.248-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:10:40.248-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
+? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":550,"duracionMinutos":45}
+2026-03-16T19:11:24.920-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/recuperacion
+2026-03-16T19:11:24.928-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:11:24.928-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:11:24.928-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/recuperacion
+2026-03-16T19:11:24.928-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-grupo-recuperacion-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = grupo-recuperacion
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-03-16T19:11:24.933-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-03-16T19:11:24.943-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-03-16T19:11:24.943-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-03-16T19:11:24.943-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773706284943
+2026-03-16T19:11:24.944-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Assigned to partition(s): topic-a-0
+2026-03-16T19:11:24.944-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Seeking to offset 5 for partition topic-a-0
+? Iniciando recuperación desde offsets manuales...
+2026-03-16T19:11:24.953-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
+Procesando evento en offset: 5 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
+Offset 6 guardado para topic-a-0
+Procesando evento en offset: 6 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
+Offset 7 guardado para topic-a-0
+Procesando evento en offset: 7 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":450,"duracionMinutos":45}
+Offset 8 guardado para topic-a-0
+Procesando evento en offset: 8 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":450,"duracionMinutos":45}
+Offset 9 guardado para topic-a-0
+Procesando evento en offset: 9 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":550,"duracionMinutos":45}
+Offset 10 guardado para topic-a-0
+2026-03-16T19:11:25.402-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-03-16T19:11:25.403-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Request joining group due to: consumer pro-actively leaving the group
+2026-03-16T19:11:25.469-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-03-16T19:11:25.469-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-03-16T19:11:25.469-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-03-16T19:11:25.469-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-03-16T19:11:25.473-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-grupo-recuperacion-3 unregistered
+2026-03-16T19:13:38.023-05:00  WARN 26668 --- [microservicio-miembros] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s529ms690µs300ns).
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:01 h
+[INFO] Finished at: 2026-03-16T19:16:21-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project microservicio-miembros: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
