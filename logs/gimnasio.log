@@ -1,3 +1,4 @@
+nohup: ignoring input
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] ------------------------< co.analisys:gimnasio >------------------------
@@ -15,7 +16,7 @@
 [INFO] Nothing to compile - all classes are up to date.
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ gimnasio ---
-[INFO] skip non existing resourceDirectory C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\src\test\resources
+[INFO] skip non existing resourceDirectory C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ gimnasio ---
 [INFO] Nothing to compile - all classes are up to date.
@@ -35,35 +36,35 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2026-03-16T18:51:38.586-05:00  INFO 5304 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : Starting GimnasioApplication using Java 17.0.11 with PID 5304 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async)
-2026-03-16T18:51:38.597-05:00  INFO 5304 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-03-16T18:51:40.061-05:00  INFO 5304 --- [gimnasio] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-16T18:51:40.245-05:00  INFO 5304 --- [gimnasio] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 4 JPA repository interfaces.
-2026-03-16T18:51:41.691-05:00  INFO 5304 --- [gimnasio] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-03-16T18:51:41.720-05:00  INFO 5304 --- [gimnasio] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-16T18:51:41.720-05:00  INFO 5304 --- [gimnasio] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2026-03-16T18:51:41.863-05:00  INFO 5304 --- [gimnasio] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-16T18:51:41.865-05:00  INFO 5304 --- [gimnasio] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3127 ms
-2026-03-16T18:51:41.963-05:00  INFO 5304 --- [gimnasio] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-16T18:51:42.308-05:00  INFO 5304 --- [gimnasio] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:gimnasiodb user=SA
-2026-03-16T18:51:42.308-05:00  INFO 5304 --- [gimnasio] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-16T18:51:42.327-05:00  INFO 5304 --- [gimnasio] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:gimnasiodb'
-2026-03-16T18:51:42.556-05:00  INFO 5304 --- [gimnasio] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-16T18:51:42.661-05:00  INFO 5304 --- [gimnasio] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-16T18:51:42.714-05:00  INFO 5304 --- [gimnasio] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-16T18:51:43.243-05:00  INFO 5304 --- [gimnasio] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-16T18:51:43.322-05:00  WARN 5304 --- [gimnasio] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-03-16T18:51:44.901-05:00  INFO 5304 --- [gimnasio] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-16T18:51:45.015-05:00  INFO 5304 --- [gimnasio] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-16T18:51:45.638-05:00  WARN 5304 --- [gimnasio] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-16T18:51:46.180-05:00  INFO 5304 --- [gimnasio] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-03-16T18:51:46.209-05:00  INFO 5304 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : Started GimnasioApplication in 8.481 seconds (process running for 9.318)
+2026-03-16T19:49:50.985-05:00  INFO 22972 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : Starting GimnasioApplication using Java 17.0.11 with PID 22972 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async)
+2026-03-16T19:49:51.000-05:00  INFO 22972 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-16T19:49:52.794-05:00  INFO 22972 --- [gimnasio] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16T19:49:53.022-05:00  INFO 22972 --- [gimnasio] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 196 ms. Found 4 JPA repository interfaces.
+2026-03-16T19:49:54.773-05:00  INFO 22972 --- [gimnasio] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-16T19:49:54.810-05:00  INFO 22972 --- [gimnasio] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-16T19:49:54.810-05:00  INFO 22972 --- [gimnasio] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-16T19:49:54.986-05:00  INFO 22972 --- [gimnasio] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-16T19:49:54.986-05:00  INFO 22972 --- [gimnasio] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3815 ms
+2026-03-16T19:49:55.102-05:00  INFO 22972 --- [gimnasio] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-16T19:49:55.813-05:00  INFO 22972 --- [gimnasio] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:gimnasiodb user=SA
+2026-03-16T19:49:55.817-05:00  INFO 22972 --- [gimnasio] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-16T19:49:55.846-05:00  INFO 22972 --- [gimnasio] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:gimnasiodb'
+2026-03-16T19:49:56.733-05:00  INFO 22972 --- [gimnasio] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16T19:49:56.977-05:00  INFO 22972 --- [gimnasio] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-16T19:49:57.172-05:00  INFO 22972 --- [gimnasio] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-16T19:49:58.263-05:00  INFO 22972 --- [gimnasio] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16T19:49:58.404-05:00  WARN 22972 --- [gimnasio] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-16T19:50:01.166-05:00  INFO 22972 --- [gimnasio] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16T19:50:01.309-05:00  INFO 22972 --- [gimnasio] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16T19:50:01.957-05:00  WARN 22972 --- [gimnasio] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16T19:50:02.695-05:00  INFO 22972 --- [gimnasio] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-16T19:50:02.717-05:00  INFO 22972 --- [gimnasio] [           main] c.analisys.gimnasio.GimnasioApplication  : Started GimnasioApplication in 12.952 seconds (process running for 14.085)
 Datos de ejemplo cargados exitosamente.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  08:23 min
-[INFO] Finished at: 2026-03-16T19:36:16-05:00
+[INFO] Total time:  03:57 min
+[INFO] Finished at: 2026-03-16T19:53:35-05:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project gimnasio: Process terminated with exit code: 1 -> [Help 1]
 [ERROR] 
