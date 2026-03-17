@@ -35,29 +35,29 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2026-03-16T18:14:37.395-05:00  INFO 26668 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Starting MiembrosApplication using Java 17.0.16 with PID 26668 (C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-miembros\target\classes started by daron in C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-miembros)
-2026-03-16T18:14:37.400-05:00  INFO 26668 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-03-16T18:14:39.107-05:00  INFO 26668 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-16T18:14:39.221-05:00  INFO 26668 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interface.
-2026-03-16T18:14:40.866-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-03-16T18:14:40.889-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-16T18:14:40.889-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2026-03-16T18:14:41.059-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-16T18:14:41.061-05:00  INFO 26668 --- [microservicio-miembros] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3566 ms
-2026-03-16T18:14:41.157-05:00  INFO 26668 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-16T18:14:41.549-05:00  INFO 26668 --- [microservicio-miembros] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:miembrosdb user=SA
-2026-03-16T18:14:41.554-05:00  INFO 26668 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-16T18:14:41.575-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:miembrosdb'
-2026-03-16T18:14:41.875-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-16T18:14:41.996-05:00  INFO 26668 --- [microservicio-miembros] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-16T18:14:42.069-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-16T18:14:42.683-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-16T18:14:44.662-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-16T18:14:44.782-05:00  INFO 26668 --- [microservicio-miembros] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-16T18:14:46.292-05:00  WARN 26668 --- [microservicio-miembros] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-16T18:14:46.350-05:00 DEBUG 26668 --- [microservicio-miembros] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-03-16T18:14:47.120-05:00 DEBUG 26668 --- [microservicio-miembros] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-03-16T18:14:47.238-05:00  INFO 26668 --- [microservicio-miembros] [           main] org.apache.kafka.streams.StreamsConfig   : StreamsConfig values: 
+2026-03-16T19:28:02.046-05:00  INFO 36632 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Starting MiembrosApplication using Java 17.0.16 with PID 36632 (C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-miembros\target\classes started by daron in C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-miembros)
+2026-03-16T19:28:02.049-05:00  INFO 36632 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-16T19:28:03.539-05:00  INFO 36632 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16T19:28:03.617-05:00  INFO 36632 --- [microservicio-miembros] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interface.
+2026-03-16T19:28:05.130-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-03-16T19:28:05.158-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-16T19:28:05.158-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-16T19:28:05.324-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-16T19:28:05.326-05:00  INFO 36632 --- [microservicio-miembros] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3192 ms
+2026-03-16T19:28:05.409-05:00  INFO 36632 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-16T19:28:05.773-05:00  INFO 36632 --- [microservicio-miembros] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:miembrosdb user=SA
+2026-03-16T19:28:05.777-05:00  INFO 36632 --- [microservicio-miembros] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-16T19:28:05.799-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:miembrosdb'
+2026-03-16T19:28:06.087-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16T19:28:06.201-05:00  INFO 36632 --- [microservicio-miembros] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-16T19:28:06.267-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-16T19:28:06.843-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16T19:28:08.744-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16T19:28:08.852-05:00  INFO 36632 --- [microservicio-miembros] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16T19:28:10.411-05:00  WARN 36632 --- [microservicio-miembros] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16T19:28:10.456-05:00 DEBUG 36632 --- [microservicio-miembros] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-16T19:28:11.281-05:00 DEBUG 36632 --- [microservicio-miembros] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-16T19:28:11.414-05:00  INFO 36632 --- [microservicio-miembros] [           main] org.apache.kafka.streams.StreamsConfig   : StreamsConfig values: 
 	acceptable.recovery.lag = 10000
 	application.id = miembros-streams-app
 	application.server = 
@@ -119,8 +119,8 @@
 	windowed.inner.class.serde = null
 	windowstore.changelog.additional.retention.ms = 86400000
 
-2026-03-16T18:14:48.292-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-03-16T18:14:48.300-05:00  INFO 26668 --- [microservicio-miembros] [           main] org.apache.kafka.streams.StreamsConfig   : StreamsConfig values: 
+2026-03-16T19:28:12.620-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-03-16T19:28:12.629-05:00  INFO 36632 --- [microservicio-miembros] [           main] org.apache.kafka.streams.StreamsConfig   : StreamsConfig values: 
 	acceptable.recovery.lag = 10000
 	application.id = miembros-streams-app
 	application.server = 
@@ -182,11 +182,11 @@
 	windowed.inner.class.serde = null
 	windowstore.changelog.additional.retention.ms = 86400000
 
-2026-03-16T18:14:48.377-05:00  WARN 26668 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StateDirectory       : Using an OS temp directory in the state.dir property can cause failures with writing the checkpoint file due to the fact that this directory can be cleared by the OS. Resolved state.dir: [C:\Users\daron\AppData\Local\Temp\\kafka-streams]
-2026-03-16T18:14:48.378-05:00 ERROR 26668 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StateDirectory       : Failed to change permissions for the directory C:\Users\daron\AppData\Local\Temp\kafka-streams
-2026-03-16T18:14:48.378-05:00 ERROR 26668 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StateDirectory       : Failed to change permissions for the directory C:\Users\daron\AppData\Local\Temp\kafka-streams\miembros-streams-app
-2026-03-16T18:14:48.382-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StateDirectory       : No process id found on disk, got fresh process id 06796c4b-74f9-4076-aa2e-bff56a1efb87
-2026-03-16T18:14:48.444-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+2026-03-16T19:28:12.702-05:00  WARN 36632 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StateDirectory       : Using an OS temp directory in the state.dir property can cause failures with writing the checkpoint file due to the fact that this directory can be cleared by the OS. Resolved state.dir: [C:\Users\daron\AppData\Local\Temp\\kafka-streams]
+2026-03-16T19:28:12.703-05:00 ERROR 36632 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StateDirectory       : Failed to change permissions for the directory C:\Users\daron\AppData\Local\Temp\kafka-streams
+2026-03-16T19:28:12.703-05:00 ERROR 36632 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StateDirectory       : Failed to change permissions for the directory C:\Users\daron\AppData\Local\Temp\kafka-streams\miembros-streams-app
+2026-03-16T19:28:12.740-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StateDirectory       : Reading UUID from process file: 06796c4b-74f9-4076-aa2e-bff56a1efb87
+2026-03-16T19:28:12.771-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
 	auto.include.jmx.reporter = true
 	bootstrap.controllers = []
 	bootstrap.servers = [localhost:9092]
@@ -260,13 +260,13 @@
 	ssl.truststore.password = null
 	ssl.truststore.type = JKS
 
-2026-03-16T18:14:48.635-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T18:14:48.635-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T18:14:48.635-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773702888635
-2026-03-16T18:14:48.643-05:00  INFO 26668 --- [microservicio-miembros] [           main] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Kafka Streams version: 3.7.1
-2026-03-16T18:14:48.643-05:00  INFO 26668 --- [microservicio-miembros] [           main] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Kafka Streams commit ID: e2494e6ffb89f828
-2026-03-16T18:14:48.669-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Creating restore consumer client
-2026-03-16T18:14:48.674-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-03-16T19:28:12.999-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-03-16T19:28:13.000-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-03-16T19:28:13.000-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773707292997
+2026-03-16T19:28:13.006-05:00  INFO 36632 --- [microservicio-miembros] [           main] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Kafka Streams version: 3.7.1
+2026-03-16T19:28:13.006-05:00  INFO 36632 --- [microservicio-miembros] [           main] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Kafka Streams commit ID: e2494e6ffb89f828
+2026-03-16T19:28:13.042-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Creating restore consumer client
+2026-03-16T19:28:13.047-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -364,12 +364,12 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
 
-2026-03-16T18:14:48.745-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T18:14:48.825-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T18:14:48.825-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T18:14:48.825-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773702888825
-2026-03-16T18:14:48.839-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Creating thread producer client
-2026-03-16T18:14:48.852-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2026-03-16T19:28:13.122-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-03-16T19:28:13.198-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-03-16T19:28:13.199-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-03-16T19:28:13.199-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773707293198
+2026-03-16T19:28:13.214-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Creating thread producer client
+2026-03-16T19:28:13.223-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -461,13 +461,13 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
 
-2026-03-16T18:14:48.853-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T18:14:48.867-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer] Instantiated an idempotent producer.
-2026-03-16T18:14:48.911-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T18:14:48.911-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T18:14:48.912-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773702888911
-2026-03-16T18:14:48.926-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Creating consumer client
-2026-03-16T18:14:48.931-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-03-16T19:28:13.223-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-03-16T19:28:13.240-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer] Instantiated an idempotent producer.
+2026-03-16T19:28:13.278-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-03-16T19:28:13.278-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-03-16T19:28:13.278-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773707293277
+2026-03-16T19:28:13.292-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Creating consumer client
+2026-03-16T19:28:13.298-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = false
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -565,104 +565,40 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
 
-2026-03-16T18:14:48.945-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T18:14:48.971-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.s.p.i.a.AssignorConfiguration      : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer] Cooperative rebalancing protocol is enabled now
-2026-03-16T18:14:49.006-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[replication.factor, probing.rebalance.interval.ms, max.warmup.replicas, acceptable.recovery.lag, rack.aware.assignment.non_overlap_cost, application.server, rack.aware.assignment.strategy, rack.aware.assignment.traffic_cost, windowstore.changelog.additional.retention.ms, num.standby.replicas, upgrade.from, rack.aware.assignment.tags, application.id]' were supplied but are not used yet.
-2026-03-16T18:14:49.007-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T18:14:49.007-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T18:14:49.007-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773702889007
-2026-03-16T18:14:49.020-05:00  INFO 26668 --- [microservicio-miembros] [           main] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] State transition from CREATED to REBALANCING
-2026-03-16T18:14:49.021-05:00  INFO 26668 --- [microservicio-miembros] [           main] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Started 1 stream threads
-2026-03-16T18:14:49.021-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Starting
-2026-03-16T18:14:49.021-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] State transition from CREATED to STARTING
-2026-03-16T18:14:49.024-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Subscribed to topic(s): datos-entrenamiento
-2026-03-16T18:14:49.026-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-03-16T18:14:49.134-05:00  INFO 26668 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5b697993:0/SimpleConnection@71d37ecd [delegate=amqp://guest@127.0.0.1:5672/, localPort=64000]
-2026-03-16T18:14:49.256-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Processed 0 total records, ran 0 punctuators, and committed 0 total tasks since the last update
-2026-03-16T18:14:49.305-05:00  INFO 26668 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Started MiembrosApplication in 12.778 seconds (process running for 13.647)
-2026-03-16T18:14:49.398-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 2 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:14:49.398-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
-2026-03-16T18:14:49.398-05:00  INFO 26668 --- [microservicio-miembros] [read-1-producer] org.apache.kafka.clients.Metadata        : [Producer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
-2026-03-16T18:14:49.398-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.404-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
-2026-03-16T18:14:49.436-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.437-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.437-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
-2026-03-16T18:14:49.437-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Client requested disconnect from node 2147483646
-2026-03-16T18:14:49.454-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.454-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.454-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.483-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.484-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.484-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.513-05:00  INFO 26668 --- [microservicio-miembros] [read-1-producer] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer] ProducerId set to 0 with epoch 0
+2026-03-16T19:28:13.306-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-03-16T19:28:13.339-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.s.p.i.a.AssignorConfiguration      : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer] Cooperative rebalancing protocol is enabled now
+2026-03-16T19:28:13.376-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[replication.factor, probing.rebalance.interval.ms, max.warmup.replicas, acceptable.recovery.lag, rack.aware.assignment.non_overlap_cost, application.server, rack.aware.assignment.strategy, rack.aware.assignment.traffic_cost, windowstore.changelog.additional.retention.ms, num.standby.replicas, upgrade.from, rack.aware.assignment.tags, application.id]' were supplied but are not used yet.
+2026-03-16T19:28:13.376-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-03-16T19:28:13.376-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-03-16T19:28:13.376-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773707293376
+2026-03-16T19:28:13.390-05:00  INFO 36632 --- [microservicio-miembros] [           main] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] State transition from CREATED to REBALANCING
+2026-03-16T19:28:13.391-05:00  INFO 36632 --- [microservicio-miembros] [           main] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Started 1 stream threads
+2026-03-16T19:28:13.391-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Starting
+2026-03-16T19:28:13.391-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] State transition from CREATED to STARTING
+2026-03-16T19:28:13.394-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Subscribed to topic(s): datos-entrenamiento
+2026-03-16T19:28:13.396-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-16T19:28:13.506-05:00  INFO 36632 --- [microservicio-miembros] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5b977aaa:0/SimpleConnection@3d36204f [delegate=amqp://guest@127.0.0.1:5672/, localPort=64021]
+2026-03-16T19:28:13.622-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Processed 0 total records, ran 0 punctuators, and committed 0 total tasks since the last update
+2026-03-16T19:28:13.703-05:00  INFO 36632 --- [microservicio-miembros] [           main] c.analisys.miembros.MiembrosApplication  : Started MiembrosApplication in 12.332 seconds (process running for 13.067)
+2026-03-16T19:28:13.761-05:00  WARN 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 2 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
+2026-03-16T19:28:13.762-05:00  INFO 36632 --- [microservicio-miembros] [read-1-producer] org.apache.kafka.clients.Metadata        : [Producer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
+2026-03-16T19:28:13.762-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
+2026-03-16T19:28:13.764-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-03-16T19:28:13.767-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
+2026-03-16T19:28:13.798-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: need to re-join with the given member-id: miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-38e6e31f-98aa-4ccf-affb-0c94c033bac7
+2026-03-16T19:28:13.798-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
+2026-03-16T19:28:13.873-05:00  WARN 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 8 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
+2026-03-16T19:28:13.880-05:00  INFO 36632 --- [microservicio-miembros] [read-1-producer] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer] ProducerId set to 0 with epoch 0
 Datos de miembros cargados exitosamente.
-2026-03-16T18:14:49.597-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 9 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:14:49.598-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.600-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
-2026-03-16T18:14:49.602-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
-2026-03-16T18:14:49.609-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.610-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.610-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
-2026-03-16T18:14:49.611-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Client requested disconnect from node 2147483646
-2026-03-16T18:14:49.614-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.615-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.616-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.704-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.706-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
-2026-03-16T18:14:49.706-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
-2026-03-16T18:14:49.711-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.711-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.711-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
-2026-03-16T18:14:49.711-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Client requested disconnect from node 2147483646
-2026-03-16T18:14:49.714-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.715-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.715-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.809-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.810-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
-2026-03-16T18:14:49.811-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 19 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:14:49.811-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
-2026-03-16T18:14:49.816-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.816-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.816-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
-2026-03-16T18:14:49.816-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Client requested disconnect from node 2147483646
-2026-03-16T18:14:49.819-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.819-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.819-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.909-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.911-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
-2026-03-16T18:14:49.911-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
-2026-03-16T18:14:49.916-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.916-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.916-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
-2026-03-16T18:14:49.916-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Client requested disconnect from node 2147483646
-2026-03-16T18:14:49.919-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:49.920-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:49.920-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:50.021-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:50.022-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
-2026-03-16T18:14:50.023-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
-2026-03-16T18:14:50.028-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:50.029-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:50.029-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
-2026-03-16T18:14:50.030-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Client requested disconnect from node 2147483646
-2026-03-16T18:14:50.035-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:50.035-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
-2026-03-16T18:14:50.035-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:50.131-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T18:14:50.132-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
-2026-03-16T18:14:50.133-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
-2026-03-16T18:14:50.150-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: need to re-join with the given member-id: miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-7e1ec65c-8ac0-4308-8be5-02f9bfcde3a3
-2026-03-16T18:14:50.150-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] (Re-)joining group
-2026-03-16T18:14:50.240-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 35 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:14:51.029-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 36 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:14:51.976-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 37 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:14:52.970-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 38 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:14:53.173-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Successfully joined group with generation Generation{generationId=1, memberId='miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-7e1ec65c-8ac0-4308-8be5-02f9bfcde3a3', protocol='stream'}
-2026-03-16T18:14:53.962-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 39 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:14:53.976-05:00 ERROR 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.RepartitionTopics    : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer] Subtopology 0 has missing source topics [datos-entrenamiento] and will be excluded from the current assignment, this can be due to the consumer client's metadata being stale or because they have not been created yet. Please verify that you have created all input topics; if they do exist, you just need to wait for the metadata to be updated, at which time a new rebalance will be kicked off automatically and the topology will be retried at that time.
-2026-03-16T18:14:53.976-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.RepartitionTopics    : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer] Skipping the repartition topic validation since all topologies containing repartitiontopics are missing external user source topics and cannot be processed.
-2026-03-16T18:14:53.977-05:00 ERROR 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.i.StreamsPartitionAssignor     : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer] Caught an error in the task assignment. Returning an error assignment.
+2026-03-16T19:28:14.083-05:00  WARN 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 9 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
+2026-03-16T19:28:14.496-05:00  WARN 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 10 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
+2026-03-16T19:28:15.249-05:00  WARN 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 11 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
+2026-03-16T19:28:16.254-05:00  WARN 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 12 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
+2026-03-16T19:28:16.805-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Successfully joined group with generation Generation{generationId=1, memberId='miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-38e6e31f-98aa-4ccf-affb-0c94c033bac7', protocol='stream'}
+2026-03-16T19:28:17.271-05:00  WARN 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Error while fetching metadata with correlation id 13 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
+2026-03-16T19:28:17.281-05:00 ERROR 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.RepartitionTopics    : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer] Subtopology 0 has missing source topics [datos-entrenamiento] and will be excluded from the current assignment, this can be due to the consumer client's metadata being stale or because they have not been created yet. Please verify that you have created all input topics; if they do exist, you just need to wait for the metadata to be updated, at which time a new rebalance will be kicked off automatically and the topology will be retried at that time.
+2026-03-16T19:28:17.281-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.RepartitionTopics    : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer] Skipping the repartition topic validation since all topologies containing repartitiontopics are missing external user source topics and cannot be processed.
+2026-03-16T19:28:17.282-05:00 ERROR 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.i.StreamsPartitionAssignor     : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer] Caught an error in the task assignment. Returning an error assignment.
 
 org.apache.kafka.streams.errors.MissingSourceTopicException: Missing source topics.
 	at org.apache.kafka.streams.processor.internals.StreamsPartitionAssignor.prepareRepartitionTopics(StreamsPartitionAssignor.java:526) ~[kafka-streams-3.7.1.jar:na]
@@ -691,19 +627,19 @@ org.apache.kafka.streams.errors.MissingSourceTopicException: Missing source topi
 	at org.apache.kafka.streams.processor.internals.StreamThread.runLoop(StreamThread.java:686) ~[kafka-streams-3.7.1.jar:na]
 	at org.apache.kafka.streams.processor.internals.StreamThread.run(StreamThread.java:645) ~[kafka-streams-3.7.1.jar:na]
 
-2026-03-16T18:14:53.987-05:00  WARN 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] The following subscribed topics are not assigned to any members: [datos-entrenamiento] 
-2026-03-16T18:14:53.987-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Finished assignment for group at generation 1: {miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-7e1ec65c-8ac0-4308-8be5-02f9bfcde3a3=Assignment(partitions=[], userDataSize=40)}
-2026-03-16T18:14:53.999-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Successfully synced group in generation Generation{generationId=1, memberId='miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-7e1ec65c-8ac0-4308-8be5-02f9bfcde3a3', protocol='stream'}
-2026-03-16T18:14:54.000-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Updating assignment with
+2026-03-16T19:28:17.289-05:00  WARN 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] The following subscribed topics are not assigned to any members: [datos-entrenamiento] 
+2026-03-16T19:28:17.289-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Finished assignment for group at generation 1: {miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-38e6e31f-98aa-4ccf-affb-0c94c033bac7=Assignment(partitions=[], userDataSize=40)}
+2026-03-16T19:28:17.300-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Successfully synced group in generation Generation{generationId=1, memberId='miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-38e6e31f-98aa-4ccf-affb-0c94c033bac7', protocol='stream'}
+2026-03-16T19:28:17.301-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Updating assignment with
 	Assigned partitions:                       []
 	Current owned partitions:                  []
 	Added partitions (assigned - owned):       []
 	Revoked partitions (owned - assigned):     []
 
-2026-03-16T18:14:54.000-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Notifying assignor about the new Assignment(partitions=[], userDataSize=40)
-2026-03-16T18:14:54.001-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Adding newly assigned partitions: 
-2026-03-16T18:14:54.001-05:00 ERROR 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Received error code INCOMPLETE_SOURCE_TOPIC_METADATA
-2026-03-16T18:14:54.001-05:00 ERROR 26668 --- [microservicio-miembros] [-StreamThread-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] User provided listener org.apache.kafka.streams.processor.internals.StreamsRebalanceListener failed on invocation of onPartitionsAssigned for partitions []
+2026-03-16T19:28:17.301-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Notifying assignor about the new Assignment(partitions=[], userDataSize=40)
+2026-03-16T19:28:17.302-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Adding newly assigned partitions: 
+2026-03-16T19:28:17.302-05:00 ERROR 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Received error code INCOMPLETE_SOURCE_TOPIC_METADATA
+2026-03-16T19:28:17.302-05:00 ERROR 36632 --- [microservicio-miembros] [-StreamThread-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] User provided listener org.apache.kafka.streams.processor.internals.StreamsRebalanceListener failed on invocation of onPartitionsAssigned for partitions []
 
 org.apache.kafka.streams.errors.MissingSourceTopicException: One or more source topics were missing during rebalance
 	at org.apache.kafka.streams.processor.internals.StreamsRebalanceListener.onPartitionsAssigned(StreamsRebalanceListener.java:58) ~[kafka-streams-3.7.1.jar:na]
@@ -722,7 +658,7 @@ org.apache.kafka.streams.errors.MissingSourceTopicException: One or more source 
 	at org.apache.kafka.streams.processor.internals.StreamThread.runLoop(StreamThread.java:686) ~[kafka-streams-3.7.1.jar:na]
 	at org.apache.kafka.streams.processor.internals.StreamThread.run(StreamThread.java:645) ~[kafka-streams-3.7.1.jar:na]
 
-2026-03-16T18:14:54.003-05:00 ERROR 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Encountered the following exception during processing and the registered exception handler opted to SHUTDOWN_CLIENT. The streams client is going to shut down now. 
+2026-03-16T19:28:17.305-05:00 ERROR 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Encountered the following exception during processing and the registered exception handler opted to SHUTDOWN_CLIENT. The streams client is going to shut down now. 
 
 org.apache.kafka.streams.errors.MissingSourceTopicException: One or more source topics were missing during rebalance
 	at org.apache.kafka.streams.processor.internals.StreamsRebalanceListener.onPartitionsAssigned(StreamsRebalanceListener.java:58) ~[kafka-streams-3.7.1.jar:na]
@@ -741,52 +677,52 @@ org.apache.kafka.streams.errors.MissingSourceTopicException: One or more source 
 	at org.apache.kafka.streams.processor.internals.StreamThread.runLoop(StreamThread.java:686) ~[kafka-streams-3.7.1.jar:na]
 	at org.apache.kafka.streams.processor.internals.StreamThread.run(StreamThread.java:645) ~[kafka-streams-3.7.1.jar:na]
 
-2026-03-16T18:14:54.003-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] State transition from REBALANCING to PENDING_ERROR
-2026-03-16T18:14:54.004-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] State transition from STARTING to PENDING_SHUTDOWN
-2026-03-16T18:14:54.004-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Shutting down unclean
-2026-03-16T18:14:54.004-05:00  INFO 26668 --- [microservicio-miembros] [b87-CloseThread] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Informed to shut down
-2026-03-16T18:14:54.006-05:00  INFO 26668 --- [microservicio-miembros] [b87-CloseThread] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Shutting down 1 stream threads
-2026-03-16T18:14:54.008-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-2026-03-16T18:14:54.015-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2026-03-16T18:14:54.015-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2026-03-16T18:14:54.015-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2026-03-16T18:14:54.016-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2026-03-16T18:14:54.016-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer unregistered
-2026-03-16T18:14:54.017-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.processor.internals.TaskManager  : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Shutdown complete
-2026-03-16T18:14:54.018-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-restore-consumer, groupId=null] Unsubscribed all topics or patterns and assigned partitions
-2026-03-16T18:14:54.019-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Member miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-7e1ec65c-8ac0-4308-8be5-02f9bfcde3a3 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
-2026-03-16T18:14:54.020-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Resetting generation and member id due to: consumer pro-actively leaving the group
-2026-03-16T18:14:54.020-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: consumer pro-actively leaving the group
-2026-03-16T18:14:54.020-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Unsubscribed all topics or patterns and assigned partitions
-2026-03-16T18:14:54.040-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2026-03-16T18:14:54.041-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2026-03-16T18:14:54.041-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2026-03-16T18:14:54.041-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2026-03-16T18:14:54.049-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer unregistered
-2026-03-16T18:14:54.050-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2026-03-16T18:14:54.050-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2026-03-16T18:14:54.050-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2026-03-16T18:14:54.050-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2026-03-16T18:14:54.052-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-restore-consumer unregistered
-2026-03-16T18:14:54.053-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] State transition from PENDING_SHUTDOWN to DEAD
-2026-03-16T18:14:54.053-05:00  INFO 26668 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Shutdown complete
-2026-03-16T18:14:54.054-05:00  INFO 26668 --- [microservicio-miembros] [b87-CloseThread] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Shutdown 1 stream threads complete
-2026-03-16T18:14:54.054-05:00  INFO 26668 --- [microservicio-miembros] [56a1efb87-admin] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-admin unregistered
-2026-03-16T18:14:54.056-05:00  INFO 26668 --- [microservicio-miembros] [56a1efb87-admin] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2026-03-16T18:14:54.056-05:00  INFO 26668 --- [microservicio-miembros] [56a1efb87-admin] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2026-03-16T18:14:54.056-05:00  INFO 26668 --- [microservicio-miembros] [56a1efb87-admin] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2026-03-16T18:14:54.058-05:00  INFO 26668 --- [microservicio-miembros] [b87-CloseThread] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2026-03-16T18:14:54.058-05:00  INFO 26668 --- [microservicio-miembros] [b87-CloseThread] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2026-03-16T18:14:54.058-05:00  INFO 26668 --- [microservicio-miembros] [b87-CloseThread] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2026-03-16T18:14:54.058-05:00  INFO 26668 --- [microservicio-miembros] [b87-CloseThread] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] State transition from PENDING_ERROR to ERROR
-2026-03-16T18:17:57.561-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-16T18:17:57.561-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-16T18:17:57.563-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-03-16T18:17:57.589-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T18:17:57.774-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T18:17:57.774-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@c1cfdd78, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T18:17:57.780-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T18:17:57.849-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+2026-03-16T19:28:17.306-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] State transition from REBALANCING to PENDING_ERROR
+2026-03-16T19:28:17.308-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] State transition from STARTING to PENDING_SHUTDOWN
+2026-03-16T19:28:17.308-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Shutting down unclean
+2026-03-16T19:28:17.308-05:00  INFO 36632 --- [microservicio-miembros] [b87-CloseThread] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Informed to shut down
+2026-03-16T19:28:17.308-05:00  INFO 36632 --- [microservicio-miembros] [b87-CloseThread] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Shutting down 1 stream threads
+2026-03-16T19:28:17.311-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2026-03-16T19:28:17.319-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-03-16T19:28:17.319-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-03-16T19:28:17.319-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-03-16T19:28:17.319-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-03-16T19:28:17.320-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-producer unregistered
+2026-03-16T19:28:17.321-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.processor.internals.TaskManager  : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Shutdown complete
+2026-03-16T19:28:17.321-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-restore-consumer, groupId=null] Unsubscribed all topics or patterns and assigned partitions
+2026-03-16T19:28:17.321-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Member miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer-38e6e31f-98aa-4ccf-affb-0c94c033bac7 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-03-16T19:28:17.323-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-03-16T19:28:17.323-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Request joining group due to: consumer pro-actively leaving the group
+2026-03-16T19:28:17.323-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer, groupId=miembros-streams-app] Unsubscribed all topics or patterns and assigned partitions
+2026-03-16T19:28:17.342-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-03-16T19:28:17.342-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-03-16T19:28:17.342-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-03-16T19:28:17.342-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-03-16T19:28:17.348-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-consumer unregistered
+2026-03-16T19:28:17.348-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-03-16T19:28:17.349-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-03-16T19:28:17.349-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-03-16T19:28:17.349-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-03-16T19:28:17.350-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1-restore-consumer unregistered
+2026-03-16T19:28:17.351-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] State transition from PENDING_SHUTDOWN to DEAD
+2026-03-16T19:28:17.351-05:00  INFO 36632 --- [microservicio-miembros] [-StreamThread-1] o.a.k.s.p.internals.StreamThread         : stream-thread [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-StreamThread-1] Shutdown complete
+2026-03-16T19:28:17.352-05:00  INFO 36632 --- [microservicio-miembros] [b87-CloseThread] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] Shutdown 1 stream threads complete
+2026-03-16T19:28:17.352-05:00  INFO 36632 --- [microservicio-miembros] [56a1efb87-admin] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87-admin unregistered
+2026-03-16T19:28:17.355-05:00  INFO 36632 --- [microservicio-miembros] [56a1efb87-admin] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-03-16T19:28:17.356-05:00  INFO 36632 --- [microservicio-miembros] [56a1efb87-admin] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-03-16T19:28:17.356-05:00  INFO 36632 --- [microservicio-miembros] [56a1efb87-admin] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-03-16T19:28:17.356-05:00  INFO 36632 --- [microservicio-miembros] [b87-CloseThread] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-03-16T19:28:17.356-05:00  INFO 36632 --- [microservicio-miembros] [b87-CloseThread] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-03-16T19:28:17.356-05:00  INFO 36632 --- [microservicio-miembros] [b87-CloseThread] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-03-16T19:28:17.356-05:00  INFO 36632 --- [microservicio-miembros] [b87-CloseThread] org.apache.kafka.streams.KafkaStreams    : stream-client [miembros-streams-app-06796c4b-74f9-4076-aa2e-bff56a1efb87] State transition from PENDING_ERROR to ERROR
+2026-03-16T19:29:44.982-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-16T19:29:44.982-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-16T19:29:44.984-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-16T19:29:45.010-05:00 DEBUG 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
+2026-03-16T19:29:45.202-05:00 DEBUG 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:29:45.203-05:00 DEBUG 36632 --- [microservicio-miembros] [nio-8081-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@cc48318c, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:29:45.209-05:00 DEBUG 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
+2026-03-16T19:29:45.269-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
@@ -878,21 +814,20 @@ org.apache.kafka.streams.errors.MissingSourceTopicException: One or more source 
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
 
-2026-03-16T18:17:57.849-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T18:17:57.850-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=microservicio-miembros-producer-1] Instantiated an idempotent producer.
-2026-03-16T18:17:57.856-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T18:17:57.856-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T18:17:57.857-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773703077856
-2026-03-16T18:17:57.866-05:00  INFO 26668 --- [microservicio-miembros] [bros-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=microservicio-miembros-producer-1] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
-2026-03-16T18:17:57.867-05:00  INFO 26668 --- [microservicio-miembros] [bros-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=microservicio-miembros-producer-1] ProducerId set to 2 with epoch 0
-2026-03-16T18:17:57.878-05:00  WARN 26668 --- [microservicio-miembros] [bros-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=microservicio-miembros-producer-1] Error while fetching metadata with correlation id 5 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T18:17:58.055-05:00  WARN 26668 --- [microservicio-miembros] [bros-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=microservicio-miembros-producer-1] Error while fetching metadata with correlation id 8 : {topic-a=UNKNOWN_TOPIC_OR_PARTITION}
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":350,"duracionMinutos":45}
-2026-03-16T18:18:04.669-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/recuperacion
-2026-03-16T18:18:04.673-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T18:18:04.673-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@c1cfdd78, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T18:18:04.674-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/recuperacion
-2026-03-16T18:18:04.676-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+2026-03-16T19:29:45.270-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-03-16T19:29:45.270-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=microservicio-miembros-producer-1] Instantiated an idempotent producer.
+2026-03-16T19:29:45.276-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-03-16T19:29:45.276-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-03-16T19:29:45.276-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773707385276
+2026-03-16T19:29:45.285-05:00  WARN 36632 --- [microservicio-miembros] [bros-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=microservicio-miembros-producer-1] Error while fetching metadata with correlation id 1 : {datos-entrenamiento=UNKNOWN_TOPIC_OR_PARTITION}
+2026-03-16T19:29:45.286-05:00  INFO 36632 --- [microservicio-miembros] [bros-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=microservicio-miembros-producer-1] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
+2026-03-16T19:29:45.286-05:00  INFO 36632 --- [microservicio-miembros] [bros-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=microservicio-miembros-producer-1] ProducerId set to 2 with epoch 0
+? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":550,"duracionMinutos":45}
+2026-03-16T19:29:56.879-05:00 DEBUG 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/recuperacion
+2026-03-16T19:29:56.884-05:00 DEBUG 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:29:56.884-05:00 DEBUG 36632 --- [microservicio-miembros] [nio-8081-exec-3] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@cc48318c, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:29:56.885-05:00 DEBUG 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/recuperacion
+2026-03-16T19:29:56.886-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
@@ -990,339 +925,20 @@ org.apache.kafka.streams.errors.MissingSourceTopicException: One or more source 
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
 
-2026-03-16T18:18:04.676-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T18:18:04.681-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T18:18:04.681-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T18:18:04.681-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773703084681
-2026-03-16T18:18:04.683-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Assigned to partition(s): topic-a-0
-2026-03-16T18:18:04.686-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Seeking to offset 0 for partition topic-a-0
+2026-03-16T19:29:56.887-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-03-16T19:29:56.894-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-03-16T19:29:56.894-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-03-16T19:29:56.894-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773707396894
+2026-03-16T19:29:56.894-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Assigned to partition(s): topic-a-0
+2026-03-16T19:29:56.898-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Seeking to offset 0 for partition topic-a-0
 ? Iniciando recuperación desde offsets manuales...
-2026-03-16T18:18:04.698-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
-Procesando evento en offset: 0 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":350,"duracionMinutos":45}
+2026-03-16T19:29:56.908-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
+Procesando evento en offset: 0 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":550,"duracionMinutos":45}
 Offset 1 guardado para topic-a-0
-2026-03-16T18:18:05.173-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Resetting generation and member id due to: consumer pro-actively leaving the group
-2026-03-16T18:18:05.173-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Request joining group due to: consumer pro-actively leaving the group
-2026-03-16T18:18:05.239-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2026-03-16T18:18:05.239-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2026-03-16T18:18:05.239-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2026-03-16T18:18:05.239-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2026-03-16T18:18:05.244-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-grupo-recuperacion-1 unregistered
-2026-03-16T18:26:58.277-05:00  INFO 26668 --- [microservicio-miembros] [bros-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=microservicio-miembros-producer-1] Node -1 disconnected.
-2026-03-16T18:30:47.614-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T18:30:47.655-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-6] o.s.s.oauth2.jwt.JwtTimestampValidator   : Jwt expired at 2026-03-16T23:21:38Z
-2026-03-16T18:30:47.655-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-6] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Failed to authenticate since the JWT was invalid
-2026-03-16T18:30:59.606-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T18:30:59.610-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T18:30:59.610-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@66273ca3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T18:30:59.611-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":350,"duracionMinutos":45}
-2026-03-16T18:31:04.452-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T18:31:04.457-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-8] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T18:31:04.457-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-8] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@66273ca3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T18:31:04.458-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":550,"duracionMinutos":45}
-2026-03-16T18:31:10.132-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T18:31:10.137-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-9] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T18:31:10.137-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-9] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@66273ca3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T18:31:10.137-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":540,"duracionMinutos":45}
-2026-03-16T18:31:19.016-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T18:31:19.022-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T18:31:19.022-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@66273ca3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T18:31:19.022-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
-2026-03-16T18:36:57.959-05:00  INFO 26668 --- [microservicio-miembros] [bros-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=microservicio-miembros-producer-1] Node -1 disconnected.
-2026-03-16T18:37:16.887-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/recuperacion
-2026-03-16T18:37:16.919-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.s.oauth2.jwt.JwtTimestampValidator   : Jwt expired at 2026-03-16T23:35:54Z
-2026-03-16T18:37:16.920-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Failed to authenticate since the JWT was invalid
-2026-03-16T18:37:26.595-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/recuperacion
-2026-03-16T18:37:26.598-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T18:37:26.598-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@7476a1d7, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T18:37:26.598-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/recuperacion
-2026-03-16T18:37:26.600-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-grupo-recuperacion-2
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	enable.metrics.push = true
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = grupo-recuperacion
-	group.instance.id = null
-	group.protocol = classic
-	group.remote.assignor = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.max.ms = 1000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-
-2026-03-16T18:37:26.601-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T18:37:26.618-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T18:37:26.619-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T18:37:26.619-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773704246618
-2026-03-16T18:37:26.619-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-2, groupId=grupo-recuperacion] Assigned to partition(s): topic-a-0
-2026-03-16T18:37:26.619-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-2, groupId=grupo-recuperacion] Seeking to offset 1 for partition topic-a-0
-? Iniciando recuperación desde offsets manuales...
-2026-03-16T18:37:26.628-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-grupo-recuperacion-2, groupId=grupo-recuperacion] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
-Procesando evento en offset: 1 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":350,"duracionMinutos":45}
-Offset 2 guardado para topic-a-0
-Procesando evento en offset: 2 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":550,"duracionMinutos":45}
-Offset 3 guardado para topic-a-0
-Procesando evento en offset: 3 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":540,"duracionMinutos":45}
-Offset 4 guardado para topic-a-0
-Procesando evento en offset: 4 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
-Offset 5 guardado para topic-a-0
-2026-03-16T18:37:27.074-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-2, groupId=grupo-recuperacion] Resetting generation and member id due to: consumer pro-actively leaving the group
-2026-03-16T18:37:27.074-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-2, groupId=grupo-recuperacion] Request joining group due to: consumer pro-actively leaving the group
-2026-03-16T18:37:27.143-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2026-03-16T18:37:27.143-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2026-03-16T18:37:27.143-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2026-03-16T18:37:27.143-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2026-03-16T18:37:27.148-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-grupo-recuperacion-2 unregistered
-2026-03-16T19:04:42.733-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T19:04:42.782-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:04:42.782-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@3e8ec1c0, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T19:04:42.782-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
-2026-03-16T19:10:24.533-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T19:10:24.564-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:10:24.579-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T19:10:24.579-05:00 DEBUG 26668 --- [microservicio-miembros] [io-8081-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
-2026-03-16T19:10:29.342-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T19:10:29.347-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-1] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:10:29.351-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-1] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T19:10:29.351-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":450,"duracionMinutos":45}
-2026-03-16T19:10:36.126-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T19:10:36.133-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:10:36.133-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T19:10:36.133-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":450,"duracionMinutos":45}
-2026-03-16T19:10:40.246-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/M-KAFKA-UNO/entrenamiento
-2026-03-16T19:10:40.248-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:10:40.248-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T19:10:40.248-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/M-KAFKA-UNO/entrenamiento
-? Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":550,"duracionMinutos":45}
-2026-03-16T19:11:24.920-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/miembros/recuperacion
-2026-03-16T19:11:24.928-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:11:24.928-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@39c90bc3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T19:11:24.928-05:00 DEBUG 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/miembros/recuperacion
-2026-03-16T19:11:24.928-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = latest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-grupo-recuperacion-3
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	enable.metrics.push = true
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = grupo-recuperacion
-	group.instance.id = null
-	group.protocol = classic
-	group.remote.assignor = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.max.ms = 1000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-
-2026-03-16T19:11:24.933-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T19:11:24.943-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T19:11:24.943-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T19:11:24.943-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773706284943
-2026-03-16T19:11:24.944-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Assigned to partition(s): topic-a-0
-2026-03-16T19:11:24.944-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Seeking to offset 5 for partition topic-a-0
-? Iniciando recuperación desde offsets manuales...
-2026-03-16T19:11:24.953-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
-Procesando evento en offset: 5 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
-Offset 6 guardado para topic-a-0
-Procesando evento en offset: 6 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":400,"duracionMinutos":45}
-Offset 7 guardado para topic-a-0
-Procesando evento en offset: 7 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":450,"duracionMinutos":45}
-Offset 8 guardado para topic-a-0
-Procesando evento en offset: 8 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":450,"duracionMinutos":45}
-Offset 9 guardado para topic-a-0
-Procesando evento en offset: 9 con valor: {"miembroId":"M-KAFKA-UNO","caloriasQuemadas":550,"duracionMinutos":45}
-Offset 10 guardado para topic-a-0
-2026-03-16T19:11:25.402-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Resetting generation and member id due to: consumer pro-actively leaving the group
-2026-03-16T19:11:25.403-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-3, groupId=grupo-recuperacion] Request joining group due to: consumer pro-actively leaving the group
-2026-03-16T19:11:25.469-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
-2026-03-16T19:11:25.469-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2026-03-16T19:11:25.469-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
-2026-03-16T19:11:25.469-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
-2026-03-16T19:11:25.473-05:00  INFO 26668 --- [microservicio-miembros] [nio-8081-exec-4] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-grupo-recuperacion-3 unregistered
-2026-03-16T19:13:38.023-05:00  WARN 26668 --- [microservicio-miembros] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s529ms690µs300ns).
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  01:01 h
-[INFO] Finished at: 2026-03-16T19:16:21-05:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project microservicio-miembros: Process terminated with exit code: 1 -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+2026-03-16T19:29:57.381-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-03-16T19:29:57.381-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-grupo-recuperacion-1, groupId=grupo-recuperacion] Request joining group due to: consumer pro-actively leaving the group
+2026-03-16T19:29:57.448-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-03-16T19:29:57.448-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-03-16T19:29:57.448-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-03-16T19:29:57.448-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-03-16T19:29:57.452-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-grupo-recuperacion-1 unregistered

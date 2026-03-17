@@ -107,7 +107,8 @@ public class MiembroController {
 
     @Operation(summary = "Enviar datos de entrenamiento (Kafka)", description = "Simula el envío de datos a Kafka para procesamiento de streams")
     @PostMapping("/{id}/entrenamiento")
-    public void registrarEntrenamiento(@PathVariable String id, @RequestBody co.analisys.miembros.kafka.DatosEntrenamiento datos) {
+    public org.springframework.http.ResponseEntity<Map<String, Object>> registrarEntrenamiento(@PathVariable String id, @RequestBody co.analisys.miembros.kafka.DatosEntrenamiento datos) {
+        Map<String, Object> response = new HashMap<>();
         try {
             datos.setMiembroId(id);
             com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
@@ -115,14 +116,32 @@ public class MiembroController {
             kafkaTemplate.send("datos-entrenamiento", id, json);
             kafkaTemplate.send("topic-a", id, json); // para probar la recuperación simulada
             System.out.println("✅ Datos de entrenamiento enviados a Kafka (Topic: datos-entrenamiento): " + json);
+            
+            response.put("mensaje", "Exito: Datos de entrenamiento enviados a Kafka");
+            response.put("topic", "datos-entrenamiento");
+            response.put("payload_enviado", mapper.readTree(json));
+            response.put("observacion", "Revisa la consola de streams y offset explorer.");
+            return org.springframework.http.ResponseEntity.ok(response);
         } catch (Exception e) {
             e.printStackTrace();
+            response.put("error", e.getMessage());
+            return org.springframework.http.ResponseEntity.status(500).body(response);
         }
     }
 
     @Operation(summary = "Forzar Recuperación Kafka", description = "Simula la caída del sistema y recupera desde el último Offset guardado")
     @PostMapping("/recuperacion")
-    public void forzarRecuperacion() {
-        recuperacionService.iniciarProcesamiento();
+    public org.springframework.http.ResponseEntity<Map<String, Object>> forzarRecuperacion() {
+        Map<String, Object> response = new HashMap<>();
+        try {
+            recuperacionService.iniciarProcesamiento();
+            response.put("mensaje", "Recuperacion de OFFSETS iniciada.");
+            response.put("funcionalidad", "Se ha desactivado el auto-commit. Leyendo mensajes pendientes manualmente.");
+            response.put("topic", "topic-a");
+            return org.springframework.http.ResponseEntity.ok(response);
+        } catch (Exception e) {
+            response.put("error", e.getMessage());
+            return org.springframework.http.ResponseEntity.status(500).body(response);
+        }
     }
 }

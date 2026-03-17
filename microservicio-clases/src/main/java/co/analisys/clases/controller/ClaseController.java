@@ -35,8 +35,16 @@ public class ClaseController {
 
     @Operation(summary = "Actualizar y notificar ocupación de clase vía Kafka")
     @PostMapping("/{id}/ocupacion")
-    public void notificarOcupacion(@PathVariable String id, @RequestParam int ocupacion) {
+    public org.springframework.http.ResponseEntity<Map<String, Object>> notificarOcupacion(@PathVariable String id, @RequestParam int ocupacion) {
         ocupacionClaseProducer.actualizarOcupacion(id, ocupacion);
+        
+        Map<String, Object> response = new HashMap<>();
+        response.put("mensaje", "Ocupación de la clase actualizada y notificada vía Kafka (Pub/Sub)");
+        response.put("topic_publicado", "ocupacion-clases");
+        response.put("claseId", id);
+        response.put("ocupacion_actual_json", ocupacion);
+        
+        return org.springframework.http.ResponseEntity.ok(response);
     }
 
     @Operation(summary = "Programar una clase", description = "Requiere rol ADMIN o TRAINER.")
