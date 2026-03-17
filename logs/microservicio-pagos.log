@@ -1,2 +1,53 @@
-"mvnw.cmd" no se reconoce como un comando interno o externo,
-programa o archivo por lotes ejecutable.
+nohup: ignoring input
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< co.analisys:microservicio-pagos >-------------------
+[INFO] Building microservicio-pagos 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ microservicio-pagos >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ microservicio-pagos ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ microservicio-pagos ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-pagos ---
+[INFO] skip non existing resourceDirectory C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-pagos\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ microservicio-pagos ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.2:run (default-cli) < test-compile @ microservicio-pagos <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.2:run (default-cli) @ microservicio-pagos ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-03-16T18:51:36.394-05:00  INFO 17648 --- [microservicio-pagos] [           main] c.a.pagos.MicroservicioPagosApplication  : Starting MicroservicioPagosApplication using Java 17.0.11 with PID 17648 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-pagos\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-pagos)
+2026-03-16T18:51:36.402-05:00  INFO 17648 --- [microservicio-pagos] [           main] c.a.pagos.MicroservicioPagosApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-03-16T18:51:39.116-05:00  INFO 17648 --- [microservicio-pagos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-03-16T18:51:39.137-05:00  INFO 17648 --- [microservicio-pagos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-16T18:51:39.137-05:00  INFO 17648 --- [microservicio-pagos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-16T18:51:39.278-05:00  INFO 17648 --- [microservicio-pagos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-16T18:51:39.278-05:00  INFO 17648 --- [microservicio-pagos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2760 ms
+2026-03-16T18:51:41.757-05:00  INFO 17648 --- [microservicio-pagos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-03-16T18:51:41.763-05:00  INFO 17648 --- [microservicio-pagos] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-16T18:51:41.876-05:00  INFO 17648 --- [microservicio-pagos] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5562c2c9:0/SimpleConnection@75793f17 [delegate=amqp://guest@127.0.0.1:5672/, localPort=33505]
+2026-03-16T18:51:42.008-05:00  INFO 17648 --- [microservicio-pagos] [           main] c.a.pagos.MicroservicioPagosApplication  : Started MicroservicioPagosApplication in 6.732 seconds (process running for 7.998)
+2026-03-16T19:07:11.035-05:00  INFO 17648 --- [microservicio-pagos] [nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-16T19:07:11.037-05:00  INFO 17648 --- [microservicio-pagos] [nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-16T19:07:11.040-05:00  INFO 17648 --- [microservicio-pagos] [nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Pago procesado y publicado: d694b6a1-3429-4caa-8c4c-ff7ce90ed074 payload={amount=50.0, claseId=1, authToken=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICItRm11Z3VXS2lOOVZ1RnpDUHZIUWlzc2puZlhlQ19uQk1BVnJHMmdFUGYwIn0.eyJleHAiOjE3NzM3MDYzMTEsImlhdCI6MTc3MzcwNjAxMSwianRpIjoib25ydHJvOmVkMDNlYzI2LTM5MGYtZDE3ZC1kNzkxLWU5ODdhODJlMzBiNCIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODE4MC9yZWFsbXMvZ2ltbmFzaW8iLCJzdWIiOiJlMzM5NjY4NC03NjNhLTQxZmQtYjc1OC0xOWVmNzNkNjEwYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJneW0tYmFja2VuZCIsInNpZCI6IjlWemZLTVVyTFUtZDdIeXFySHpfZVJwQyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDg0IiwiaHR0cDovL2xvY2FsaG9zdDo4MDgzIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgyIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgxIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX0FETUlOIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJBZG1pbiBHaW1uYXNpbyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwiZ2l2ZW5fbmFtZSI6IkFkbWluIiwiZmFtaWx5X25hbWUiOiJHaW1uYXNpbyIsImVtYWlsIjoiYWRtaW5AZ2ltbmFzaW8ubG9jYWwifQ.WFzmOqF-7pnqlH0a7V0JGjGKBILXu77iLO01H4Mnr56dH6y0dxhTitZCJp0QD9j4vzqyUXueXfPnh4EV9w_CVCY_wXZd1aWXYerB0-u_9GpHASN0H7KLqs-AqB7zY3WDZdKQSWJ3guHTKey-1SEdTYeWKQSpr0p13jx9gPJ31PPH1bFpOMd_NNZzO-W7AjHHqXNfhtvMWaWbvo6TN1Xmr5mkZBj9ofqxj-Y21RnwLiSkMlaa5eiSzKqCQ8SRqCNyhtOAvhLIJ_UBaOWRD0aQ_NFglgOJFrYmQQ2bFVwIaHAIC5MlSYVFBvSDCmzEYkuZriuXbukIOSHhZa3TipGsfA, miembroId=1, id=d694b6a1-3429-4caa-8c4c-ff7ce90ed074, timestamp=2026-03-17T00:07:11.654467400Z} headerPresent=true

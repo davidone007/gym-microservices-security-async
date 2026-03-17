@@ -35,268 +35,41 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2026-03-16T19:28:01.785-05:00  INFO 9892 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : Starting ClasesApplication using Java 17.0.16 with PID 9892 (C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-clases\target\classes started by daron in C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-clases)
-2026-03-16T19:28:01.789-05:00  INFO 9892 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-03-16T19:28:03.364-05:00  INFO 9892 --- [microservicio-clases] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-16T19:28:03.480-05:00  INFO 9892 --- [microservicio-clases] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
-2026-03-16T19:28:04.980-05:00  INFO 9892 --- [microservicio-clases] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2026-03-16T19:28:05.005-05:00  INFO 9892 --- [microservicio-clases] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-16T19:28:05.006-05:00  INFO 9892 --- [microservicio-clases] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2026-03-16T19:28:05.172-05:00  INFO 9892 --- [microservicio-clases] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-16T19:28:05.174-05:00  INFO 9892 --- [microservicio-clases] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3313 ms
-2026-03-16T19:28:05.249-05:00  INFO 9892 --- [microservicio-clases] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-16T19:28:05.623-05:00  INFO 9892 --- [microservicio-clases] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:clasesdb user=SA
-2026-03-16T19:28:05.626-05:00  INFO 9892 --- [microservicio-clases] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-16T19:28:05.647-05:00  INFO 9892 --- [microservicio-clases] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:clasesdb'
-2026-03-16T19:28:05.918-05:00  INFO 9892 --- [microservicio-clases] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-16T19:28:06.040-05:00  INFO 9892 --- [microservicio-clases] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-16T19:28:06.105-05:00  INFO 9892 --- [microservicio-clases] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-16T19:28:06.688-05:00  INFO 9892 --- [microservicio-clases] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-16T19:28:08.747-05:00  INFO 9892 --- [microservicio-clases] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-16T19:28:08.875-05:00  INFO 9892 --- [microservicio-clases] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-16T19:28:10.470-05:00  WARN 9892 --- [microservicio-clases] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-16T19:28:10.521-05:00 DEBUG 9892 --- [microservicio-clases] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-03-16T19:28:11.362-05:00 DEBUG 9892 --- [microservicio-clases] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-03-16T19:28:12.390-05:00  INFO 9892 --- [microservicio-clases] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2026-03-16T19:28:12.474-05:00  INFO 9892 --- [microservicio-clases] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
-	allow.auto.create.topics = true
-	auto.commit.interval.ms = 5000
-	auto.include.jmx.reporter = true
-	auto.offset.reset = earliest
-	bootstrap.servers = [localhost:9092]
-	check.crcs = true
-	client.dns.lookup = use_all_dns_ips
-	client.id = consumer-monitoreo-grupo-1
-	client.rack = 
-	connections.max.idle.ms = 540000
-	default.api.timeout.ms = 60000
-	enable.auto.commit = false
-	enable.metrics.push = true
-	exclude.internal.topics = true
-	fetch.max.bytes = 52428800
-	fetch.max.wait.ms = 500
-	fetch.min.bytes = 1
-	group.id = monitoreo-grupo
-	group.instance.id = null
-	group.protocol = classic
-	group.remote.assignor = null
-	heartbeat.interval.ms = 3000
-	interceptor.classes = []
-	internal.leave.group.on.close = true
-	internal.throw.on.fetch.stable.offset.unsupported = false
-	isolation.level = read_uncommitted
-	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-	max.partition.fetch.bytes = 1048576
-	max.poll.interval.ms = 300000
-	max.poll.records = 500
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retry.backoff.max.ms = 1000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	session.timeout.ms = 45000
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
-
-2026-03-16T19:28:12.566-05:00  INFO 9892 --- [microservicio-clases] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T19:28:12.810-05:00  INFO 9892 --- [microservicio-clases] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T19:28:12.810-05:00  INFO 9892 --- [microservicio-clases] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T19:28:12.810-05:00  INFO 9892 --- [microservicio-clases] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773707292806
-2026-03-16T19:28:12.818-05:00  INFO 9892 --- [microservicio-clases] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Subscribed to topic(s): ocupacion-clases
-2026-03-16T19:28:12.842-05:00  INFO 9892 --- [microservicio-clases] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2026-03-16T19:28:12.971-05:00  INFO 9892 --- [microservicio-clases] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4619854a:0/SimpleConnection@4ef12d7e [delegate=amqp://guest@127.0.0.1:5672/, localPort=64018]
-2026-03-16T19:28:13.288-05:00  INFO 9892 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : Started ClasesApplication in 12.166 seconds (process running for 13.02)
+2026-03-16T18:51:39.516-05:00  INFO 4316 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : Starting ClasesApplication using Java 17.0.11 with PID 4316 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-clases\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-clases)
+2026-03-16T18:51:39.517-05:00  INFO 4316 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-16T18:51:41.774-05:00  INFO 4316 --- [microservicio-clases] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16T18:51:41.891-05:00  INFO 4316 --- [microservicio-clases] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interface.
+2026-03-16T18:51:43.170-05:00  INFO 4316 --- [microservicio-clases] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-03-16T18:51:43.185-05:00  INFO 4316 --- [microservicio-clases] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-16T18:51:43.185-05:00  INFO 4316 --- [microservicio-clases] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-16T18:51:43.324-05:00  INFO 4316 --- [microservicio-clases] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-16T18:51:43.326-05:00  INFO 4316 --- [microservicio-clases] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3694 ms
+2026-03-16T18:51:43.385-05:00  INFO 4316 --- [microservicio-clases] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-16T18:51:43.718-05:00  INFO 4316 --- [microservicio-clases] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:clasesdb user=SA
+2026-03-16T18:51:43.720-05:00  INFO 4316 --- [microservicio-clases] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-16T18:51:43.736-05:00  INFO 4316 --- [microservicio-clases] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:clasesdb'
+2026-03-16T18:51:43.952-05:00  INFO 4316 --- [microservicio-clases] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16T18:51:44.062-05:00  INFO 4316 --- [microservicio-clases] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-16T18:51:44.129-05:00  INFO 4316 --- [microservicio-clases] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-16T18:51:44.707-05:00  INFO 4316 --- [microservicio-clases] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16T18:51:46.714-05:00  INFO 4316 --- [microservicio-clases] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16T18:51:46.814-05:00  INFO 4316 --- [microservicio-clases] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16T18:51:47.941-05:00  WARN 4316 --- [microservicio-clases] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16T18:51:47.977-05:00 DEBUG 4316 --- [microservicio-clases] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-16T18:51:48.589-05:00 DEBUG 4316 --- [microservicio-clases] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-16T18:51:49.204-05:00  INFO 4316 --- [microservicio-clases] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-03-16T18:51:49.204-05:00  INFO 4316 --- [microservicio-clases] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-16T18:51:49.301-05:00  INFO 4316 --- [microservicio-clases] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1d77d9c6:0/SimpleConnection@4842a683 [delegate=amqp://guest@127.0.0.1:5672/, localPort=33507]
+2026-03-16T18:51:49.424-05:00  INFO 4316 --- [microservicio-clases] [           main] co.analisys.clases.ClasesApplication     : Started ClasesApplication in 10.818 seconds (process running for 11.719)
 Datos de clases cargados exitosamente.
-2026-03-16T19:28:13.553-05:00  WARN 9892 --- [microservicio-clases] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Error while fetching metadata with correlation id 2 : {ocupacion-clases=UNKNOWN_TOPIC_OR_PARTITION}
-2026-03-16T19:28:13.555-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
-2026-03-16T19:28:13.557-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
-2026-03-16T19:28:13.561-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] (Re-)joining group
-2026-03-16T19:28:13.604-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Request joining group due to: need to re-join with the given member-id: consumer-monitoreo-grupo-1-bfd42dc8-7d47-4cfd-85ff-ebc9155cd77b
-2026-03-16T19:28:13.605-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] (Re-)joining group
-2026-03-16T19:28:16.626-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Successfully joined group with generation Generation{generationId=1, memberId='consumer-monitoreo-grupo-1-bfd42dc8-7d47-4cfd-85ff-ebc9155cd77b', protocol='range'}
-2026-03-16T19:28:16.636-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Finished assignment for group at generation 1: {consumer-monitoreo-grupo-1-bfd42dc8-7d47-4cfd-85ff-ebc9155cd77b=Assignment(partitions=[ocupacion-clases-0])}
-2026-03-16T19:28:16.675-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Successfully synced group in generation Generation{generationId=1, memberId='consumer-monitoreo-grupo-1-bfd42dc8-7d47-4cfd-85ff-ebc9155cd77b', protocol='range'}
-2026-03-16T19:28:16.676-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Notifying assignor about the new Assignment(partitions=[ocupacion-clases-0])
-2026-03-16T19:28:16.680-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Adding newly assigned partitions: ocupacion-clases-0
-2026-03-16T19:28:16.700-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Found no committed offset for partition ocupacion-clases-0
-2026-03-16T19:28:16.713-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-monitoreo-grupo-1, groupId=monitoreo-grupo] Resetting offset for partition ocupacion-clases-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
-2026-03-16T19:28:16.714-05:00  INFO 9892 --- [microservicio-clases] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : monitoreo-grupo: partitions assigned: [ocupacion-clases-0]
-2026-03-16T19:29:31.587-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-16T19:29:31.587-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-16T19:29:31.595-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2026-03-16T19:29:31.623-05:00 DEBUG 9892 --- [microservicio-clases] [nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/clases/C-KAFKA-1/ocupacion?ocupacion=45
-2026-03-16T19:29:31.909-05:00 DEBUG 9892 --- [microservicio-clases] [nio-8082-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:29:31.910-05:00 DEBUG 9892 --- [microservicio-clases] [nio-8082-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@cc48318c, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T19:29:31.925-05:00 DEBUG 9892 --- [microservicio-clases] [nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/clases/C-KAFKA-1/ocupacion?ocupacion=45
-2026-03-16T19:29:32.040-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
-	acks = -1
-	auto.include.jmx.reporter = true
-	batch.size = 16384
-	bootstrap.servers = [localhost:9092]
-	buffer.memory = 33554432
-	client.dns.lookup = use_all_dns_ips
-	client.id = microservicio-clases-producer-1
-	compression.type = none
-	connections.max.idle.ms = 540000
-	delivery.timeout.ms = 120000
-	enable.idempotence = true
-	enable.metrics.push = true
-	interceptor.classes = []
-	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
-	linger.ms = 0
-	max.block.ms = 60000
-	max.in.flight.requests.per.connection = 5
-	max.request.size = 1048576
-	metadata.max.age.ms = 300000
-	metadata.max.idle.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	partitioner.adaptive.partitioning.enable = true
-	partitioner.availability.timeout.ms = 0
-	partitioner.class = null
-	partitioner.ignore.keys = false
-	receive.buffer.bytes = 32768
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.max.ms = 1000
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.connect.timeout.ms = null
-	sasl.login.read.timeout.ms = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.login.retry.backoff.max.ms = 10000
-	sasl.login.retry.backoff.ms = 100
-	sasl.mechanism = GSSAPI
-	sasl.oauthbearer.clock.skew.seconds = 30
-	sasl.oauthbearer.expected.audience = null
-	sasl.oauthbearer.expected.issuer = null
-	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
-	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
-	sasl.oauthbearer.jwks.endpoint.url = null
-	sasl.oauthbearer.scope.claim.name = scope
-	sasl.oauthbearer.sub.claim.name = sub
-	sasl.oauthbearer.token.endpoint.url = null
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
-	transaction.timeout.ms = 60000
-	transactional.id = null
-	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
-
-2026-03-16T19:29:32.042-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
-2026-03-16T19:29:32.055-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=microservicio-clases-producer-1] Instantiated an idempotent producer.
-2026-03-16T19:29:32.082-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
-2026-03-16T19:29:32.082-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
-2026-03-16T19:29:32.082-05:00  INFO 9892 --- [microservicio-clases] [nio-8082-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1773707372082
-2026-03-16T19:29:32.095-05:00  INFO 9892 --- [microservicio-clases] [ases-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=microservicio-clases-producer-1] Cluster ID: Some(5L6g3nShT-eMCtK--X86sw)
-2026-03-16T19:29:32.099-05:00  INFO 9892 --- [microservicio-clases] [ases-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=microservicio-clases-producer-1] ProducerId set to 1 with epoch 0
-Mensaje enviado a Kafka (Topic: ocupacion-clases): {"claseId":"C-KAFKA-1","ocupacionActual":45,"timestamp":[2026,3,16,19,29,31,964686600]}
-Dashboard actualizado en tiempo real: {"claseId":"C-KAFKA-1","ocupacionActual":45,"timestamp":[2026,3,16,19,29,31,964686600]}
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  08:24 min
-[INFO] Finished at: 2026-03-16T19:36:17-05:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project microservicio-clases: Process terminated with exit code: 1 -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[clases] Recibido pago.aceptado: {amount=50.0, claseId=1, authToken=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICItRm11Z3VXS2lOOVZ1RnpDUHZIUWlzc2puZlhlQ19uQk1BVnJHMmdFUGYwIn0.eyJleHAiOjE3NzM3MDYzMTEsImlhdCI6MTc3MzcwNjAxMSwianRpIjoib25ydHJvOmVkMDNlYzI2LTM5MGYtZDE3ZC1kNzkxLWU5ODdhODJlMzBiNCIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODE4MC9yZWFsbXMvZ2ltbmFzaW8iLCJzdWIiOiJlMzM5NjY4NC03NjNhLTQxZmQtYjc1OC0xOWVmNzNkNjEwYTQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJneW0tYmFja2VuZCIsInNpZCI6IjlWemZLTVVyTFUtZDdIeXFySHpfZVJwQyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDg0IiwiaHR0cDovL2xvY2FsaG9zdDo4MDgzIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgyIiwiaHR0cDovL2xvY2FsaG9zdDo4MDgxIiwiaHR0cDovL2xvY2FsaG9zdDozMDAwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJST0xFX0FETUlOIl19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJBZG1pbiBHaW1uYXNpbyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluIiwiZ2l2ZW5fbmFtZSI6IkFkbWluIiwiZmFtaWx5X25hbWUiOiJHaW1uYXNpbyIsImVtYWlsIjoiYWRtaW5AZ2ltbmFzaW8ubG9jYWwifQ.WFzmOqF-7pnqlH0a7V0JGjGKBILXu77iLO01H4Mnr56dH6y0dxhTitZCJp0QD9j4vzqyUXueXfPnh4EV9w_CVCY_wXZd1aWXYerB0-u_9GpHASN0H7KLqs-AqB7zY3WDZdKQSWJ3guHTKey-1SEdTYeWKQSpr0p13jx9gPJ31PPH1bFpOMd_NNZzO-W7AjHHqXNfhtvMWaWbvo6TN1Xmr5mkZBj9ofqxj-Y21RnwLiSkMlaa5eiSzKqCQ8SRqCNyhtOAvhLIJ_UBaOWRD0aQ_NFglgOJFrYmQQ2bFVwIaHAIC5MlSYVFBvSDCmzEYkuZriuXbukIOSHhZa3TipGsfA, miembroId=1, id=d694b6a1-3429-4caa-8c4c-ff7ce90ed074, timestamp=1.7737060316544673E9} headerAuthPresent=true
+[clases] Inscripci�n publicada en inscripciones-exchange: {claseId=1, miembroId=1}
+2026-03-16T19:08:08.578-05:00  INFO 4316 --- [microservicio-clases] [nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-16T19:08:08.578-05:00  INFO 4316 --- [microservicio-clases] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-16T19:08:08.580-05:00  INFO 4316 --- [microservicio-clases] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-16T19:08:08.619-05:00 DEBUG 4316 --- [microservicio-clases] [nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/clases/1/horario
+2026-03-16T19:08:08.863-05:00 DEBUG 4316 --- [microservicio-clases] [nio-8082-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
+2026-03-16T19:08:08.866-05:00 DEBUG 4316 --- [microservicio-clases] [nio-8082-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@abec4e82, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
+2026-03-16T19:08:08.876-05:00 DEBUG 4316 --- [microservicio-clases] [nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/clases/1/horario
+2026-03-16T19:08:09.039-05:00 DEBUG 4316 --- [microservicio-clases] [nio-8082-exec-2] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public co.analisys.clases.model.Clase co.analisys.clases.controller.ClaseController.actualizarHorario(java.lang.String,co.analisys.clases.model.Horario); target is of class [co.analisys.clases.controller.ClaseController]
+2026-03-16T19:08:09.063-05:00 DEBUG 4316 --- [microservicio-clases] [nio-8082-exec-2] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public co.analisys.clases.model.Clase co.analisys.clases.controller.ClaseController.actualizarHorario(java.lang.String,co.analisys.clases.model.Horario); target is of class [co.analisys.clases.controller.ClaseController]

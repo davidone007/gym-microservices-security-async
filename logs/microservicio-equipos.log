@@ -35,30 +35,30 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2026-03-16T19:28:01.895-05:00  INFO 33972 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Starting EquiposApplication using Java 17.0.16 with PID 33972 (C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-equipos\target\classes started by daron in C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-equipos)
-2026-03-16T19:28:01.900-05:00  INFO 33972 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-03-16T19:28:03.390-05:00  INFO 33972 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-16T19:28:03.475-05:00  INFO 33972 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
-2026-03-16T19:28:04.888-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
-2026-03-16T19:28:04.911-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-16T19:28:04.911-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2026-03-16T19:28:05.069-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-16T19:28:05.071-05:00  INFO 33972 --- [microservicio-equipos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3093 ms
-2026-03-16T19:28:05.150-05:00  INFO 33972 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-16T19:28:05.526-05:00  INFO 33972 --- [microservicio-equipos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:equiposdb user=SA
-2026-03-16T19:28:05.530-05:00  INFO 33972 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-16T19:28:05.550-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:equiposdb'
-2026-03-16T19:28:05.812-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-16T19:28:05.918-05:00  INFO 33972 --- [microservicio-equipos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-16T19:28:05.997-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-16T19:28:06.581-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-16T19:28:08.489-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-16T19:28:08.596-05:00  INFO 33972 --- [microservicio-equipos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-16T19:28:09.464-05:00  WARN 33972 --- [microservicio-equipos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-16T19:28:09.513-05:00 DEBUG 33972 --- [microservicio-equipos] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-03-16T19:28:10.362-05:00 DEBUG 33972 --- [microservicio-equipos] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-03-16T19:28:11.645-05:00  INFO 33972 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
-2026-03-16T19:28:11.665-05:00  INFO 33972 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Started EquiposApplication in 10.426 seconds (process running for 11.192)
+2026-03-16T18:51:39.864-05:00  INFO 22484 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Starting EquiposApplication using Java 17.0.11 with PID 22484 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-equipos\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-equipos)
+2026-03-16T18:51:39.869-05:00  INFO 22484 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-03-16T18:51:41.923-05:00  INFO 22484 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16T18:51:42.033-05:00  INFO 22484 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-03-16T18:51:43.220-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-03-16T18:51:43.243-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-16T18:51:43.243-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-16T18:51:43.369-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-16T18:51:43.369-05:00  INFO 22484 --- [microservicio-equipos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3396 ms
+2026-03-16T18:51:43.428-05:00  INFO 22484 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-16T18:51:43.742-05:00  INFO 22484 --- [microservicio-equipos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:equiposdb user=SA
+2026-03-16T18:51:43.745-05:00  INFO 22484 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-16T18:51:43.760-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:equiposdb'
+2026-03-16T18:51:43.986-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16T18:51:44.105-05:00  INFO 22484 --- [microservicio-equipos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-16T18:51:44.175-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-16T18:51:44.761-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16T18:51:46.636-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16T18:51:46.724-05:00  INFO 22484 --- [microservicio-equipos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16T18:51:47.427-05:00  WARN 22484 --- [microservicio-equipos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16T18:51:47.469-05:00 DEBUG 22484 --- [microservicio-equipos] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-16T18:51:48.117-05:00 DEBUG 22484 --- [microservicio-equipos] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-16T18:51:49.047-05:00  INFO 22484 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+2026-03-16T18:51:49.062-05:00  INFO 22484 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Started EquiposApplication in 10.117 seconds (process running for 11.036)
 Datos de equipos cargados exitosamente.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
