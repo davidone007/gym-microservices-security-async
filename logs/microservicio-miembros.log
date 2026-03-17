@@ -942,3 +942,16 @@ Offset 1 guardado para topic-a-0
 2026-03-16T19:29:57.448-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
 2026-03-16T19:29:57.448-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
 2026-03-16T19:29:57.452-05:00  INFO 36632 --- [microservicio-miembros] [nio-8081-exec-3] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-grupo-recuperacion-1 unregistered
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  08:23 min
+[INFO] Finished at: 2026-03-16T19:36:17-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project microservicio-miembros: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

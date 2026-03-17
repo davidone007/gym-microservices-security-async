@@ -1,0 +1,77 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< co.analisys:microservicio-entrenadores >---------------
+[INFO] Building microservicio-entrenadores 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.2:run (default-cli) > test-compile @ microservicio-entrenadores >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ microservicio-entrenadores ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ microservicio-entrenadores ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-entrenadores ---
+[INFO] skip non existing resourceDirectory C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-entrenadores\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ microservicio-entrenadores ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.2:run (default-cli) < test-compile @ microservicio-entrenadores <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.2:run (default-cli) @ microservicio-entrenadores ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-03-16T19:28:01.716-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : Starting EntrenadoresApplication using Java 17.0.16 with PID 23864 (C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-entrenadores\target\classes started by daron in C:\Users\daron\OneDrive\Escritorio\Semestre IX\microservicios\gym-microservices-security-async\microservicio-entrenadores)
+2026-03-16T19:28:01.721-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-03-16T19:28:03.263-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16T19:28:03.370-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interface.
+2026-03-16T19:28:04.790-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-03-16T19:28:04.816-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-16T19:28:04.818-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-03-16T19:28:04.975-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-16T19:28:04.978-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3184 ms
+2026-03-16T19:28:05.050-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-16T19:28:05.439-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:entrenadoresdb user=SA
+2026-03-16T19:28:05.442-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-16T19:28:05.461-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:entrenadoresdb'
+2026-03-16T19:28:05.735-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16T19:28:05.862-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-03-16T19:28:05.918-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-16T19:28:06.514-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16T19:28:08.382-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16T19:28:08.495-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16T19:28:09.400-05:00  WARN 23864 --- [microservicio-entrenadores] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16T19:28:09.453-05:00 DEBUG 23864 --- [microservicio-entrenadores] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-03-16T19:28:10.308-05:00 DEBUG 23864 --- [microservicio-entrenadores] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-03-16T19:28:11.632-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-03-16T19:28:11.640-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2026-03-16T19:28:11.767-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#dcf64d2:0/SimpleConnection@2fe12ec3 [delegate=amqp://guest@127.0.0.1:5672/, localPort=64017]
+2026-03-16T19:28:12.250-05:00  INFO 23864 --- [microservicio-entrenadores] [           main] c.a.e.EntrenadoresApplication            : Started EntrenadoresApplication in 11.172 seconds (process running for 12.039)
+Datos de entrenadores cargados exitosamente.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  08:24 min
+[INFO] Finished at: 2026-03-16T19:36:18-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project microservicio-entrenadores: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
