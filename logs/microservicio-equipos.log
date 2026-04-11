@@ -1,4 +1,3 @@
-nohup: ignoring input
 [INFO] Scanning for projects...
 [INFO] 
 [INFO] -----------------< co.analisys:microservicio-equipos >------------------
@@ -16,7 +15,7 @@ nohup: ignoring input
 [INFO] Nothing to compile - all classes are up to date.
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ microservicio-equipos ---
-[INFO] skip non existing resourceDirectory C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-equipos\src\test\resources
+[INFO] skip non existing resourceDirectory C:\Users\nicol\Documents\9 Semestre\Microservicios\gym-kafka-rabbit\gym-microservices-security-async\microservicio-equipos\src\test\resources
 [INFO] 
 [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ microservicio-equipos ---
 [INFO] No sources to compile
@@ -36,60 +35,28 @@ nohup: ignoring input
 
  :: Spring Boot ::                (v3.3.2)
 
-2026-03-16T19:49:52.330-05:00  INFO 14104 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Starting EquiposApplication using Java 17.0.11 with PID 14104 (C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-equipos\target\classes started by pipec in C:\Universidad\Semestre IX\Microservicios\gym-microservices-security-async\microservicio-equipos)
-2026-03-16T19:49:52.337-05:00  INFO 14104 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-03-16T19:49:54.906-05:00  INFO 14104 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-16T19:49:55.052-05:00  INFO 14104 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 1 JPA repository interface.
-2026-03-16T19:49:57.931-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
-2026-03-16T19:49:57.964-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-16T19:49:57.965-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2026-03-16T19:49:58.178-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-16T19:49:58.181-05:00  INFO 14104 --- [microservicio-equipos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5730 ms
-2026-03-16T19:49:58.288-05:00  INFO 14104 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-16T19:49:58.817-05:00  INFO 14104 --- [microservicio-equipos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:equiposdb user=SA
-2026-03-16T19:49:58.821-05:00  INFO 14104 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-16T19:49:58.850-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:equiposdb'
-2026-03-16T19:49:59.290-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-16T19:49:59.510-05:00  INFO 14104 --- [microservicio-equipos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2026-03-16T19:49:59.637-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-16T19:50:00.499-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-16T19:50:02.856-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-16T19:50:02.997-05:00  INFO 14104 --- [microservicio-equipos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-16T19:50:04.012-05:00  WARN 14104 --- [microservicio-equipos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-16T19:50:04.057-05:00 DEBUG 14104 --- [microservicio-equipos] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-03-16T19:50:04.902-05:00 DEBUG 14104 --- [microservicio-equipos] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-03-16T19:50:06.202-05:00  INFO 14104 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
-2026-03-16T19:50:06.232-05:00  INFO 14104 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Started EquiposApplication in 14.938 seconds (process running for 16.249)
+2026-04-11T13:04:44.301-05:00  INFO 2188 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Starting EquiposApplication using Java 17.0.16 with PID 2188 (C:\Users\nicol\Documents\9 Semestre\Microservicios\gym-kafka-rabbit\gym-microservices-security-async\microservicio-equipos\target\classes started by nicol in C:\Users\nicol\Documents\9 Semestre\Microservicios\gym-kafka-rabbit\gym-microservices-security-async\microservicio-equipos)
+2026-04-11T13:04:44.305-05:00  INFO 2188 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-04-11T13:04:45.921-05:00  INFO 2188 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-11T13:04:46.011-05:00  INFO 2188 --- [microservicio-equipos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2026-04-11T13:04:48.210-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-04-11T13:04:48.243-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-11T13:04:48.243-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11T13:04:48.522-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-11T13:04:48.526-05:00  INFO 2188 --- [microservicio-equipos] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4151 ms
+2026-04-11T13:04:48.659-05:00  INFO 2188 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-11T13:04:49.266-05:00  INFO 2188 --- [microservicio-equipos] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:equiposdb user=SA
+2026-04-11T13:04:49.270-05:00  INFO 2188 --- [microservicio-equipos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-11T13:04:49.290-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:equiposdb'
+2026-04-11T13:04:49.751-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-11T13:04:50.380-05:00  INFO 2188 --- [microservicio-equipos] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-04-11T13:04:50.611-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-11T13:04:51.281-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-11T13:04:53.949-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-11T13:04:54.069-05:00  INFO 2188 --- [microservicio-equipos] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-11T13:04:55.427-05:00  WARN 2188 --- [microservicio-equipos] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-11T13:04:55.487-05:00 DEBUG 2188 --- [microservicio-equipos] [           main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-04-11T13:04:56.668-05:00 DEBUG 2188 --- [microservicio-equipos] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-11T13:04:58.251-05:00  INFO 2188 --- [microservicio-equipos] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+2026-04-11T13:04:58.277-05:00  INFO 2188 --- [microservicio-equipos] [           main] co.analisys.equipos.EquiposApplication   : Started EquiposApplication in 14.63 seconds (process running for 15.188)
 Datos de equipos cargados exitosamente.
-2026-03-16T19:50:47.561-05:00  INFO 14104 --- [microservicio-equipos] [nio-8084-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-16T19:50:47.562-05:00  INFO 14104 --- [microservicio-equipos] [nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-16T19:50:47.564-05:00  INFO 14104 --- [microservicio-equipos] [nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-03-16T19:50:47.591-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/equipos
-2026-03-16T19:50:47.784-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-2] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:50:47.786-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-2] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@23be76ed, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
-2026-03-16T19:50:47.793-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/equipos
-2026-03-16T19:50:50.399-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/equipos
-2026-03-16T19:50:50.400-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-3] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Failed to authenticate since the JWT was invalid
-2026-03-16T19:50:51.096-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/equipos
-2026-03-16T19:50:51.102-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-4] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:50:51.102-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-4] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@23be76ed, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_MEMBER, SCOPE_email, SCOPE_profile]]
-2026-03-16T19:50:51.102-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/equipos
-2026-03-16T19:50:51.202-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-4] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public co.analisys.equipos.model.Equipo co.analisys.equipos.controller.EquipoController.crear(co.analisys.equipos.model.Equipo); target is of class [co.analisys.equipos.controller.EquipoController]
-2026-03-16T19:50:51.218-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-4] horizationManagerBeforeMethodInterceptor : Failed to authorize ReflectiveMethodInvocation: public co.analisys.equipos.model.Equipo co.analisys.equipos.controller.EquipoController.crear(co.analisys.equipos.model.Equipo); target is of class [co.analisys.equipos.controller.EquipoController] with authorization manager org.springframework.security.config.annotation.method.configuration.DeferringObservationAuthorizationManager@1f491cee and decision ExpressionAuthorizationDecision [granted=false, expressionAttribute=hasRole('ADMIN')]
-2026-03-16T19:50:51.594-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/equipos
-2026-03-16T19:50:51.598-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-5] o.s.s.o.s.r.a.JwtAuthenticationProvider  : Authenticated token
-2026-03-16T19:50:51.598-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-5] .s.r.w.a.BearerTokenAuthenticationFilter : Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@60da9f3f, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[SCOPE_email, ROLE_ADMIN, SCOPE_profile]]
-2026-03-16T19:50:51.598-05:00 DEBUG 14104 --- [microservicio-equipos] [nio-8084-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/equipos
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  03:58 min
-[INFO] Finished at: 2026-03-16T19:53:36-05:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.2:run (default-cli) on project microservicio-equipos: Process terminated with exit code: 1 -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
