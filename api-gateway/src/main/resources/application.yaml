@@ -2,6 +2,8 @@ server:
   port: 8080
 
 spring:
+  application:
+    name: api-gateway
   security:
     oauth2:
       resourceserver:
@@ -10,27 +12,42 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: resumen-miembro
+          uri: no://op
+          predicates:
+            - Path=/resumen/miembros/{miembroId}
+          filters:
+            - name: MemberSummaryAggregation
         - id: miembros
-          uri: http://localhost:8081
+          uri: lb://microservicio-miembros
           predicates:
-            - Path=/miembros/**
+            - Path=/miembros,/miembros/**
           filters:
-            - StripPrefix=1
+            - RewritePath=/miembros(?<segment>/?.*), /api/miembros${segment}
         - id: clases
-          uri: http://localhost:8082
+          uri: lb://microservicio-clases
           predicates:
-            - Path=/clases/**
+            - Path=/clases,/clases/**
           filters:
-            - StripPrefix=1
+            - RewritePath=/clases(?<segment>/?.*), /api/clases${segment}
         - id: entrenadores
-          uri: http://localhost:8083
+          uri: lb://microservicio-entrenadores
           predicates:
-            - Path=/entrenadores/**
+            - Path=/entrenadores,/entrenadores/**
           filters:
-            - StripPrefix=1
+            - RewritePath=/entrenadores(?<segment>/?.*), /api/entrenadores${segment}
         - id: equipos
-          uri: http://localhost:8084
+          uri: lb://microservicio-equipos
           predicates:
-            - Path=/equipos/**
+            - Path=/equipos,/equipos/**
           filters:
-            - StripPrefix=1
+            - RewritePath=/equipos(?<segment>/?.*), /api/equipos${segment}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true

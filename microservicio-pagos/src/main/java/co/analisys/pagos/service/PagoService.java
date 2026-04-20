@@ -1,18 +1,38 @@
 package co.analisys.pagos.service;
 
 import co.analisys.pagos.dto.Pago;
+import co.analisys.pagos.repository.PagoRepository;
 import org.springframework.amqp.AmqpRejectAndDontRequeueException;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.util.List;
+
 @Service
 public class PagoService {
 
     private final RabbitTemplate rabbitTemplate;
+    private final PagoRepository pagoRepository;
 
-    public PagoService(RabbitTemplate rabbitTemplate) {
+    public PagoService(RabbitTemplate rabbitTemplate, PagoRepository pagoRepository) {
         this.rabbitTemplate = rabbitTemplate;
+        this.pagoRepository = pagoRepository;
+    }
+
+    public Pago registrarPago(Pago pago) {
+        if (pago.getId() == null || pago.getId().isBlank()) {
+            pago.setId(java.util.UUID.randomUUID().toString());
+        }
+        if (pago.getTimestamp() == null) {
+            pago.setTimestamp(Instant.now());
+        }
+        return pagoRepository.save(pago);
+    }
+
+    public List<Pago> listarPorMiembro(String miembroId) {
+        return pagoRepository.findByMiembroIdOrderByTimestampDesc(miembroId);
     }
 
     @RabbitListener(queues = "pagos-queue")

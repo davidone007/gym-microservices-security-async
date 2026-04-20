@@ -1,8 +1,11 @@
 package co.analisys.pagos.controller;
 
 import co.analisys.pagos.dto.Pago;
+import co.analisys.pagos.service.PagoService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,9 +19,11 @@ import java.util.UUID;
 public class PagosController {
 
     private final RabbitTemplate rabbitTemplate;
+    private final PagoService pagoService;
 
-    public PagosController(RabbitTemplate rabbitTemplate) {
+    public PagosController(RabbitTemplate rabbitTemplate, PagoService pagoService) {
         this.rabbitTemplate = rabbitTemplate;
+        this.pagoService = pagoService;
     }
 
     @PostMapping
@@ -28,6 +33,8 @@ public class PagosController {
             pago.setId(UUID.randomUUID().toString());
         if (pago.getTimestamp() == null)
             pago.setTimestamp(Instant.now());
+
+        pagoService.registrarPago(pago);
 
         if (pago.getAmount() <= 0) {
             if (authorization != null && !authorization.isBlank()) {
@@ -51,5 +58,10 @@ public class PagosController {
             rabbitTemplate.convertAndSend("", "pagos-queue", pago);
         }
         return ResponseEntity.accepted().body(pago);
+    }
+
+    @GetMapping("/miembro/{miembroId}")
+    public ResponseEntity<?> pagosPorMiembro(@PathVariable String miembroId) {
+        return ResponseEntity.ok(pagoService.listarPorMiembro(miembroId));
     }
 }

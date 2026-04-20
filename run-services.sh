@@ -110,6 +110,8 @@ run_maven() {
 
 # Lista de aplicaciones a levantar
 APPS=( "gimnasio:." \
+  "service-registry:service-registry" \
+  "api-gateway:api-gateway" \
        "microservicio-clases:microservicio-clases" \
        "microservicio-entrenadores:microservicio-entrenadores" \
        "microservicio-equipos:microservicio-equipos" \

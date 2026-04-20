@@ -33,3 +33,25 @@ Puedes editarlas en la pestaña *Variables* de la colección:
 - **200/201**: Petición autorizada y exitosa.
 - **401 Unauthorized**: Sin token, token vacío, inválido o expirado.
 - **403 Forbidden**: Token válido pero el rol no tiene permiso para la acción.
+
+---
+
+## Colección adicional para taller de API Gateway
+
+Se agregó la colección `API Gateway - Taller Completo.postman_collection.json` para validar de punta a punta los 5 puntos del taller:
+
+1. Infraestructura disponible (Eureka + Gateway)
+2. Obtención de token JWT (admin)
+3. Enrutamiento por Gateway (`/miembros`, `/clases`, `/entrenadores`, `/equipos`)
+4. Carga de datos de pagos para agregación
+5. Filtro de agregación (`/resumen/miembros/{miembroId}`)
+
+### Orden recomendado de ejecución (Run Collection)
+
+1. `0 - Infra Smoke`
+2. `1 - Keycloak Tokens`
+3. `2 - Gateway Routing`
+4. `3 - Pagos data for aggregation`
+5. `4 - Aggregation Filter`
+
+Si la variable `miembro_id` no existe en tus datos, ejecuta primero `GET miembros via gateway`; ese request toma automáticamente el primer miembro retornado y guarda su id en la variable de colección.

@@ -1,0 +1,324 @@
+{
+  "info": {
+    "_postman_id": "f6bce8cf-7a97-4d37-a174-9f3904cf8398",
+    "name": "API Gateway - Taller Completo",
+    "description": "Coleccion para probar gateway con seguridad JWT, routing, balanceo (via Eureka) y filtro de agregacion (resumen de miembro con clases y pagos).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "0 - Infra Smoke",
+      "item": [
+        {
+          "name": "Eureka UI",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{eureka_url}}",
+              "host": [
+                "{{eureka_url}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Gateway protected route without token (expected 401)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{gateway_url}}/miembros",
+              "host": [
+                "{{gateway_url}}"
+              ],
+              "path": [
+                "miembros"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "1 - Keycloak Tokens",
+      "item": [
+        {
+          "name": "Token ADMIN (admin/admin123)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var json = pm.response.json();",
+                  "pm.collectionVariables.set('token_admin', json.access_token || '');",
+                  "pm.environment.set('token_admin', json.access_token || '');",
+                  "pm.globals.set('token_admin', json.access_token || '');",
+                  "pm.test('token_admin generado', function () { pm.expect(pm.collectionVariables.get('token_admin')).to.not.eql(''); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                { "key": "username", "value": "admin" },
+                { "key": "password", "value": "admin123" },
+                { "key": "grant_type", "value": "password" },
+                { "key": "client_id", "value": "{{client_id}}" },
+                { "key": "client_secret", "value": "{{client_secret}}" }
+              ]
+            },
+            "url": {
+              "raw": "{{keycloak_url}}/realms/{{realm}}/protocol/openid-connect/token",
+              "host": [
+                "{{keycloak_url}}"
+              ],
+              "path": [
+                "realms",
+                "{{realm}}",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2 - Gateway Routing",
+      "item": [
+        {
+          "name": "GET miembros via gateway",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var arr = pm.response.json();",
+                  "if (Array.isArray(arr) && arr.length > 0 && arr[0].id && arr[0].id.miembro_id) {",
+                  "  pm.collectionVariables.set('miembro_id', arr[0].id.miembro_id);",
+                  "}",
+                  "pm.test('status 200', function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{gateway_url}}/miembros",
+              "host": [
+                "{{gateway_url}}"
+              ],
+              "path": [
+                "miembros"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET clases via gateway",
+          "request": {
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{gateway_url}}/clases",
+              "host": [
+                "{{gateway_url}}"
+              ],
+              "path": [
+                "clases"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET entrenadores via gateway",
+          "request": {
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{gateway_url}}/entrenadores",
+              "host": [
+                "{{gateway_url}}"
+              ],
+              "path": [
+                "entrenadores"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET equipos via gateway",
+          "request": {
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{gateway_url}}/equipos",
+              "host": [
+                "{{gateway_url}}"
+              ],
+              "path": [
+                "equipos"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "3 - Pagos data for aggregation",
+      "item": [
+        {
+          "name": "POST pago (direct to pagos)",
+          "request": {
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"miembroId\": \"{{miembro_id}}\",\n  \"claseId\": \"clase-demo\",\n  \"amount\": 40.0\n}"
+            },
+            "url": {
+              "raw": "{{pagos_url}}/pagos",
+              "host": [
+                "{{pagos_url}}"
+              ],
+              "path": [
+                "pagos"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "4 - Aggregation Filter",
+      "item": [
+        {
+          "name": "GET resumen miembro via gateway",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', function () { pm.response.to.have.status(200); });",
+                  "var json = pm.response.json();",
+                  "pm.test('incluye bloque miembro', function () { pm.expect(json.miembro).to.exist; });",
+                  "pm.test('incluye bloque clases', function () { pm.expect(Array.isArray(json.clases)).to.eql(true); });",
+                  "pm.test('incluye bloque pagos', function () { pm.expect(Array.isArray(json.pagos)).to.eql(true); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token_admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{gateway_url}}/resumen/miembros/{{miembro_id}}",
+              "host": [
+                "{{gateway_url}}"
+              ],
+              "path": [
+                "resumen",
+                "miembros",
+                "{{miembro_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "keycloak_url", "value": "http://localhost:8180" },
+    { "key": "realm", "value": "gimnasio" },
+    { "key": "client_id", "value": "gym-backend" },
+    { "key": "client_secret", "value": "g7nM2pQ5rT8vX1yB4cF0hJ3kL6nP9sU" },
+    { "key": "gateway_url", "value": "http://localhost:8080" },
+    { "key": "pagos_url", "value": "http://localhost:8085" },
+    { "key": "eureka_url", "value": "http://localhost:8761" },
+    { "key": "token_admin", "value": "" },
+    { "key": "miembro_id", "value": "M001" }
+  ]
+}

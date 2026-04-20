@@ -42,7 +42,7 @@ docker run -d ^
   -e KC_BOOTSTRAP_ADMIN_USERNAME=admin ^
   -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin ^
   -v %KEYCLOAK_VOLUME_NAME%:/opt/keycloak/data ^
-  -v %cd%\keycloak:/opt/keycloak/data/import ^
+    -v "%cd%\keycloak:/opt/keycloak/data/import" ^
   %KEYCLOAK_IMAGE% start-dev --import-realm
 
 echo Iniciando RabbitMQ...
@@ -89,6 +89,8 @@ REM ---------------------------
 REM FUNCIÓN SIMULADA
 REM ---------------------------
 call :run_maven gimnasio .
+call :run_maven service-registry service-registry
+call :run_maven api-gateway api-gateway
 call :run_maven microservicio-clases microservicio-clases
 call :run_maven microservicio-entrenadores microservicio-entrenadores
 call :run_maven microservicio-equipos microservicio-equipos
